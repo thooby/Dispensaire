@@ -1,0 +1,16 @@
+<% title "Consul Trat" %>
+
+<p>
+  <strong>Consultation:</strong>
+  <%= @consul_trat.consultation_id %>
+</p>
+<p>
+  <strong>Traitement:</strong>
+  <%= @consul_trat.traitement_id %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_consul_trat_path(@consul_trat) %> |
+  <%= link_to "Destroy", @consul_trat, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", consul_trats_path %>
+</p>

@@ -1,0 +1,17 @@
+<% title "Professions" %>
+
+<table>
+  <tr>
+    <th>Nom</th>
+  </tr>
+  <% for profession in @professions %>
+    <tr>
+      <td><%= profession.nom %></td>
+      <td><%= link_to "Show", profession %></td>
+      <td><%= link_to "Edit", edit_profession_path(profession) %></td>
+      <td><%= link_to "Destroy", profession, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Profession", new_profession_path %></p>

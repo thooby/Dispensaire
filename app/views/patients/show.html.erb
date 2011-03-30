@@ -1,0 +1,74 @@
+
+<div style="float:left; margin-right:30px;">
+	<% title "Patient" %><p>
+  <strong>Carte Code:</strong>
+  <%= @patient.carte_code %>
+
+  <strong>Prenom:</strong>
+  <%= @patient.prenom %>
+
+  <strong>Nom:</strong>
+  <%= @patient.nom %>
+</p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @patient.fecha %>
+
+  <strong>Sex:</strong>
+  <%= @patient.sex_description %>
+
+  <strong>Naissance:</strong>
+  <%= @patient.naissance %>
+</p>
+<p>
+  <strong>Village:</strong>
+  <% if @patient.village_id %>
+          <%= @patient.village_nom %>
+<% end %>
+
+  <strong>Commune:</strong>
+  <% if @patient.commune_id %>
+          <%= @patient.commune_nom %>
+<% end %>
+</p>
+<p>
+  <strong>Ethnie:</strong>
+  <%= @patient.ethnie_nom %>
+
+  <strong>Profession:</strong>
+  <%= @patient.profession_nom %>
+</p>
+<h3>Consultations</h3>
+<p>
+<% @patient.consultations.each do |k| %>
+   <strong><%= k.fecha %></strong><br/>
+   <strong>Diagnostic:</strong> <% k.consul_diags.each do |h| %>
+      <%= h.diagnostic.description %><br />
+      <% end %>
+   <strong>Traitement:</strong>
+   <% k.consul_trats.each do |h| %>
+      <%= h.traitement.description %><br />
+      <% end %>
+    <strong>Observations:</strong><%= k.observation %>
+    <br /><br />
+<% end %>
+</p>
+</div>
+<div>
+	<h2>Nouvelles indications</h2>
+	<h3>Syntomes:</h3>
+	<h1></h1><h1></h1>
+	<h3>Diagnostics:</h3>
+	<h1></h1><h1></h1>
+	<h3>Traitements:</h3>
+	<h1></h1><h1></h1>
+	<h3>Observations:</h3>
+	</div>
+	<div style = "clear:both;">
+<p>
+  <%= link_to "Edit", edit_patient_path(@patient) %> |
+  <%= link_to "Destroy", @patient, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", patients_path %>
+</p>
+</div>

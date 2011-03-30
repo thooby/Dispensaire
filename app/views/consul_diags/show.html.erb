@@ -1,0 +1,16 @@
+<% title "Consul Diag" %>
+
+<p>
+  <strong>Consultation:</strong>
+  <%= @consul_diag.consultation_id %>
+</p>
+<p>
+  <strong>Diagnostic:</strong>
+  <%= @consul_diag.diagnostic_id %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_consul_diag_path(@consul_diag) %> |
+  <%= link_to "Destroy", @consul_diag, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", consul_diags_path %>
+</p>

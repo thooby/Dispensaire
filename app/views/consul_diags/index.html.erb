@@ -1,0 +1,20 @@
+<% title "Consul Diags" %>
+<table>
+  <tr>
+    <th>Consultation</th>
+    <th>Acronime</th>
+    <th>Diagnostic</th>
+  </tr>
+  <% for consul_diag in @consul_diags %>
+    <tr>
+      <td><%= consul_diag.consultation_id %></td>
+      <td><%= consul_diag.diagnostic.acronime %></td>
+      <td><%= consul_diag.diagnostic.description %></td>
+      <td><%= link_to "Show", consul_diag %></td>
+      <td><%= link_to "Edit", edit_consul_diag_path(consul_diag) %></td>
+      <td><%= link_to "Destroy", consul_diag, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Consul Diag", new_consul_diag_path %></p>

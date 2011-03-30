@@ -1,0 +1,19 @@
+<% title "Villages" %>
+
+<table>
+  <tr>
+    <th>Nom</th>
+    <th>Commune</th>
+  </tr>
+  <% for village in @villages %>
+    <tr>
+      <td><%= village.nom %></td>
+      <td><%= village.commune_id %></td>
+      <td><%= link_to "Show", village %></td>
+      <td><%= link_to "Edit", edit_village_path(village) %></td>
+      <td><%= link_to "Destroy", village, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Village", new_village_path %></p>

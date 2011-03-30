@@ -1,0 +1,17 @@
+<% title "Ethnies" %>
+
+<table>
+  <tr>
+    <th>Nom</th>
+  </tr>
+  <% for ethnie in @ethnies %>
+    <tr>
+      <td><%= ethnie.nom %></td>
+      <td><%= link_to "Show", ethnie %></td>
+      <td><%= link_to "Edit", edit_ethny_path(ethnie) %></td>
+      <td><%= link_to "Destroy", ethnie, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Ethnie", new_ethny_path %></p>

@@ -1,0 +1,20 @@
+<% title "Traitement" %>
+
+<p>
+  <strong>Groupe Traitement:</strong>
+  <%= @traitement.groupe_traitement_id %>
+</p>
+<p>
+  <strong>Acronime:</strong>
+  <%= @traitement.acronime %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%= @traitement.description %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_traitement_path(@traitement) %> |
+  <%= link_to "Destroy", @traitement, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", traitements_path %>
+</p>

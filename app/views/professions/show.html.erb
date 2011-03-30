@@ -1,0 +1,12 @@
+<% title "Profession" %>
+
+<p>
+  <strong>Nom:</strong>
+  <%= @profession.nom %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_profession_path(@profession) %> |
+  <%= link_to "Destroy", @profession, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", professions_path %>
+</p>

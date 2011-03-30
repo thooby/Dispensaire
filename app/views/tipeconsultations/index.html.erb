@@ -1,0 +1,17 @@
+<% title "Tipeconsultations" %>
+
+<table>
+  <tr>
+    <th>Tipe</th>
+  </tr>
+  <% for tipeconsultation in @tipeconsultations %>
+    <tr>
+      <td><%= tipeconsultation.tipe %></td>
+      <td><%= link_to "Show", tipeconsultation %></td>
+      <td><%= link_to "Edit", edit_tipeconsultation_path(tipeconsultation) %></td>
+      <td><%= link_to "Destroy", tipeconsultation, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Tipeconsultation", new_tipeconsultation_path %></p>

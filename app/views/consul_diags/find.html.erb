@@ -1,0 +1,8 @@
+<table>
+<% @find_diags.keys.each do |h| %> 
+<tr>
+<td><%=   Diagnostic.find(h).description %></td>
+<td><%= @find_diags[h] %></td>
+</tr>
+<% end %>
+</table>

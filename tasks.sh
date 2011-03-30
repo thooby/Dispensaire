@@ -1,0 +1,13 @@
+rake dispen:import_commune
+rake dispen:import_consul_diag
+rake dispen:import_consul_trat
+rake dispen:import_consultation
+rake dispen:import_diagnostic
+rake dispen:import_ethnie
+rake dispen:import_groupe_traitement
+rake dispen:import_patient
+rake dispen:import_profession
+rake dispen:import_sex
+rake dispen:import_tipeconsultation
+rake dispen:import_traitement
+rake dispen:import_village

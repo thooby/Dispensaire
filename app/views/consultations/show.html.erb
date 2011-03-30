@@ -1,0 +1,36 @@
+<% title "Consultation" %>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @consultation.fecha %>
+</p>
+<div id="datos_person">
+  <strong>Patient:</strong>
+  <strong><%= @consultation.patient_carte_code %></strong> <%= @consultation.patient_prenom %> <%= @consultation.patient_nom %><br /><strong>Residence: </strong><%= @consultation.patient_village_nom.capitalize %>, 
+<% if @consultation.patient.commune_id %><%= @consultation.patient.commune_nom.capitalize %><% end %><br /><strong>Profession:</strong> <%= @consultation.patient_profession_nom.capitalize %><br/> <strong>Ethnie:</strong> <%= @consultation.patient_ethnie_nom.capitalize %>
+</div>
+<div id=datos_consulta>
+<p>
+  <strong>Tipe de consultation:</strong>
+  <%= @consultation.tipeconsultation.tipe %>
+</p>
+<p><strong>Diagnostics:</strong><br />
+	<% @consultation.consul_diags.each do |h| %>
+	      <%= h.diagnostic.description %><br />
+	      <% end %>
+</p>
+<p><strong>Traitements:</strong><br />
+<% @consultation.consul_trats.each do |h| %>
+	      <%= h.traitement.description %><br />
+	      <% end %>
+</p>
+<p>
+  <strong>Observations:</strong>
+  <%= @consultation.observation %>
+</p>
+</div>
+<p>
+  <%= link_to "Edit", edit_consultation_path(@consultation) %> |
+  <%= link_to "Destroy", @consultation, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", consultations_path %>
+</p>

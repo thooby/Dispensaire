@@ -1,0 +1,16 @@
+<%= form_for @traitement do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :groupe_traitement_id %><br />
+    <%= f.text_field :groupe_traitement_id %>
+  </p>
+  <p>
+    <%= f.label :acronime %><br />
+    <%= f.text_field :acronime %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

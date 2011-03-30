@@ -1,0 +1,24 @@
+
+<%= form_for @consultation do |f| -%>
+<%= f.error_messages %>
+
+  <p>
+    Date: <%= f.date_select :fecha %>
+  </p>
+  <p>
+    Patient: <%= f.text_field :patient_id %>
+  </p>
+  <p>
+    Tipe de consultation:  <%= f.text_field :tipeconsultation_id %>
+  </p>
+  <div id="consul_diags">
+	<%= render :partial => 'consul_diag', :collection => @consultation.consul_diags %>
+  </div>
+  <p>
+	<%= add_consul_diag_link "Ajouter un diagnostique" %>
+  </p>
+  <p>
+    Observations: <%= f.text_field :observation %>
+  </p>
+  <p><%= f.submit "Ajouter consultation" %></p>
+<% end %>

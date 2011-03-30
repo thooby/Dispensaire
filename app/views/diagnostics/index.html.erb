@@ -1,0 +1,19 @@
+<% title "Diagnostics" %>
+
+<table>
+  <tr>
+    <th>Acronime</th>
+    <th>Description</th>
+  </tr>
+  <% for diagnostic in @diagnostics %>
+    <tr>
+      <td><%= diagnostic.acronime %></td>
+      <td><%= diagnostic.description %></td>
+      <td><%= link_to "Show", diagnostic %></td>
+      <td><%= link_to "Edit", edit_diagnostic_path(diagnostic) %></td>
+      <td><%= link_to "Destroy", diagnostic, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Diagnostic", new_diagnostic_path %></p>

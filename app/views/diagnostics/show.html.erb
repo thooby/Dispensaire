@@ -1,0 +1,16 @@
+<% title "Diagnostic" %>
+
+<p>
+  <strong>Acronime:</strong>
+  <%= @diagnostic.acronime %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%= @diagnostic.description %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_diagnostic_path(@diagnostic) %> |
+  <%= link_to "Destroy", @diagnostic, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", diagnostics_path %>
+</p>

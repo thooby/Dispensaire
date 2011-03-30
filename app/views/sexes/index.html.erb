@@ -1,0 +1,17 @@
+<% title "Sexes" %>
+
+<table>
+  <tr>
+    <th>Description</th>
+  </tr>
+  <% for sex in @sexes %>
+    <tr>
+      <td><%= sex.description %></td>
+      <td><%= link_to "Show", sex %></td>
+      <td><%= link_to "Edit", edit_sex_path(sex) %></td>
+      <td><%= link_to "Destroy", sex, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Sex", new_sex_path %></p>

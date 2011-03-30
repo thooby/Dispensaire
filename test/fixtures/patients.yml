@@ -1,0 +1,23 @@
+one:
+  prenom: MyString
+  nom: MyString
+  carte_code: MyString
+  fecha: 2011-03-25
+  sex_id: 1
+  naissance: 1
+  village_id: 1
+  commune_id: 1
+  ethnie_id: 1
+  profession_id: 1
+
+two:
+  prenom: MyString
+  nom: MyString
+  carte_code: MyString
+  fecha: 2011-03-25
+  sex_id: 1
+  naissance: 1
+  village_id: 1
+  commune_id: 1
+  ethnie_id: 1
+  profession_id: 1

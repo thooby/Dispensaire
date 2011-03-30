@@ -1,0 +1,12 @@
+<%= form_for @consul_trat do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :consultation_id %><br />
+    <%= f.text_field :consultation_id %>
+  </p>
+  <p>
+    <%= f.label :traitement_id %><br />
+    <%= f.text_field :traitement_id %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

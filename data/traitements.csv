@@ -1,0 +1,62 @@
+1, 1, PARC, Paracétamol,,2011-03-24 16-34-16,2011-03-24 16-34-16
+2, 1, CORT, Corticoïde,,2011-03-24 16-34-16,2011-03-24 16-34-16
+3, 1, AUTR, Autres anti-inflammatoires / analgésiques,,2011-03-24 16-34-16,2011-03-24 16-34-16
+4, 2, PENI, Penicilline intraveineuse ou intramusculaire,,2011-03-24 16-34-16,2011-03-24 16-34-16
+5, 2, AMOX, Amoxicilline,,2011-03-24 16-34-16,2011-03-24 16-34-16
+6, 2, ACLA, Amoxicilline /Clavulanique,,2011-03-24 16-34-16,2011-03-24 16-34-16
+7, 2, ERYT, Erythromycine,,2011-03-24 16-34-16,2011-03-24 16-34-16
+8, 2, CEFT, Ceftriaxone,,2011-03-24 16-34-16,2011-03-24 16-34-16
+9, 2, CIPR, Ciprofloxacine,,2011-03-24 16-34-16,2011-03-24 16-34-16
+10, 2, CLOX, Cloxacilline,,2011-03-24 16-34-16,2011-03-24 16-34-16
+11, 2, DOXY, Doxycycline,,2011-03-24 16-34-16,2011-03-24 16-34-16
+12, 2, METR, Metronidazole,,2011-03-24 16-34-16,2011-03-24 16-34-16
+13, 2, COTR, Cotrimoxazole,,2011-03-24 16-34-16,2011-03-24 16-34-16
+14, 2, AUTR, Autres antibactériens,,2011-03-24 16-34-16,2011-03-24 16-34-16
+15, 3, AFOR, Antifongique oral,,2011-03-24 16-34-16,2011-03-24 16-34-16
+16, 3, AFVA, Antifongique vaginal,,2011-03-24 16-34-16,2011-03-24 16-34-16
+17, 3, AUTR, Autres antifongiques,,2011-03-24 16-34-16,2011-03-24 16-34-16
+18, 4, AVIR, Antiviraux,,2011-03-24 16-34-16,2011-03-24 16-34-16
+19, 5, QUIN, Quinine intraveineuse,,2011-03-24 16-34-16,2011-03-24 16-34-16
+20, 5, QUIO, Quinine via oral,,2011-03-24 16-34-16,2011-03-24 16-34-16
+21, 5, ARTH, Artemether intramusculaire,,2011-03-24 16-34-16,2011-03-24 16-34-16
+22, 5, ACAT, Thérapie Combinée de dérivés d'arthémisine,,2011-03-24 16-34-16,2011-03-24 16-34-16
+23, 5, AUTR, Autres antipaludiques,,2011-03-24 16-34-16,2011-03-24 16-34-16
+24, 6, ALBE, Albendazole,,2011-03-24 16-34-16,2011-03-24 16-34-16
+25, 6, AUTR, Autres antiparasitaires,,2011-03-24 16-34-16,2011-03-24 16-34-16
+26, 7, VITA, Vitamine A,,2011-03-24 16-34-16,2011-03-24 16-34-16
+27, 7, ACFO, Acide folique,,2011-03-24 16-34-16,2011-03-24 16-34-16
+28, 7, SEFE, Sel ferreux,,2011-03-24 16-34-16,2011-03-24 16-34-16
+29, 7, AUTR, Autres vitamines,,2011-03-24 16-34-16,2011-03-24 16-34-16
+30, 8, LAIT, Lait,,2011-03-24 16-34-16,2011-03-24 16-34-16
+31, 8, RUFT, Ruft,,2011-03-24 16-34-16,2011-03-24 16-34-16
+32, 8, AUTR, Autres suppléments nutritionnaux,,2011-03-24 16-34-16,2011-03-24 16-34-16
+33, 9, OMEP, Oméprazole ou similaire,,2011-03-24 16-34-16,2011-03-24 16-34-16
+34, 9, HIAL, Hydroxyde d'aluminium,,2011-03-24 16-34-16,2011-03-24 16-34-16
+35, 9, AUTR, Autres antiulcéreux,,2011-03-24 16-34-16,2011-03-24 16-34-16
+36, 10, AMET, Antiémétique,,2011-03-24 16-34-16,2011-03-24 16-34-16
+37, 11, ADIA, Antidiarrhéique,,2011-03-24 16-34-16,2011-03-24 16-34-16
+38, 12, SELO, Sels de réhydritation orale,,2011-03-24 16-34-16,2011-03-24 16-34-16
+39, 13, ASTS, Salbutamol,,2011-03-24 16-34-16,2011-03-24 16-34-16
+40, 13, AUTR, Autres antiasthmatiques inhalés,,2011-03-24 16-34-16,2011-03-24 16-34-16
+41, 14, ATUS, Antitusif,,2011-03-24 16-34-16,2011-03-24 16-34-16
+42, 15, AEPI, Antiépileptique,,2011-03-24 16-34-16,2011-03-24 16-34-16
+43, 16, DIAZ, Diazepam,,2011-03-24 16-34-16,2011-03-24 16-34-16
+44, 17, APSY, Antipsychotique,,2011-03-24 16-34-16,2011-03-24 16-34-16
+45, 18, AALL, Antiallergique / antianaphylactique,,2011-03-24 16-34-16,2011-03-24 16-34-16
+46, 19, INSU, Insuline,,2011-03-24 16-34-16,2011-03-24 16-34-16
+47, 20, METF, Metformin,,2011-03-24 16-34-16,2011-03-24 16-34-16
+48, 20, AUTR, Autres antidiabétiques,,2011-03-24 16-34-16,2011-03-24 16-34-16
+49, 21, DIUR, Diurétique,,2011-03-24 16-34-16,2011-03-24 16-34-16
+50, 22, CAPT, Captopril,,2011-03-24 16-34-16,2011-03-24 16-34-16
+51, 22, AUTR, Autres antihypertenseurs,,2011-03-24 16-34-16,2011-03-24 16-34-16
+52, 23, DIGO, Digoxine,,2011-03-24 16-34-16,2011-03-24 16-34-16
+53, 23, AUTR, Autres antiarythmiques,,2011-03-24 16-34-16,2011-03-24 16-34-16
+54, 24, TOPH, Traitement topique ophatalmologique et othalgique,,2011-03-24 16-34-16,2011-03-24 16-34-16
+55, 25, INFC, Traitement topique anti-infectieux,,2011-03-24 16-34-16,2011-03-24 16-34-16
+56, 26, CORT, Corticoïde topique,,2011-03-24 16-34-16,2011-03-24 16-34-16
+57, 27, SVPA, Sérum voie parenterale,,2011-03-24 16-34-16,2011-03-24 16-34-16
+58, 28, SVEN, Sérum antivenimeux,,2011-03-24 16-34-16,2011-03-24 16-34-16
+59, 29, SOIN, Antiseptique, seringue, matériel pour soin,,2011-03-24 16-34-16,2011-03-24 16-34-16
+60, 30, AAAS, Acide Acétylsalicylique,,2011-03-24 16-34-16,2011-03-24 16-34-16
+61, 30, AUTR, Autres anti-coagulants,,2011-03-24 16-34-16,2011-03-24 16-34-16
+62, 31, AAAA, Autres,,2011-03-24 16-34-16,2011-03-24 16-34-16

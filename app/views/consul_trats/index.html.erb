@@ -1,0 +1,19 @@
+<% title "Consul Trats" %>
+
+<table>
+  <tr>
+    <th>Consultation</th>
+    <th>Traitement</th>
+  </tr>
+  <% for consul_trat in @consul_trats %>
+    <tr>
+      <td><%= consul_trat.consultation_id %></td>
+      <td><%= consul_trat.traitement.description %></td>
+      <td><%= link_to "Show", consul_trat %></td>
+      <td><%= link_to "Edit", edit_consul_trat_path(consul_trat) %></td>
+      <td><%= link_to "Destroy", consul_trat, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Consul Trat", new_consul_trat_path %></p>

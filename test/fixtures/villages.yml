@@ -1,0 +1,7 @@
+one:
+  nom: MyString
+  commune_id: 1
+
+two:
+  nom: MyString
+  commune_id: 1

@@ -1,0 +1,12 @@
+<% title "Commune" %>
+
+<p>
+  <strong>Nom:</strong>
+  <%= @commune.nom %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_commune_path(@commune) %> |
+  <%= link_to "Destroy", @commune, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", communes_path %>
+</p>

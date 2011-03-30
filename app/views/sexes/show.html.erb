@@ -1,0 +1,12 @@
+<% title "Sex" %>
+
+<p>
+  <strong>Description:</strong>
+  <%= @sex.description %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_sex_path(@sex) %> |
+  <%= link_to "Destroy", @sex, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", sexes_path %>
+</p>

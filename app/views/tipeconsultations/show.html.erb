@@ -1,0 +1,12 @@
+<% title "Tipeconsultation" %>
+
+<p>
+  <strong>Tipe:</strong>
+  <%= @tipeconsultation.tipe %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_tipeconsultation_path(@tipeconsultation) %> |
+  <%= link_to "Destroy", @tipeconsultation, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", tipeconsultations_path %>
+</p>

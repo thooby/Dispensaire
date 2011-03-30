@@ -1,0 +1,46 @@
+<% title "Patients" %>
+ 
+<% for i in 0..25 %>
+    <%= link_to @alfaorig[i], { :page => @alfabeto[i] } if @alfabeto[i] %>
+<% end %>
+&nbsp;<%= link_to "Nouveau Patient", new_patient_path %> <%= will_paginate @patients %>
+<table class="limpia">
+  <tr>
+	<th>Code</th>
+    <th>Prenom</th>
+    <th>Nom</th>
+    
+    <th>Fecha</th>
+    <th>Sex</th>
+    <th>Naiss.</th>
+    <th>Village</th>
+    <th>Commune</th>
+    <th>Ethnie</th>
+    <th>Profession</th>
+  </tr>
+  <% for patient in @patients %>
+    <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+	<td><%= patient.carte_code %></td>
+      <td><%= patient.prenom %></td>
+      <td><%= patient.nom %></td>
+      
+      <td><%= patient.fecha.strftime("%d-%m-%Y") %></td>
+      <td><%= patient.sex_description[0].chr %></td>
+      <td><%= patient.naissance %></td>
+      <td><% if patient.village_id %>
+	          <%= patient.village_nom.capitalize %>
+	<% end %></td>
+	<td><% if patient.commune_id %>
+	          <%= patient.commune_nom.capitalize %>
+	<% end %></td>
+      
+      <td><%= patient.ethnie_nom.capitalize %></td>
+      <td><%= patient.profession_nom.capitalize %></td>
+      <td><%= link_to "Montrer", patient %></td>
+      <td><%= link_to "Editer", edit_patient_path(patient) %></td>
+      <td><%= link_to "Eliminer", patient, :confirm => 'Etez vous sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+<%= will_paginate @patients %>
+<p><%= link_to "Nouveau Patient", new_patient_path %></p>

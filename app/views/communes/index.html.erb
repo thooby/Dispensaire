@@ -1,0 +1,17 @@
+<% title "Communes" %>
+
+<table>
+  <tr>
+    <th>Nom</th>
+  </tr>
+  <% for commune in @communes %>
+    <tr>
+      <td><%= commune.nom %></td>
+      <td><%= link_to "Show", commune %></td>
+      <td><%= link_to "Edit", edit_commune_path(commune) %></td>
+      <td><%= link_to "Destroy", commune, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Commune", new_commune_path %></p>
