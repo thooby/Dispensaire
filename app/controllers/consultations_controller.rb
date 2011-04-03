@@ -1,24 +1,20 @@
 class ConsultationsController < ApplicationController
-  def index
-     @consultations = Consultation.paginate :page => params[:page], :order => 'fecha ASC, id'
-    
-     
-  end
-
   def show
     @consultation = Consultation.find(params[:id])
   end
 
   def new
+    @patient = Patient.find(params[:id])
     @consultation = Consultation.new
     @consultation.consul_diags.build
+    @consultation.consul_trats.build
   end
 
   def create
     
     @consultation = Consultation.new(params[:consultation]) 
     if @consultation.save
-      redirect_to consultation_path, :notice => "Successfully created consultation."
+      redirect_to consultation_path(@consultation), :notice => "Successfully created consultation."
     else
       render :action => 'new'
     end
@@ -26,21 +22,28 @@ class ConsultationsController < ApplicationController
 
   def edit
     @consultation = Consultation.find(params[:id])
+    @patient = Patient.find(@consultation.patient_id)
+    p "++++++++++++++"
   end
 
   def update
+       p "*************"
     params[:consultation][:existing_task_attributes] ||= {}
     @consultation = Consultation.find(params[:id])
+    p "*************"
     if @consultation.update_attributes(params[:consultation])
-      redirect_to @consultation, :notice  => "Successfully updated consultation et consul_diag."
+      p "?????????????"
+      redirect_to @consultation, :notice  => "Successfully updated consultation consul_diag et consul_trats."
     else
+      p "KKKKKKKKKKKKKKK"
       render :action => 'edit'
     end
   end
 
   def destroy
     @consultation = Consultation.find(params[:id])
+    @patient = Patient.find(@consultation.patient_id)
     @consultation.destroy
-    redirect_to consultations_url, :notice => "Successfully destroyed consultation."
+    render :template => "/patients/show.html.erb", :notice => "Successfully destroyed consultation."
   end
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110325223712) do
+ActiveRecord::Schema.define(:version => 20110403081958) do
 
   create_table "communes", :force => true do |t|
     t.string   "nom"
@@ -39,6 +39,14 @@ ActiveRecord::Schema.define(:version => 20110325223712) do
     t.string   "observation"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "motif"
+    t.integer  "tension_arteriale_haute"
+    t.integer  "tension_arteriale_basse"
+    t.integer  "poul"
+    t.decimal  "temperature"
+    t.integer  "respiration"
+    t.integer  "poid"
+    t.string   "analyse"
   end
 
   create_table "diagnostics", :force => true do |t|

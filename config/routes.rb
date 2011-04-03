@@ -1,7 +1,9 @@
 Dispen3::Application.routes.draw do
 
   match 'consul_diags/find' => 'consul_diags#find'
-
+  match 'consultations/:id/new' => 'consultations#new',  :as => :enlace
+  get 'consultations/:id' => 'consultations#show',  :as => :enlace2
+  match 'search' => 'search#show', :as => :search
   resources :consul_diags
 
   resources :consul_trats

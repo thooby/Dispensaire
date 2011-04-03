@@ -30,4 +30,7 @@ class Patient < ActiveRecord::Base
            scope :tranche4, lambda {where('naissance  > ? and naissance < ?',(Date.today.year-18),(Date.today.year-13))}
            scope :tranche5, lambda {where('naissance  > ? and naissance < ?',(Date.today.year-25),(Date.today.year-17))}
            scope :tranche6, lambda {where('naissance < ?',(Date.today.year-24))}
+  def self.find_code(carte_code)
+    patient = Patient.where("carte_code = ?", carte_code).first
+  end
 end

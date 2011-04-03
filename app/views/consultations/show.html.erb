@@ -9,28 +9,55 @@
   <strong><%= @consultation.patient_carte_code %></strong> <%= @consultation.patient_prenom %> <%= @consultation.patient_nom %><br /><strong>Residence: </strong><%= @consultation.patient_village_nom.capitalize %>, 
 <% if @consultation.patient.commune_id %><%= @consultation.patient.commune_nom.capitalize %><% end %><br /><strong>Profession:</strong> <%= @consultation.patient_profession_nom.capitalize %><br/> <strong>Ethnie:</strong> <%= @consultation.patient_ethnie_nom.capitalize %>
 </div>
-<div id=datos_consulta>
+<div id="datos_consulta">
+<h3>Consultations</h3>
 <p>
-  <strong>Tipe de consultation:</strong>
-  <%= @consultation.tipeconsultation.tipe %>
-</p>
-<p><strong>Diagnostics:</strong><br />
-	<% @consultation.consul_diags.each do |h| %>
-	      <%= h.diagnostic.description %><br />
-	      <% end %>
-</p>
-<p><strong>Traitements:</strong><br />
-<% @consultation.consul_trats.each do |h| %>
-	      <%= h.traitement.description %><br />
-	      <% end %>
-</p>
-<p>
-  <strong>Observations:</strong>
-  <%= @consultation.observation %>
-</p>
+
+   <p>
+   <strong class="rouge">
+   <%=  @consultation.fecha %></strong><br/>
+   <% if @consultation.motif %> 
+     <strong>Motif ou symptomes:</strong> <%= @consultation.motif %><br />
+   <% end %>
+   <% if @consultation.tension_arteriale_haute %>   
+      <strong>TA:</strong> <%= @consultation.tension_arteriale_haute %>/<%= @consultation.tension_arteriale_basse %> mm Hg
+   <% end %>
+   <% if @consultation.poul %>
+      <strong>Pouls:</strong> <%= @consultation.poul %> p/m
+   <% end %>
+   <% if @consultation.temperature %>
+      <strong>Temp:</strong> <%= @consultation.temperature %> C
+   <% end %>     
+   <% if @consultation.respiration %>
+     <strong>Respiration:</strong> <%= @consultation.respiration %> R/m
+   <% end %> 
+   <% if @consultation.poid %>
+     <strong>Poids:</strong> <%= @consultation.poid %> Kg
+   <% end %>
+
+   <%  if (@consultation.motif or @consultation.tension_arteriale_haute or  @consultation.poul or @consultation.temperature or @consultation.respiration or @consultation.poid) then %>
+  
+      <br />
+	<% end %>
+   <strong>Diagnostic:</strong><br /> <% @consultation.consul_diags.each do |h| %>
+      <%= h.diagnostic.description %><br />
+      <% end %>
+   <strong>Traitement:</strong><br />
+   <% @consultation.consul_trats.each do |h| %>
+      <%= h.traitement.description %><br />
+      <% end %>
+   <% if @consultation.observation %> 
+    <strong>Observations:</strong> <%= @consultation.observation %><br />
+     <% end %>
+       <% if @consultation.analyse %> 
+    <strong>Résultat analyses:</strong> <%= @consultation.analyse %>
+     <% end %>
+     </p>
+
+
 </div>
 <p>
-  <%= link_to "Edit", edit_consultation_path(@consultation) %> |
-  <%= link_to "Destroy", @consultation, :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", consultations_path %>
+  <%= link_to "Editer consultation", edit_consultation_path(@consultation) %> |
+  <%= link_to "Eliminer consultation", @consultation, :confirm => 'Etez vous sure?', :method => :delete %> |
+  <%= link_to "Liste generale ", patients_path %> |
 </p>

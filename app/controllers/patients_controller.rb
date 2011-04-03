@@ -6,14 +6,13 @@ class PatientsController < ApplicationController
     @orden.collect!{|x| x.nom[0].chr.upcase if x.nom[0]}
     @alfabeto.collect!{|x|  (@orden.index(x).to_i/30)+1 if @orden.index(x)}
     @tipoorden = "nom"
-    @cadena = ""
     @patients = Patient.paginate :page => params[:page], :order => 'nom ASC, carte_code'
   end
 
   def show
     @patient = Patient.find(params[:id])
   end
-
+  
   def new
     @patient = Patient.new
   end
@@ -32,6 +31,7 @@ class PatientsController < ApplicationController
   end
 
   def update
+    p "xxxxxxxxxxxxxxx"
     @patient = Patient.find(params[:id])
     if @patient.update_attributes(params[:patient])
       redirect_to @patient, :notice  => "Successfully updated patient."

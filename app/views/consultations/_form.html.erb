@@ -1,24 +1,47 @@
-
 <%= form_for @consultation do |f| -%>
-<%= f.error_messages %>
-
+  <%= f.error_messages %>
+  <div id="identification">
+    <strong><%= pat_carte_code %></strong> <%= pat_prenom %> <%= pat_nom %> <%= pat_id %>
+  </div>
+  <%= f.hidden_field :patient_id, :value => pat_id %> 
   <p>
     Date: <%= f.date_select :fecha %>
   </p>
-  <p>
-    Patient: <%= f.text_field :patient_id %>
+  <p> Tipe de consultation: 
+	<%= f.collection_select(:tipeconsultation_id,Tipeconsultation.all,:id,:tipe ) %>
+    
   </p>
-  <p>
-    Tipe de consultation:  <%= f.text_field :tipeconsultation_id %>
-  </p>
+  <p>Motif ou symptomes:
+	  <%= f.text_area :motif, :size => "40x3" %>
+	</p>
+	<p>
+		Tension arteriale: <%= f.text_field :tension_arteriale_haute, options={:size =>'3'} %>/<%= f.text_field :tension_arteriale_basse, options = {:size =>'3'} %> 
+		Pouls: <%= f.text_field :poul, options={:size =>'3'} %> 
+		Temperature: <%= f.text_field :temperature, options={:size =>'4'} %> 
+		Respiration: <%= f.text_field :respiration, options={:size =>'3'} %> 
+		Poids: <%= f.text_field :poid, options={:size =>'3'} %></p>
+	<p>
   <div id="consul_diags">
-	<%= render :partial => 'consul_diag', :collection => @consultation.consul_diags %>
+    <% f.fields_for :consul_diags do |builder| %>
+      <%= render "consul_diag", :f => builder %>
+    <% end %>
+    <p>
+      <%= add_consul_diag_link "Ajouter un diagnostique", f %>
+    </p>    
   </div>
-  <p>
-	<%= add_consul_diag_link "Ajouter un diagnostique" %>
-  </p>
+  <div id="consul_diags">
+    <% f.fields_for :consul_trats do |builder| %>
+      <%= render "consul_trat", :f => builder %>
+    <% end %>
+    <p>
+      <%= add_consul_trat_link "Ajouter un traitement", f %>
+    </p>
+  </div>
   <p>
     Observations: <%= f.text_field :observation %>
   </p>
+<p>Résultat analyses:
+	  <%= f.text_area :analyse, :size => "40x3" %>
+	</p>
   <p><%= f.submit "Ajouter consultation" %></p>
 <% end %>

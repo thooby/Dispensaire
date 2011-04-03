@@ -87,6 +87,7 @@ a {
 #datos_consulta {
 		background-color: #E9E9D9;
 }
+.rouge {color:red;}
 #header {
         background-image: url("images/rails.png");
         background-repeat: no-repeat;

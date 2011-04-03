@@ -1,5 +1,5 @@
-
-<div id="datos_person">
+<%= debug @patient %>
+<div style="float:left; margin-right:30px;">
 	<% title "Patient" %><p>
   <strong>Carte Code:</strong>
   <%= @patient.carte_code %>
@@ -39,37 +39,10 @@
   <strong>Profession:</strong>
   <%= @patient.profession_nom %>
 </p>
-</div>
-<div id="datos_consulta">
 <h3>Consultations</h3>
 <p>
 <% @patient.consultations.each do |k| %>
-   <p>
-   <strong class="rouge">
-   <%= link_to k.fecha, enlace2_url(:id =>  k.id)%></strong><br/>
-   <% if k.motif %> 
-     <strong>Motif ou symptomes:</strong> <%= k.motif %><br />
-   <% end %>
-   <% if k.tension_arteriale_haute %>   
-      <strong>TA:</strong> <%= k.tension_arteriale_haute %>/<%= k.tension_arteriale_basse %> mm Hg
-   <% end %>
-   <% if k.poul %>
-      <strong>Pouls:</strong> <%= k.poul %> p/m
-   <% end %>
-   <% if k.temperature %>
-      <strong>Temp:</strong> <%= k.temperature %> C
-   <% end %>     
-   <% if k.respiration %>
-     <strong>Respiration:</strong> <%= k.respiration %> R/m
-   <% end %> 
-   <% if k.poid %>
-     <strong>Poids:</strong> <%= k.poid %> Kg
-   <% end %>
-
-   <%  if (k.motif or k.tension_arteriale_haute or  k.poul or k.temperature or k.respiration or k.poid) then %>
-  
-      <br />
-	<% end %>
+   <strong><%= k.fecha %></strong><br/>
    <strong>Diagnostic:</strong> <% k.consul_diags.each do |h| %>
       <%= h.diagnostic.description %><br />
       <% end %>
@@ -77,18 +50,25 @@
    <% k.consul_trats.each do |h| %>
       <%= h.traitement.description %><br />
       <% end %>
-   <% if k.observation %> 
-    <strong>Observations:</strong> <%= k.observation %><br />
-     <% end %>
-       <% if k.analyse %> 
-    <strong>Résultat analyses:</strong> <%= k.analyse %>
-     <% end %>
-     </p>
+    <strong>Observations:</strong> <%= k.observation %>
+    <br /><br />
 <% end %>
 </p>
 </div>
-
+<div>
+	<h2>Nouvelles indications</h2>
+	<h3>Syntomes:</h3>
+	<h1></h1><h1></h1>
+	<h3>Diagnostics:</h3>
+	<h1></h1><h1></h1>
+	<h3>Traitements:</h3>
+	<h1></h1><h1></h1>
+	<h3>Observations:</h3>
+	</div>
+	<div style = "clear:both;">
+<p>
   <%= link_to "Editer", edit_patient_path(@patient) %> |
+  <%= link_to "Eliminer", @patient, :confirm => 'Are you sure?', :method => :delete %> |
   <%= link_to "Liste generale ", patients_path %> |
   <%= link_to "Nouvelle Consultation", enlace_url(:id =>  @patient.id) %>
 </p>

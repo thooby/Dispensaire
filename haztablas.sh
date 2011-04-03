@@ -12,4 +12,4 @@ rails  generate nifty:scaffold  Diagnostic acronime:string description:string
 rails  generate nifty:scaffold  Consul_trat consultation_id:integer traitement_id:integer 
 rails  generate nifty:scaffold  Consul_diag consultation_id:integer diagnostic_id:integer
 rails  generate nifty:layout
-
+rails generate migration AddConsulItemsToConsultations motif:string tension_arteriale_haute:integer tension_arteriale_basse:integer pouls:integer temperature:decimal respiration:integer poids:integer analyses:string
