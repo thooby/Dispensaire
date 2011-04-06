@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110403081958) do
+ActiveRecord::Schema.define(:version => 20110404082140) do
 
   create_table "communes", :force => true do |t|
     t.string   "nom"
@@ -81,6 +81,8 @@ ActiveRecord::Schema.define(:version => 20110403081958) do
     t.integer  "profession_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "mois"
+    t.integer  "jour"
   end
 
   create_table "professions", :force => true do |t|

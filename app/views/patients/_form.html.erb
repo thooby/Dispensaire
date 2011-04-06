@@ -12,7 +12,7 @@
 
   </p>
   <p>Date d'inscription
-    <%= f.date_select :fecha %>
+   <%= f.date_select :fecha %>
   </p>
   <p>    <%= f.label :sex_id %>
 	<%= @sexes=Sex.find(:all,:order=>"description")
@@ -20,8 +20,8 @@
 &nbsp;&nbsp;
    
   
-    <%= f.label :naissance %>
-    <%= f.text_field :naissance , :size => '4'%>
+    Date de naissance: 
+    <%= f.text_field :jour, :size => '1' %> /<%= f.text_field :mois , :size => '1' %>/<%= f.text_field :naissance , :size => '3'%>
 &nbsp;&nbsp;
     <%= f.label :village_id %>
 	<%= @villages=Village.find(:all,:order=>"nom")
@@ -30,9 +30,7 @@
  &nbsp;&nbsp;
     <%= f.label :commune_id %>
 	<%= @communes=Commune.find(:all,:order=>"nom")
-	    f.collection_select(:commune_id,@communes,:id,:nom, {:selected=>4} ) %>
-
-  
+	    f.collection_select(:commune_id,@communes,:id,:nom, {:selected=>4} ) %> 
   </p>
   <p>
     <%= f.label :ethnie_id %>
@@ -42,7 +40,6 @@
     <%= f.label :profession_id %>
 	<%= @professions=Profession.find(:all,:order=>"nom")
 	    f.collection_select(:profession_id,@professions,:id,:nom) %>
-  
   </p>
   <p><%= f.submit "Ajouter patient" %></p>
 <% end %>
