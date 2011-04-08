@@ -1,6 +1,5 @@
 <div class="consul_diag">
-  <p>Diagnostique:
-	
+  <p>Diagnostique:	
     <%= f.collection_select(:diagnostic_id,Diagnostic.order("description"),:id,:description ) %>
     <%= link_to_function "remove", "$(this).up('.consul_diag').remove()" %>
   </p>

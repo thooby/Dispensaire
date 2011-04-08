@@ -1,5 +1,8 @@
 <% title "Nouvelle Consultation" %>
 
-  <%= render :partial => 'form', :locals => {:pat_id => @patient.id, :pat_carte_code => @patient.carte_code, :pat_prenom => @patient.prenom, :pat_nom => @patient.nom} %>
+  <%= render :partial => 'form', :locals => {:pat_id => @patient.id, 
+	                                         :pat_carte_code => @patient.carte_code, 
+	                                         :pat_prenom => @patient.prenom, 
+	                                         :pat_nom => @patient.nom } %>
 
 <p><%= link_to "En arriere vers la liste", consultations_path %></p>

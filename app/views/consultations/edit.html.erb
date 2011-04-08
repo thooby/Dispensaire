@@ -1,6 +1,9 @@
 <% title "Editer la consultation" %>
 
-<%= render :partial => 'form', :locals => {:pat_id => @patient.id, :pat_carte_code => @patient.carte_code, :pat_prenom => @patient.prenom, :pat_nom => @patient.nom} %>
+<%= render :partial => 'form', :locals => {:pat_id => @patient.id, 
+	                                       :pat_carte_code => @patient.carte_code, 
+	                                       :pat_prenom => @patient.prenom, 
+	                                       :pat_nom => @patient.nom} %>
 
 <p>
   <%= link_to "Montrer", @consultation %> |

@@ -1,6 +1,6 @@
 class TraitementsController < ApplicationController
   def index
-    @traitements = Traitement.all
+    @traitements = Traitement.order('description')
   end
 
   def show

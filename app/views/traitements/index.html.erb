@@ -8,7 +8,7 @@
   </tr>
   <% for traitement in @traitements %>
     <tr>
-      <td><%= traitement.groupe_traitement_id %></td>
+      <td><%= traitement.groupe_traitement.description %></td>
       <td><%= traitement.acronime %></td>
       <td><%= traitement.description %></td>
       <td><%= link_to "Show", traitement %></td>

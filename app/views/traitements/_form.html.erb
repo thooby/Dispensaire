@@ -2,7 +2,8 @@
   <%= f.error_messages %>
   <p>
     <%= f.label :groupe_traitement_id %><br />
-    <%= f.text_field :groupe_traitement_id %>
+   
+    <%= f.collection_select(:groupe_traitement_id,GroupeTraitement.order("description"),:id,:description ) %>
   </p>
   <p>
     <%= f.label :acronime %><br />

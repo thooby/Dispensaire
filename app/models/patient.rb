@@ -8,7 +8,7 @@ class Patient < ActiveRecord::Base
   belongs_to  :commune 
   belongs_to  :profession 
   belongs_to  :ethnie
-  has_many :consultations
+  has_many :consultations  
   delegate :description,
            :to => :sex,
            :prefix => true
