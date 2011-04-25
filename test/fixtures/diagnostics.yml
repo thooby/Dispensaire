@@ -1,7 +1,9 @@
 one:
+  id: 1    
   acronime: MyString
   description: MyString
 
 two:
+  id: 2
   acronime: MyString
   description: MyString

@@ -1,7 +1,9 @@
 one:
+  id: 1
   nom: MyString
   commune_id: 1
 
 two:
+  id: 2
   nom: MyString
   commune_id: 1

@@ -25,7 +25,7 @@ class EthniesControllerTest < ActionController::TestCase
   def test_create_valid
     Ethnie.any_instance.stubs(:valid?).returns(true)
     post :create
-    assert_redirected_to ethnie_url(assigns(:ethnie))
+    assert_redirected_to ethny_url(assigns(:ethnie))
   end
 
   def test_edit
@@ -42,7 +42,7 @@ class EthniesControllerTest < ActionController::TestCase
   def test_update_valid
     Ethnie.any_instance.stubs(:valid?).returns(true)
     put :update, :id => Ethnie.first
-    assert_redirected_to ethnie_url(assigns(:ethnie))
+    assert_redirected_to ethny_url(assigns(:ethnie))
   end
 
   def test_destroy

@@ -31,7 +31,6 @@ class PatientsController < ApplicationController
   end
 
   def update
-    p "xxxxxxxxxxxxxxx"
     @patient = Patient.find(params[:id])
     if @patient.update_attributes(params[:patient])
       redirect_to @patient, :notice  => "Successfully updated patient."

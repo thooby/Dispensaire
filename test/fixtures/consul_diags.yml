@@ -1,7 +1,9 @@
 one:
+  id: 1
   consultation_id: 1
   diagnostic_id: 1
 
 two:
+  id: 2
   consultation_id: 1
   diagnostic_id: 1

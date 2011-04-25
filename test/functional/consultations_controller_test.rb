@@ -1,10 +1,6 @@
 require 'test_helper'
 
 class ConsultationsControllerTest < ActionController::TestCase
-  def test_index
-    get :index
-    assert_template 'index'
-  end
 
   def test_show
     get :show, :id => Consultation.first
@@ -12,13 +8,13 @@ class ConsultationsControllerTest < ActionController::TestCase
   end
 
   def test_new
-    get :new
+    get :new, :id => 1
     assert_template 'new'
   end
 
   def test_create_invalid
     Consultation.any_instance.stubs(:valid?).returns(false)
-    post :create
+    post :create, :consultation => {:patient_id => 1}
     assert_template 'new'
   end
 
@@ -35,20 +31,20 @@ class ConsultationsControllerTest < ActionController::TestCase
 
   def test_update_invalid
     Consultation.any_instance.stubs(:valid?).returns(false)
-    put :update, :id => Consultation.first
+    put :update, :id => Consultation.first, :consultation => 1
     assert_template 'edit'
   end
 
   def test_update_valid
     Consultation.any_instance.stubs(:valid?).returns(true)
-    put :update, :id => Consultation.first
+    put :update, :id => Consultation.first, :consultation => 1
     assert_redirected_to consultation_url(assigns(:consultation))
   end
 
   def test_destroy
     consultation = Consultation.first
     delete :destroy, :id => consultation
-    assert_redirected_to consultations_url
+    assert_template "patients/show"
     assert !Consultation.exists?(consultation.id)
   end
 end

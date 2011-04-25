@@ -1,9 +1,11 @@
 one:
+  id: 1
   groupe_traitement_id: 1
   acronime: MyString
-  description: MyString
+  description: MyString1
 
 two:
+  id: 2
   groupe_traitement_id: 1
   acronime: MyString
-  description: MyString
+  description: MyString2

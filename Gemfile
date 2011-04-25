@@ -36,3 +36,4 @@ group :test do
 end
 gem "mocha", :group => :test
 gem "will_paginate" , "~> 3.0.pre2"
+gem "ZenTest"

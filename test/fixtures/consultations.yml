@@ -1,10 +1,12 @@
 one:
+  id:  1
   fecha: 2011-03-25
   patient_id: 1
   tipeconsultation_id: 1
   observation: MyString
 
 two:
+  id: 2
   fecha: 2011-03-25
   patient_id: 1
   tipeconsultation_id: 1

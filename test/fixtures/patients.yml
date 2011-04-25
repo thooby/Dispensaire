@@ -1,22 +1,24 @@
 one:
-  prenom: MyString
-  nom: MyString
-  carte_code: MyString
+  id: 1
+  prenom: Dauda
+  nom: Dembele
+  carte_code: 12A
   fecha: 2011-03-25
   sex_id: 1
-  naissance: 1
+  naissance: 1980
   village_id: 1
   commune_id: 1
   ethnie_id: 1
   profession_id: 1
 
 two:
-  prenom: MyString
-  nom: MyString
-  carte_code: MyString
+  id: 2
+  prenom: Maria
+  nom: Sangare
+  carte_code: 13B
   fecha: 2011-03-25
-  sex_id: 1
-  naissance: 1
+  sex_id: 2
+  naissance: 1980
   village_id: 1
   commune_id: 1
   ethnie_id: 1

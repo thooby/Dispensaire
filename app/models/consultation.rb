@@ -41,7 +41,7 @@ class Consultation < ActiveRecord::Base
   end
   def save_consul_diags
     consul_diags.each do |consul_diag|
-      consul_diag.save(false) 
+      consul_diag.save(:validate => false) 
     end
   end
   
@@ -64,7 +64,7 @@ class Consultation < ActiveRecord::Base
   end
   def save_consul_trats
     consul_trats.each do |consul_trat|
-      consul_trat.save(false) 
+      consul_trat.save(:validate => false) 
     end
   end
 end

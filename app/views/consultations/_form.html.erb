@@ -22,7 +22,7 @@
 		Poids: <%= f.text_field :poid, options={:size =>'3'} %></p>
 	<p>
   <div id="consul_diags">
-    <% f.fields_for :consul_diags do |builder| %>
+    <%= f.fields_for :consul_diags do |builder| %>
       <%= render "consul_diag", :f => builder %>
     <% end %>
     <p>
@@ -30,7 +30,7 @@
     </p>    
   </div>
   <div id="consul_diags">
-    <% f.fields_for :consul_trats do |builder| %>
+    <%= f.fields_for :consul_trats do |builder| %>
       <%= render "consul_trat", :f => builder %>
     <% end %>
     <p>

@@ -1,5 +1,5 @@
 <div id="search", style="float:right;">
-  <%	form_tag(search_path  :method => 'get') do %>
+  <%=	form_tag(search_path  :method => 'get') do %>
   <%= label_tag(:q, "Cherchez pour le code: ") %>
   <%= search_field_tag(:q, value = nil, options = {:size => '6'})  %>
  <%= submit_tag("Cherchez") %>
