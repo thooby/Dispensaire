@@ -1,0 +1,20 @@
+
+	<h2>Registre de Patients</h2>
+	<ul id="home">
+		<li><a href="/patients">Liste generale de patients</a></li>
+		<li><a href="/patients/new">Nouveau patient</a></li>
+		<li><%=	form_tag(search_path  :method => 'get') do %>
+		  <%= label_tag(:q, "Cherchez un patient par le code:") %>
+		  <%= search_field_tag(:q, value = nil, options = {:size => '6'})  %>
+		 <%= submit_tag("Cherchez") %>
+		  <% end %>
+		</li>
+		<li> <a href="/consul_diags/find">Statistiques</a></li>
+		<h3>Administration</h3>
+		<li><a href="/communes">Communes</a></li>
+		<li><a href="/ethnies">Ethnies</a></li>
+		<li><a href="/professions">Professions</a></li>
+		<li><a href="/villages">Villages</a></li>
+		<li><a href="/diagnostics">Diagnostics</a></li>
+		<li><a href="/traitements">Traitements</a></li>
+		</ul>

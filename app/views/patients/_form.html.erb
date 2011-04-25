@@ -12,7 +12,7 @@
 
   </p>
   <p>Date d'inscription
-   <%= f.date_select :fecha %>
+   <%= f.date_select :fecha, :start_year => 1995 %>
   </p>
   <p>    <%= f.label :sex_id %>
 	<%= @sexes=Sex.find(:all,:order=>"description")
