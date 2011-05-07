@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.3'
+gem 'rails', '3.0.7'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -26,14 +26,21 @@ gem 'nokogiri'
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:
-# group :development, :test do
-#   gem 'webrat'
-# end
+  group :development, :test do
+    gem 'webrat'
+  end
 gem "nifty-generators", :group => :development
 group :test do
   gem 'rspec'
+  gem 'rspec-rails'
   gem 'faker'
+  gem "shoulda", :git => "git://github.com/bmaddy/shoulda.git"
+  gem 'mocha'
+  gem 'cucumber'
+  gem 'cucumber-rails'
+
 end
-gem "mocha", :group => :test
 gem "will_paginate" , "~> 3.0.pre2"
 gem "ZenTest"
+gem "hoe"
+gem "redgreen"

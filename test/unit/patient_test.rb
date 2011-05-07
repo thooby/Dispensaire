@@ -174,4 +174,10 @@ class PatientTest < ActiveSupport::TestCase
   test "find_code_find_codes" do
     assert_equal(Patient.find_code("12A"),patients(:one))
   end
+  should_belong_to :sex  
+  should_belong_to :village
+  should_belong_to :commune
+  should_belong_to :ethnie
+  should_belong_to :profession
+  should_have_many :consultations
 end
