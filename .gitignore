@@ -1,2 +1,3 @@
 *.log
 rdoc/
+*sqlite3

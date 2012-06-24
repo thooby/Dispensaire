@@ -4,31 +4,21 @@ Dispen3::Application.routes.draw do
   match 'consultations/:id/new' => 'consultations#new',  :as => :enlace
   get 'consultations/:id' => 'consultations#show',  :as => :enlace2
   match 'search' => 'search#show', :as => :search
+
   resources :consul_diags
-
   resources :consul_trats
-
   resources :diagnostics
-
   resources :groupe_traitements
-
   resources :traitements
-
   resources :tipeconsultations
-
   resources :communes
-
   resources :professions
-
   resources :ethnies
-
   resources :villages
-
   resources :sexes
-
   resources :consultations
-
   resources :patients
+  match 'patients/update_village_select/:id', :controller=>'patients', :action => 'update_village_select'
   
 
   # The priority is based upon order of creation:

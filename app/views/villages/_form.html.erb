@@ -1,12 +1,25 @@
-<%= form_for @village do |f| %>
-  <%= f.error_messages %>
-  <p>
+<%= form_for(@village) do |f| %>
+  <% if @village.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@village.errors.count, "error") %> prohibited this village from being saved:</h2>
+
+      <ul>
+      <% @village.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
     <%= f.label :nom %><br />
     <%= f.text_field :nom %>
-  </p>
-  <p>
+  </div>
+  <div class="field">
     <%= f.label :commune_id %><br />
     <%= f.text_field :commune_id %>
-  </p>
-  <p><%= f.submit %></p>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
 <% end %>
