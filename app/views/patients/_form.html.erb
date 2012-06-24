@@ -25,10 +25,8 @@
   </p>
   <p>    <%= f.label :sex_id %>
 	<%= @sexes=Sex.find(:all,:order=>"description")
-	    f.collection_select(:sex_id,@sexes,:id,:description, {:selected=>1}) %>
+	    f.collection_select(:sex_id, @sexes, :id, :description, :include_blank => true) %>
 &nbsp;&nbsp;
-   
-  
     Date de naissance: 
     <%= f.text_field :jour, :size => '1' %> /<%= f.text_field :mois , :size => '1' %>/<%= f.text_field :naissance , :size => '3'%>
 &nbsp;&nbsp;
@@ -43,11 +41,11 @@
   <p>
     <%= f.label :ethnie_id %>
 	<%= @ethnies=Ethnie.find(:all,:order=>"nom")
-	    f.collection_select(:ethnie_id,@ethnies,:id,:nom) %>
+	    f.collection_select(:ethnie_id,@ethnies,:id,:nom, :include_blank => true) %>
 &nbsp;&nbsp;
     <%= f.label :profession_id %>
 	<%= @professions=Profession.find(:all,:order=>"nom")
-	    f.collection_select(:profession_id,@professions,:id,:nom) %>
+	    f.collection_select(:profession_id,@professions,:id,:nom, :include_blank => true) %>
   </p>
   <p><%= f.submit "Ajouter patient" %></p>
 <% end %>

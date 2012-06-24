@@ -1,6 +1,6 @@
 <div class="consul_trat">
   <p>Traitement:
-	<%=  f.collection_select(:traitement_id, Traitement.order("description"),:id,:description ) %>
+	<%=  f.collection_select(:traitement_id, Traitement.order("description"),:id,:description, :include_blank => true ) %>
     <%= link_to_function "remove", "$(this).up('.consul_trat').remove()" %>
   </p>
 </div>
