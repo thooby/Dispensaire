@@ -2,7 +2,9 @@ require 'test_helper'
 
 class TipeconsultationTest < ActiveSupport::TestCase
   def test_should_be_valid
-    assert Tipeconsultation.new.valid?
+    assert Tipeconsultation.new(:tipe => "NC").valid?
   end
-  should_have_many :consultations  
+  should have_many :consultations  
+  should validate_presence_of :tipe
+  
 end
