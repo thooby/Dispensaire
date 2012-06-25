@@ -103,3 +103,4 @@ a {
         font-weight: normal;
         font-size: 16px;
       }
+div#user_nav { float: right; font-size: 0.9em; }

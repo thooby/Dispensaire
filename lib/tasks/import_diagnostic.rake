@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require File.join(Rails.root.to_s,  'config',  'environment')
 require 'csv'
 namespace 'dispen' do
