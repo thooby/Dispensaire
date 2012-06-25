@@ -1,19 +1,9 @@
 # -*- encoding : utf-8 -*-
 Dispen3::Application.routes.draw do
-<<<<<<< HEAD
   resources :users
   resources :user_sessions
   match 'login' => "user_sessions#new",      :as => :login
   match 'logout' => "user_sessions#destroy", :as => :logout
-=======
-
-  get "users/new"
-
-  get "users/edit"
-
-  resources :users
-
->>>>>>> master
   match 'consul_diags/find' => 'consul_diags#find'
   match 'consultations/:id/new' => 'consultations#new',  :as => :enlace
   get 'consultations/:id' => 'consultations#show',  :as => :enlace2
