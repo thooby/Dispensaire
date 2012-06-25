@@ -37,7 +37,7 @@ class PatientsController < ApplicationController
     @patient = Patient.new(params[:patient])
     respond_to do |format|
      if @patient.save
-        format.html { redirect_to(@patient, :notice => 'Le patient a été  crée.') }
+        format.html { redirect_to(@patient, :notice => 'Le patient a ete  cree.') }
         format.xml  { render :xml => @patient, :status => :created, :location => @patient }
       else
         format.html { render :action => "new" }
