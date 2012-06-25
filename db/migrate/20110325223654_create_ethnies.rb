@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class CreateEthnies < ActiveRecord::Migration
   def self.up
     create_table :ethnies do |t|

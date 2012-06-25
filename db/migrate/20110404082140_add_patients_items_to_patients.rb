@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class AddPatientsItemsToPatients < ActiveRecord::Migration
   def self.up
     add_column :patients, :mois, :integer

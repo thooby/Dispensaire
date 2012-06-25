@@ -1,4 +1,11 @@
+# -*- encoding : utf-8 -*-
 Dispen3::Application.routes.draw do
+
+  get "users/new"
+
+  get "users/edit"
+
+  resources :users
 
   match 'consul_diags/find' => 'consul_diags#find'
   match 'consultations/:id/new' => 'consultations#new',  :as => :enlace
