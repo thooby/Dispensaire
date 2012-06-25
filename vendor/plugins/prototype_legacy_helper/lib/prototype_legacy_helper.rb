@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module PrototypeHelper
   # Creates a button with an onclick event which calls a remote action
   # via XMLHttpRequest

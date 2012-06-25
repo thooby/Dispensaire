@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ConsultationsHelper
   def add_consul_diag_link(name, f)
     new_object = f.object.class.reflect_on_association(:consul_diags).klass.new

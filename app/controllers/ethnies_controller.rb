@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class EthniesController < ApplicationController
   def index
     @ethnies = Ethnie.all

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class DiagnosticsController < ApplicationController
   def index
     @diagnostics = Diagnostic.all

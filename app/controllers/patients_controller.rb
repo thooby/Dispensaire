@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class PatientsController < ApplicationController
   def index
     @alfaorig = Array.new(26) {|i| (i+65).chr}

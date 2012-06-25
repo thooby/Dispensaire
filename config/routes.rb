@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 Dispen3::Application.routes.draw do
 
   match 'consul_diags/find' => 'consul_diags#find'

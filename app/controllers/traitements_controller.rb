@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class TraitementsController < ApplicationController
   def index
     @traitements = Traitement.order('description')

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class ConsulDiagsController < ApplicationController
   def index
     @consul_diags = ConsulDiag.all
