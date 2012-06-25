@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 # This model initially had no columns defined.  If you add columns to the
@@ -9,3 +10,14 @@ one: {}
 #
 two: {}
 #  column: value
+=======
+one:
+  username: MyString
+  email: MyString
+  password: MyString
+
+two:
+  username: MyString
+  email: MyString
+  password: MyString
+>>>>>>> master
