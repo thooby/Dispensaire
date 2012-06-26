@@ -10,7 +10,7 @@ jQuery(function($) {
 })
 </script>
 
-    <% if !villages.blank? %>
-      Villages <%= select "patient", :village_id, villages.collect{ |s| [s.nom,s.id]} %>
-    <% end %>
+<% if !villages.blank? %>
+  Villages <%= select "patient", :village_id, villages.collect{ |s| [s.nom,s.id]}, :include_blank => true %>
+<% end %>
 

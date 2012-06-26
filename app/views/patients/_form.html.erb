@@ -1,42 +1,36 @@
-<%= form_for  @patient, :as => :patient, :remote => true do |f| %>
-  <% if @patient.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@patient.errors.count, "error") %> prohibited this patient from being saved:</h2>
-      <ul>
-        <% @patient.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+<%= form_for  @patient, :as => :patient do |f| %>
+  <%= f.error_messages %>
   <p>
-	<%= f.label :carte_code %>
+	  <%= f.label :carte_code %>
     <%= f.text_field :carte_code, :size => '5' %>&nbsp;&nbsp;
     <%= f.label :prenom %>
     <%= f.text_field :prenom %>&nbsp;&nbsp;
  
     <%= f.label :nom %>
     <%= f.text_field :nom %><br />
-  
-
   </p>
   <p>Date d'inscription
    <%= f.date_select :fecha, :start_year => 1995 %>
   </p>
-  <p>    <%= f.label :sex_id %>
-	<%= @sexes=Sex.find(:all,:order=>"description")
+  <p> 
+    <%= f.label :sex_id %>
+	  <%= @sexes=Sex.find(:all,:order=>"description")
 	    f.collection_select(:sex_id, @sexes, :id, :description, :include_blank => true) %>
 &nbsp;&nbsp;
+  </p>
+  <p>
     Date de naissance: 
     <%= f.text_field :jour, :size => '1' %> /<%= f.text_field :mois , :size => '1' %>/<%= f.text_field :naissance , :size => '3'%>
 &nbsp;&nbsp;
-<div class="field">
-  <%= f.label :commune_id %>
-  <%= f.select :commune_id, Commune.find(:all, :order=>:nom).collect{ |c| [c.nom,c.id]}, :required=>true %>
-</div>
-<div class="field", id="addressVillages">
-  <%= render :partial => 'villages',  :locals => { :f => f }%>
-</div>
+  </p>
+  <p>
+    <div class="field">
+      <%= f.label :commune_id %>
+      <%= f.select :commune_id, Commune.find(:all, :order=>:nom).collect{ |c| [c.nom,c.id]}, :required => true, :include_blank => true %>
+    </div>
+    <div class="field", id="addressVillages">
+      <%= render :partial => 'villages',  :locals => { :f => f }%>
+    </div>
   </p>
   <p>
     <%= f.label :ethnie_id %>
