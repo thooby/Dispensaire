@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class CreateConsulDiags < ActiveRecord::Migration
   def self.up
     create_table :consul_diags do |t|

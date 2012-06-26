@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class VillagesController < ApplicationController
   def index
     @villages = Village.all

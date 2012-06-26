@@ -3,7 +3,7 @@
   <p>
     <%= f.label :groupe_traitement_id %><br />
    
-    <%= f.collection_select(:groupe_traitement_id,GroupeTraitement.order("description"),:id,:description ) %>
+    <%= f.collection_select(:groupe_traitement_id,GroupeTraitement.order("description"),:id,:description, :include_blank => true ) %>
   </p>
   <p>
     <%= f.label :acronime %><br />

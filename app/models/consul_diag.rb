@@ -1,7 +1,10 @@
+# -*- encoding : utf-8 -*-
 class ConsulDiag < ActiveRecord::Base
   attr_accessible :consultation_id, :diagnostic_id
   belongs_to :diagnostic
   belongs_to :consultation
+  validates  :diagnostic_id, :consultation_id, :presence => true 
+  
   def self.tranch(t,date_report)
     lev = 0
     trozos =[0,12,60,120,240,360]

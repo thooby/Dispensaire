@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class GroupeTraitementsController < ApplicationController
   def index
     @groupe_traitements = GroupeTraitement.all

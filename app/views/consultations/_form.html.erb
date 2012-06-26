@@ -8,7 +8,7 @@
     Date: <%= f.date_select :fecha %>
   </p>
   <p> Tipe de consultation: 
-	<%= f.collection_select(:tipeconsultation_id,Tipeconsultation.all,:id,:tipe ) %>
+	<%= f.collection_select(:tipeconsultation_id,Tipeconsultation.all,:id,:tipe , :include_blank => true) %>
     
   </p>
   <p>Motif ou symptomes:

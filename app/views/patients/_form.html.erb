@@ -1,5 +1,14 @@
-<%= form_for @patient do |f| %>
-  <%= f.error_messages %>
+<%= form_for  @patient, :as => :patient, :remote => true do |f| %>
+  <% if @patient.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@patient.errors.count, "error") %> prohibited this patient from being saved:</h2>
+      <ul>
+        <% @patient.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
   <p>
 	<%= f.label :carte_code %>
     <%= f.text_field :carte_code, :size => '5' %>&nbsp;&nbsp;
@@ -16,30 +25,27 @@
   </p>
   <p>    <%= f.label :sex_id %>
 	<%= @sexes=Sex.find(:all,:order=>"description")
-	    f.collection_select(:sex_id,@sexes,:id,:description, {:selected=>1}) %>
+	    f.collection_select(:sex_id, @sexes, :id, :description, :include_blank => true) %>
 &nbsp;&nbsp;
-   
-  
     Date de naissance: 
     <%= f.text_field :jour, :size => '1' %> /<%= f.text_field :mois , :size => '1' %>/<%= f.text_field :naissance , :size => '3'%>
 &nbsp;&nbsp;
-    <%= f.label :village_id %>
-	<%= @villages=Village.find(:all,:order=>"nom")
-	    f.collection_select(:village_id,@villages,:id,:nom, {:selected=>23} ) %>
-    
- &nbsp;&nbsp;
-    <%= f.label :commune_id %>
-	<%= @communes=Commune.find(:all,:order=>"nom")
-	    f.collection_select(:commune_id,@communes,:id,:nom, {:selected=>4} ) %> 
+<div class="field">
+  <%= f.label :commune_id %>
+  <%= f.select :commune_id, Commune.find(:all, :order=>:nom).collect{ |c| [c.nom,c.id]}, :required=>true %>
+</div>
+<div class="field", id="addressVillages">
+  <%= render :partial => 'villages',  :locals => { :f => f }%>
+</div>
   </p>
   <p>
     <%= f.label :ethnie_id %>
 	<%= @ethnies=Ethnie.find(:all,:order=>"nom")
-	    f.collection_select(:ethnie_id,@ethnies,:id,:nom) %>
+	    f.collection_select(:ethnie_id,@ethnies,:id,:nom, :include_blank => true) %>
 &nbsp;&nbsp;
     <%= f.label :profession_id %>
 	<%= @professions=Profession.find(:all,:order=>"nom")
-	    f.collection_select(:profession_id,@professions,:id,:nom) %>
+	    f.collection_select(:profession_id,@professions,:id,:nom, :include_blank => true) %>
   </p>
   <p><%= f.submit "Ajouter patient" %></p>
 <% end %>

@@ -1,8 +1,21 @@
-<%= form_for @commune do |f| %>
-  <%= f.error_messages %>
-  <p>
+<%= form_for(@commune) do |f| %>
+  <% if @commune.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@commune.errors.count, "error") %> C'est defendu cette commune d'etre gardée:</h2>
+
+      <ul>
+      <% @commune.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
     <%= f.label :nom %><br />
     <%= f.text_field :nom %>
-  </p>
-  <p><%= f.submit %></p>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
 <% end %>

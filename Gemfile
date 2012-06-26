@@ -26,21 +26,12 @@ gem 'nokogiri'
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:
-  group :development, :test do
-    gem 'webrat'
-  end
 gem "nifty-generators", :group => :development
-group :test do
-  gem 'rspec'
-  gem 'rspec-rails'
-  gem 'faker'
-  gem "shoulda", :git => "git://github.com/bmaddy/shoulda.git"
-  gem 'mocha'
-  gem 'cucumber'
-  gem 'cucumber-rails'
-
-end
+gem 'faker'
+gem "shoulda"
+gem "mocha"
 gem "will_paginate" , "~> 3.0.pre2"
-gem "ZenTest"
 gem "hoe"
-gem "redgreen"
+gem "rdoc"
+gem "magic_encoding"
+gem "authlogic"

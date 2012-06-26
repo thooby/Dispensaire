@@ -1,9 +1,11 @@
+# -*- encoding : utf-8 -*-
 class Consultation < ActiveRecord::Base
   attr_accessible :fecha, :patient_id, :tipeconsultation_id, :observation, :motif, :tension_arteriale_haute, :tension_arteriale_basse, :poul, :temperature, :respiration , :poid, :analyse, :consul_diags_attributes, :consul_trats_attributes
   belongs_to :patient
   has_many :consul_diags, :dependent => :destroy
   has_many :consul_trats, :dependent => :destroy
   belongs_to :tipeconsultation
+  validates  :fecha, :patient_id, :tipeconsultation_id, :motif, :presence => true
   #validates_numericality_of :temperature, :if => "self.temperature.exists?"
   delegate :tipe,
           :to => :tipeconsultation,

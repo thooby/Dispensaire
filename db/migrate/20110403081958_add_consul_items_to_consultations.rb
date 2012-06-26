@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class AddConsulItemsToConsultations < ActiveRecord::Migration
   def self.up
     add_column :consultations, :motif, :string

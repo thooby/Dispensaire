@@ -1,8 +1,12 @@
+# -*- encoding : utf-8 -*-
 require 'test_helper'
 
 class ProfessionTest < ActiveSupport::TestCase
   def test_should_be_valid
-    assert Profession.new.valid?
+    assert Profession.new(:nom =>"Agriculteur").valid?
   end
-  should_have_many :patients
+  should have_many :patients
+  should validate_presence_of :nom
+  should validate_uniqueness_of :nom
+  
 end

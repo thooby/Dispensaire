@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class TipeconsultationsController < ApplicationController
   def index
     @tipeconsultations = Tipeconsultation.all

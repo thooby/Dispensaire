@@ -1,7 +1,9 @@
+# -*- encoding : utf-8 -*-
 class ConsulTrat < ActiveRecord::Base
   attr_accessible :consultation_id, :traitement_id
   belongs_to :traitement
   belongs_to :consultation
+    validates  :consultation_id, :traitement_id, :presence => true
   def self.find_trat
     tot_trat=ConsulTrat.all
     trat_dic=Hash.new(0)

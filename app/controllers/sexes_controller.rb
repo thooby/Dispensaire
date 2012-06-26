@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class SexesController < ApplicationController
   def index
     @sexes = Sex.all

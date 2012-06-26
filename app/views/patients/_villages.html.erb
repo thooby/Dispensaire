@@ -1,0 +1,16 @@
+<script type="text/javascript">
+jQuery(function($) {
+// when the #commune_id field changes
+  $("#patient_village_id").change(function() {
+    // make a POST call and replace the content
+    var village = $('select#patient_village_id :selected').val();
+    if(village == "") village="0";
+    return false;
+  });
+})
+</script>
+
+    <% if !villages.blank? %>
+      Villages <%= select "patient", :village_id, villages.collect{ |s| [s.nom,s.id]} %>
+    <% end %>
+
