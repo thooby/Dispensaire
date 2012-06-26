@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Consultation < ActiveRecord::Base
   attr_accessible :fecha, :patient_id, :tipeconsultation_id, :observation, :motif, :tension_arteriale_haute, :tension_arteriale_basse, :poul, :temperature, :respiration , :poid, :analyse, :consul_diags_attributes, :consul_trats_attributes
   belongs_to :patient

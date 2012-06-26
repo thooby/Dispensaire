@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Patient < ActiveRecord::Base
   attr_accessible :prenom, :nom, :carte_code, :fecha, :sex_id, :naissance, :village_id, :commune_id, :ethnie_id, :profession_id, :mois, :jour
   validates  :prenom, :nom, :carte_code, :fecha, :sex_id, :naissance, :village_id, :commune_id, :ethnie_id, :profession_id, :presence => true

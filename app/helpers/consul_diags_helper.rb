@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ConsulDiagsHelper
   def lista_diag(table_diag)
     diag_dic=Hash.new(0)

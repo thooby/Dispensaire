@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class CreateGroupeTraitements < ActiveRecord::Migration
   def self.up
     create_table :groupe_traitements do |t|

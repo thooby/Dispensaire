@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class ProfessionsController < ApplicationController
   def index
     @professions = Profession.all

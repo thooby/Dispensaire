@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class ConsulTratsController < ApplicationController
   def index
     @consul_trats = ConsulTrat.all

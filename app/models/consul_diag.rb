@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class ConsulDiag < ActiveRecord::Base
   attr_accessible :consultation_id, :diagnostic_id
   belongs_to :diagnostic

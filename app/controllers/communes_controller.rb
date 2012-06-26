@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class CommunesController < ApplicationController
   def index
     @communes = Commune.all
