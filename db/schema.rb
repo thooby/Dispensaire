@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120625220430) do
+ActiveRecord::Schema.define(:version => 20120625140023) do
 
   create_table "communes", :force => true do |t|
     t.string   "nom"
