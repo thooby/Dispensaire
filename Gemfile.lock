@@ -34,6 +34,7 @@ GEM
       activerecord (>= 3.0.0)
       activesupport (>= 3.0.0)
     builder (2.1.2)
+    cancan (1.6.4)
     columnize (0.3.6)
     erubis (2.6.6)
       abstract (>= 1.0.0)
@@ -104,6 +105,7 @@ PLATFORMS
 
 DEPENDENCIES
   authlogic
+  cancan
   faker
   hoe
   magic_encoding

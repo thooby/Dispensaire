@@ -1,5 +1,6 @@
 # -*- encoding : utf-8 -*-
 class PatientsController < ApplicationController
+  before_filter { requires :admin }
   def index
     @alfaorig = Array.new(26) {|i| (i+65).chr}
     @alfabeto = Array.new(26) {|i| (i+65).chr}
