@@ -32,13 +32,13 @@ class ConsultationsControllerTest < ActionController::TestCase
 
   def test_update_invalid
     Consultation.any_instance.stubs(:valid?).returns(false)
-    put :update, :id => Consultation.first, :consultation => 1
+    put :update, :id => 1, :consultation => Consultation.first
     assert_template 'edit'
   end
 
   def test_update_valid
     Consultation.any_instance.stubs(:valid?).returns(true)
-    put :update, :id => Consultation.first, :consultation => 1
+    put :update, :id => 1, :consultation => Consultation.first
     assert_redirected_to consultation_url(assigns(:consultation))
   end
 

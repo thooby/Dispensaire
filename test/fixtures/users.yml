@@ -5,11 +5,11 @@
 # below each fixture, per the syntax in the comments below
 #
 one:
-  username: MyString
-  email: MyString
+  username: juan
+  email: juan@pepe.com
   crypted_password: MyString
 
 two:
-  username: MyString
-  email: MyString
+  username: tania
+  email: tania@pepe.com
   crypted_password: MyString
