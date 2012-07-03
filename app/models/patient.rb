@@ -9,7 +9,8 @@ class Patient < ActiveRecord::Base
   belongs_to  :commune 
   belongs_to  :profession 
   belongs_to  :ethnie
-  has_many :consultations  
+  has_many :consultations 
+  before_destroy :check_for_consultation
   delegate :description,
            :to => :sex,
            :prefix => true
@@ -34,4 +35,10 @@ class Patient < ActiveRecord::Base
   def self.find_code(carte_code)
     patient = Patient.where("carte_code = ?", carte_code).first
   end
+  def check_for_consultation
+      unless consultations.count == 0
+        errors.add(:patient, "Il n'est pas posible eliminer un patient sans eliminer ses consultations")
+        return false
+      end
+    end
 end
