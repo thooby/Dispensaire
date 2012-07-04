@@ -17,9 +17,14 @@
     <%= form.label :password_confirmation, "Password confirmation" %>
     <%= form.password_field :password_confirmation %>
   </li>
-<li>
+  <li>
     <%= form.label :role, "Role" %>
-    <%= form.text_field :role %>
+    <% if can? :assign_roles, @user %>
+      <%= form.collection_select :role, User::ROLES, :to_s, :humanize %>
+    <% else %>
+      <%= form.hidden_field :role, :value => "visiteur" %>
+      visiteur
+    <% end %>
   </li>
   <li>
     <%= form.submit "Submit" %>

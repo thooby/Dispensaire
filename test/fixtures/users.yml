@@ -8,8 +8,9 @@ one:
   username: juan
   email: juan@pepe.com
   crypted_password: MyString
-
+  role: admin
 two:
   username: tania
   email: tania@pepe.com
   crypted_password: MyString
+  role: visiteur

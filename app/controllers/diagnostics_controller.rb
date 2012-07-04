@@ -1,5 +1,7 @@
 # -*- encoding : utf-8 -*-
 class DiagnosticsController < ApplicationController
+  load_and_authorize_resource
+  
   def index
     @diagnostics = Diagnostic.all
   end

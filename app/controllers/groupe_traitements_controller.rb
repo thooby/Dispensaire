@@ -1,5 +1,7 @@
 # -*- encoding : utf-8 -*-
 class GroupeTraitementsController < ApplicationController
+  load_and_authorize_resource
+  
   def index
     @groupe_traitements = GroupeTraitement.all
   end

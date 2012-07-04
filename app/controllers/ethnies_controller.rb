@@ -1,5 +1,7 @@
 # -*- encoding : utf-8 -*-
 class EthniesController < ApplicationController
+  load_and_authorize_resource
+  
   def index
     @ethnies = Ethnie.all
   end

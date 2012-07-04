@@ -1,5 +1,7 @@
 # -*- encoding : utf-8 -*-
 class SexesController < ApplicationController
+  load_and_authorize_resource
+  
   def index
     @sexes = Sex.all
   end

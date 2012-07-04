@@ -1,5 +1,7 @@
 # -*- encoding : utf-8 -*-
 class ConsulTratsController < ApplicationController
+  load_and_authorize_resource
+  
   def index
     @consul_trats = ConsulTrat.all
   end

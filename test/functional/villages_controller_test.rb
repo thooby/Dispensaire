@@ -2,6 +2,11 @@
 require 'test_helper'
 
 class VillagesControllerTest < ActionController::TestCase
+  
+  def setup
+    @user = users(:one)
+  end
+  
   def test_index
     get :index
     assert_template 'index'
@@ -52,4 +57,5 @@ class VillagesControllerTest < ActionController::TestCase
     assert_redirected_to villages_url
     assert !Village.exists?(village.id)
   end
+  
 end

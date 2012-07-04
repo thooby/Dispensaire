@@ -1,5 +1,7 @@
 # -*- encoding : utf-8 -*-
 class TipeconsultationsController < ApplicationController
+  load_and_authorize_resource
+  
   def index
     @tipeconsultations = Tipeconsultation.all
   end

@@ -1,5 +1,7 @@
 # -*- encoding : utf-8 -*-
 class ConsultationsController < ApplicationController
+  load_and_authorize_resource
+  
   def show
     @consultation = Consultation.find(params[:id])
   end

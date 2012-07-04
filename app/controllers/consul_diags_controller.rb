@@ -1,5 +1,7 @@
 # -*- encoding : utf-8 -*-
 class ConsulDiagsController < ApplicationController
+  load_and_authorize_resource
+  
   def index
     @consul_diags = ConsulDiag.all
   end

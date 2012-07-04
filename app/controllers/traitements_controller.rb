@@ -1,5 +1,7 @@
 # -*- encoding : utf-8 -*-
 class TraitementsController < ApplicationController
+  load_and_authorize_resource
+  
   def index
     @traitements = Traitement.order('description')
   end
