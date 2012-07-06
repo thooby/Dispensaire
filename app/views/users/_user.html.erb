@@ -19,11 +19,11 @@
   </li>
   <li>
     <%= form.label :role, "Role" %>
-    <% if can? :assign_roles, @user %>
-      <%= form.collection_select :role, User::ROLES, :to_s, :humanize %>
-    <% else %>
-      <%= form.hidden_field :role, :value => "visiteur" %>
-      visiteur
+      <% if can? :assign_roles, @user %>
+        <%= form.collection_select :role, User::ROLES, :to_s, :humanize %>
+      <% else %>
+        <%= form.hidden_field :role, :value => "visiteur" %>
+        visiteur
     <% end %>
   </li>
   <li>
