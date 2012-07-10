@@ -1,6 +1,6 @@
 # -*- encoding : utf-8 -*-
 class PatientsController < ApplicationController
-  load_and_authorize_resource
+  load_and_authorize_resource :except => :update_village_select
   def index
     @alfaorig = Array.new(26) {|i| (i+65).chr}
     @alfabeto = Array.new(26) {|i| (i+65).chr}
@@ -67,6 +67,7 @@ class PatientsController < ApplicationController
       end
   end
   def update_village_select
+      authorize! :created
       villages = Village.where(:commune_id => params[:id]).order(:nom) unless params[:id].blank?
       render :partial => "villages", :locals => { :villages => villages }
   end
