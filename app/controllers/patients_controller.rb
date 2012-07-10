@@ -59,11 +59,11 @@ class PatientsController < ApplicationController
   end
 
   def destroy
-    @patient.destroy
-     respond_to do |format|
-        format.html { redirect_to(patients_url,:notice => "Successfully destroyed patient.") }
-        format.xml  { head :ok }
-      end
+    if @patient.destroy
+      redirect_to(patients_url, :notice => "Successfully destroyed patient.")
+    else
+      redirect_to(patients_url, :alert => "Il n'est pas posible eliminer un patient sans eliminer ses consultations")
+    end
   end
   
   def update_village_select
