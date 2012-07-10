@@ -7,6 +7,5 @@ class ConsulTratTest < ActiveSupport::TestCase
   end
   should belong_to :consultation
   should belong_to :traitement  
-  should validate_presence_of :consultation_id
   should validate_presence_of :traitement_id
 end

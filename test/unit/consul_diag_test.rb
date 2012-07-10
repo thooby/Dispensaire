@@ -8,5 +8,4 @@ class ConsulDiagTest < ActiveSupport::TestCase
   should belong_to :consultation
   should belong_to :diagnostic
   should validate_presence_of :diagnostic_id
-  should validate_presence_of :consultation_id
 end
