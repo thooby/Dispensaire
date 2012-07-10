@@ -1,6 +1,6 @@
 # -*- encoding : utf-8 -*-
 class PatientsController < ApplicationController
-  load_and_authorize_resource
+  load_and_authorize_resource :except => :update_village_select
   def index
     @alfaorig = Array.new(26) {|i| (i+65).chr}
     @alfabeto = Array.new(26) {|i| (i+65).chr}
@@ -26,7 +26,7 @@ class PatientsController < ApplicationController
   end
   
   def new
-    @patient = Patient.new
+    # @patient = Patient.new
     
     respond_to do |format|
       format.html # new.html.erb
@@ -35,7 +35,7 @@ class PatientsController < ApplicationController
   end
 
   def create
-    @patient = Patient.new(params[:patient])
+    # @patient = Patient.new(params[:patient])
     respond_to do |format|
      if @patient.save
         format.html { redirect_to(@patient, :notice => 'Le patient a ete  cree.') }
@@ -72,8 +72,11 @@ class PatientsController < ApplicationController
         format.xml  { head :ok }
       end
   end
+  
   def update_village_select
+    authorize! :create, User
       villages = Village.where(:commune_id => params[:id]).order(:nom) unless params[:id].blank?
       render :partial => "villages", :locals => { :villages => villages }
   end
+  
 end

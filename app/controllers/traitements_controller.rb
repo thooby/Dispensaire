@@ -3,7 +3,15 @@ class TraitementsController < ApplicationController
   load_and_authorize_resource
   
   def index
-    @traitements = Traitement.order('description')
+    respond_to do |format|
+      format.html {
+        @traitements = Traitement.order('description')
+      }
+      format.json { 
+        @traitements =  Traitement.where("description like ?", "%#{params[:q]}%")
+        render :json => @traitements.map{|d| [d.id, d.description]}
+      }
+    end  
   end
 
   def show

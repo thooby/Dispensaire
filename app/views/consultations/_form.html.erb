@@ -1,3 +1,5 @@
+<%= init_jquery_ui %>
+
 <%= form_for @consultation do |f| -%>
   <%= f.error_messages %>
   <div id="identification">
@@ -21,7 +23,7 @@
 		Respiration: <%= f.text_field :respiration, options={:size =>'3'} %> 
 		Poids: <%= f.text_field :poid, options={:size =>'3'} %></p>
 	<p>
-  <div id="consul_diags">
+  <div class="consul_diags fields">
     <%= f.fields_for :consul_diags do |builder| %>
       <%= render "consul_diag", :f => builder %>
     <% end %>
@@ -29,7 +31,7 @@
       <%= add_consul_diag_link "Ajouter un diagnostique", f %>
     </p>    
   </div>
-  <div id="consul_diags">
+  <div class="consul_trats fields">
     <%= f.fields_for :consul_trats do |builder| %>
       <%= render "consul_trat", :f => builder %>
     <% end %>

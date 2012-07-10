@@ -20,5 +20,58 @@ $(document).ready(function() {
     })
     return false;
   });
-
+  
+  setAutoCompleters();
 })
+
+function remove_fields(link) {
+  $(link).prev("input[type=hidden]").val("1");
+  $(link).closest("div").hide();
+}
+
+function add_fields(link, association, content, autocomplete) {
+  autocomplete = autocomplete || false
+  var new_id = new Date().getTime();
+  var regexp = new RegExp("new_" + association, "g")
+  $(link).parents(".fields").find('div:last').after(content.replace(regexp, new_id));
+  if (autocomplete == true) {
+    setAutoCompleters();
+  }
+  // $(this).parents(".fields").find('div').attr("id", 'tr_' + new_id);
+}
+
+function setAutoCompleters() {
+  $('input.autocomplete').each(function(){
+    var url = new String();
+    if ($(this).attr('id').match(/consultation_consul_diags*/)) {
+      url = "/diagnostics.json";
+    } else if ($(this).attr('id').match(/consultation_consul_trats*/)) {  
+      url = "/traitements.json";
+    }
+    $(this).autocomplete({
+      source: function (request, response) {
+       $.ajax({
+         url: url + '?q=' + request.term,
+         dataType: "json",
+      	success: function( data ) {
+          response($.map(data, function(item){
+      	    return { 
+      	      value: item[0],
+      	      label: item[1] 
+            }
+      	  }));
+      	}	
+      });
+      },
+      focus: function( event, ui ) {
+       $(this).attr('value', ui.item.label );
+      	 return false;
+      },
+      select: function(event, ui) {
+       $(this).attr('value', ui.item.label);
+       $(this).siblings('input[type=hidden]:first').attr('value', ui.item.value);
+       return false;
+      }
+  });
+  })
+}

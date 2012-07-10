@@ -14,9 +14,11 @@ class ConsultationsController < ApplicationController
 
   def create  
     @consultation = Consultation.new(params[:consultation]) 
+    debugger
     if @consultation.save
       redirect_to consultation_path(@consultation), :notice => "Successfully created consultation."
     else
+      debugger
       @patient = Patient.find(params[:consultation][:patient_id])
       render :action => 'new'
     end
