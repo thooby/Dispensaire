@@ -3,44 +3,55 @@ class ConsulDiagsController < ApplicationController
   load_and_authorize_resource
   
   def index
-    @consul_diags = ConsulDiag.all
+    
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @consul_diags }
+    end
+ 
   end
-  def find
-   @find_diags = ConsulDiag.find_diag
-  end
+
   def show
-    @consul_diag = ConsulDiag.find(params[:id])
+    respond_to do |format|
+      format.html # show.html.erb
+      format.xml  { render :xml => @consul_diag }
+    end
+ 
   end
 
   def new
-    @consul_diag = ConsulDiag.new
+    respond_to do |format|
+      format.html # new.html.erb
+      format.xml  { render :xml => @consul_diag }
+    end
+ 
   end
 
   def create
-    @consul_diag = ConsulDiag.new(params[:consul_diag])
     if @consul_diag.save
-      redirect_to @consul_diag, :notice => "Successfully created consul diag."
-    else
-      render :action => 'new'
-    end
+       format.html { redirect_to(@consul_diag, :notice => 'La consul_diag a eté  creé.') }
+       format.xml  { render :xml => @consul_diag, :status => :created, :location => @consul_diag }
+     else
+       format.html { render :action => "new" }
+       format.xml  { render :xml => @consul_diag.errors, :status => :unprocessable_entity }
+     end
   end
-
   def edit
-    @consul_diag = ConsulDiag.find(params[:id])
   end
 
   def update
-    @consul_diag = ConsulDiag.find(params[:id])
     if @consul_diag.update_attributes(params[:consul_diag])
-      redirect_to @consul_diag, :notice  => "Successfully updated consul diag."
-    else
-      render :action => 'edit'
-    end
+        format.html { redirect_to(@consul_diag, :notice => 'La consul_diag a eté mis a jour.') }
+        format.xml  { head :ok }
+      else
+        format.html { render :action => "edit" }
+        format.xml  { render :xml => @consul_diag.errors, :status => :unprocessable_entity }
+      end
   end
 
   def destroy
-    @consul_diag = ConsulDiag.find(params[:id])
-    @consul_diag.destroy
-    redirect_to consul_diags_url, :notice => "Successfully destroyed consul diag."
-  end
+      if @consul_diag.destroy
+        redirect_to(consul_diags_url, :notice => "La consul_diag a eté eliminé.")
+      end
+    end
 end

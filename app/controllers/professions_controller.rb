@@ -3,19 +3,15 @@ class ProfessionsController < ApplicationController
   load_and_authorize_resource
   
   def index
-    @professions = Profession.all
   end
 
   def show
-    @profession = Profession.find(params[:id])
   end
 
   def new
-    @profession = Profession.new
   end
 
   def create
-    @profession = Profession.new(params[:profession])
     if @profession.save
       redirect_to @profession, :notice => "Successfully created profession."
     else
@@ -24,11 +20,9 @@ class ProfessionsController < ApplicationController
   end
 
   def edit
-    @profession = Profession.find(params[:id])
   end
 
   def update
-    @profession = Profession.find(params[:id])
     if @profession.update_attributes(params[:profession])
       redirect_to @profession, :notice  => "Successfully updated profession."
     else
@@ -37,7 +31,6 @@ class ProfessionsController < ApplicationController
   end
 
   def destroy
-    @profession = Profession.find(params[:id])
     @profession.destroy
     redirect_to professions_url, :notice => "Successfully destroyed profession."
   end
