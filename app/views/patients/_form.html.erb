@@ -34,7 +34,7 @@
   </p>
   <p>
     <%= f.label :ethnie_id %>
-	<%= @ethnies=Ethnie.find(:all,:order=>"nom")
+	  <%= @ethnies=Ethnie.find(:all,:order=>"nom")
 	    f.collection_select(:ethnie_id,@ethnies,:id,:nom, :include_blank => true) %>
 &nbsp;&nbsp;
     <%= f.label :profession_id %>

@@ -3,7 +3,15 @@ class ConsulTrat < ActiveRecord::Base
   attr_accessible :consultation_id, :traitement_id
   belongs_to :traitement
   belongs_to :consultation
-    validates  :consultation_id, :traitement_id, :presence => true
+  
+  validates  :traitement_id, :presence => true
+
+  attr_accessor :traitement_name
+  
+  def traitement_name
+    self.traitement.description if self.traitement
+  end
+
   def self.find_trat
     tot_trat=ConsulTrat.all
     trat_dic=Hash.new(0)

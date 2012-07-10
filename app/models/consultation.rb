@@ -5,7 +5,7 @@ class Consultation < ActiveRecord::Base
   has_many :consul_diags, :dependent => :destroy
   has_many :consul_trats, :dependent => :destroy
   belongs_to :tipeconsultation
-  validates  :fecha, :patient_id, :tipeconsultation_id, :motif, :presence => true
+  validates  :fecha, :patient_id, :tipeconsultation_id, :motif, :consul_trats, :consul_diags, :presence => true
   #validates_numericality_of :temperature, :if => "self.temperature.exists?"
   delegate :tipe,
           :to => :tipeconsultation,
@@ -22,8 +22,7 @@ class Consultation < ActiveRecord::Base
   
   accepts_nested_attributes_for :consul_diags, :allow_destroy => true
   accepts_nested_attributes_for :consul_trats, :allow_destroy => true
-  validates_associated :consul_trats
-  validates_associated :consul_diags
+  
   def new_consul_diag_attributes=(consul_diag_attributes)
     consul_diag_attributes.each do |attributes|
       consul_diags.build(attributes)

@@ -3,7 +3,15 @@ class DiagnosticsController < ApplicationController
   load_and_authorize_resource
   
   def index
-    @diagnostics = Diagnostic.all
+
+    respond_to do |format|
+      format.html {
+        @diagnostics = Diagnostic.all
+      }
+      format.json { 
+        @diagnostics =  Diagnostic.where("description like ?", "%#{params[:q]}%")
+        render :json => @diagnostics.map{|d| [d.id, d.description]} }
+    end
   end
 
   def show

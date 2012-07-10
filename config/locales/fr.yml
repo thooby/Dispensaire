@@ -7,6 +7,7 @@
 # Emended by Benjamin des Gachons and Patrick Chew : <http://www.fitima.org/docs/fiche.pdf>
 
 fr:
+  Seguro: "Êtes-vous sûr de vouloir supprimer définitivement les objets"
   
   number:
     format:

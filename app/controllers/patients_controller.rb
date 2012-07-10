@@ -24,7 +24,6 @@ class PatientsController < ApplicationController
   end
   
   def new
-    
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @patient }
@@ -32,7 +31,7 @@ class PatientsController < ApplicationController
   end
 
   def create
-    @patient = Patient.new(params[:patient])
+    # @patient = Patient.new(params[:patient])
     respond_to do |format|
      if @patient.save
         format.html { redirect_to(@patient, :notice => 'Le patient a ete  cree.') }
@@ -60,15 +59,17 @@ class PatientsController < ApplicationController
   end
 
   def destroy
-    @patient.destroy
-     respond_to do |format|
-        format.html { redirect_to(patients_url,:notice => "Successfully destroyed patient.") }
-        format.xml  { head :ok }
-      end
+    if @patient.destroy
+      redirect_to(patients_url, :notice => "Successfully destroyed patient.")
+    else
+      redirect_to(patients_url, :alert => "Il n'est pas posible eliminer un patient sans eliminer ses consultations")
+    end
   end
+  
   def update_village_select
-      authorize! :created
+      authorize! :create, User
       villages = Village.where(:commune_id => params[:id]).order(:nom) unless params[:id].blank?
       render :partial => "villages", :locals => { :villages => villages }
   end
+  
 end

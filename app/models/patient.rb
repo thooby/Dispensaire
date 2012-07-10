@@ -26,12 +26,12 @@ class Patient < ActiveRecord::Base
   delegate :nom,   
            :to => :ethnie,
            :prefix => true
-           scope :tranche1, lambda {where('naissance  > ?' ,(Date.today.year-3))}
-           scope :tranche2, lambda {where('naissance  > ? and naissance < ?',(Date.today.year-8),(Date.today.year-2))}
-           scope :tranche3, lambda {where('naissance  > ? and naissance < ?',(Date.today.year-14),(Date.today.year-7))}
-           scope :tranche4, lambda {where('naissance  > ? and naissance < ?',(Date.today.year-18),(Date.today.year-13))}
-           scope :tranche5, lambda {where('naissance  > ? and naissance < ?',(Date.today.year-25),(Date.today.year-17))}
-           scope :tranche6, lambda {where('naissance < ?',(Date.today.year-24))}
+  scope :tranche1, lambda {where('naissance  > ?' ,(Date.today.year-3))}
+  scope :tranche2, lambda {where('naissance  > ? and naissance < ?',(Date.today.year-8),(Date.today.year-2))}
+  scope :tranche3, lambda {where('naissance  > ? and naissance < ?',(Date.today.year-14),(Date.today.year-7))}
+  scope :tranche4, lambda {where('naissance  > ? and naissance < ?',(Date.today.year-18),(Date.today.year-13))}
+  scope :tranche5, lambda {where('naissance  > ? and naissance < ?',(Date.today.year-25),(Date.today.year-17))}
+  scope :tranche6, lambda {where('naissance < ?',(Date.today.year-24))}
   def self.find_code(carte_code)
     patient = Patient.where("carte_code = ?", carte_code).first
   end
