@@ -17,8 +17,6 @@ class PatientsController < ApplicationController
   end
 
   def show
-    @patient = Patient.find(params[:id])
-    
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @patient }
@@ -26,8 +24,6 @@ class PatientsController < ApplicationController
   end
   
   def new
-    # @patient = Patient.new
-    
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @patient }
@@ -48,11 +44,9 @@ class PatientsController < ApplicationController
   end
 
   def edit
-    @patient = Patient.find(params[:id])
   end
 
   def update
-    @patient = Patient.find(params[:id])
     respond_to do |format|
       if @patient.update_attributes(params[:patient])
         format.html { redirect_to(@patient, :notice => 'Patient was successfully updated.') }
@@ -65,7 +59,6 @@ class PatientsController < ApplicationController
   end
 
   def destroy
-    @patient = Patient.find(params[:id])
     @patient.destroy
      respond_to do |format|
         format.html { redirect_to(patients_url,:notice => "Successfully destroyed patient.") }
