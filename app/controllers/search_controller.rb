@@ -1,8 +1,9 @@
 # -*- encoding : utf-8 -*-
 class SearchController < ApplicationController
-  load_and_authorize_resource
+  #load_and_authorize_resource
   
   def show 
+      authorize! :create, User
       @patient = Patient.find_code(params[:q])
       if @patient then
         flash[:notice]=nil

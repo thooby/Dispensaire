@@ -9,13 +9,19 @@
 <% for i in 0..25 %>
     <%= link_to @alfaorig[i], { :page => @alfabeto[i] } if @alfabeto[i] %>
 <% end %>
+<% if current_user.role == 'sanitaire' || 
+      current_user.role == 'admin' %>
+
 &nbsp;<%= link_to "Nouveau Patient", new_patient_path %> <%= will_paginate @patients %>
+<% end %>
 <table class="limpia">
   <tr>
 	<th>Code</th>
+	<% if current_user.role == 'sanitaire' || 
+	        current_user.role == 'admin' %>
     <th>Prenom</th>
     <th>Nom</th>
-    
+    <% end %>
     <th>Fecha</th>
     <th>Sex</th>
     <th>Naiss.</th>
@@ -27,8 +33,11 @@
   <% for patient in @patients %>
     <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
 	<td><%= patient.carte_code %></td>
+    <% if current_user.role == 'sanitaire' || 
+	        current_user.role == 'admin' %>
       <td><%= patient.prenom %></td>
       <td><%= patient.nom %></td>
+    <% end %>
       
       <td><%= patient.fecha.strftime("%d-%m-%Y") %></td>
       <td><%= patient.sex_description[0].chr %></td>
@@ -43,11 +52,20 @@
       <td><%= patient.ethnie_nom.capitalize %></td>
       <td><%= patient.profession_nom.capitalize %></td>
       <td><%= link_to "Montrer", patient %></td>
-      <td><%= link_to "Editer", edit_patient_path(patient) %></td>
-      <td><%= link_to "Eliminer", patient, :confirm => 'Etez vous sure?', :method => :delete %></td>
-      <td>   <%= link_to "Nouvelle Consultation", enlace_url(:id =>  patient.id) %></td>
+      <% if current_user.role == 'sanitaire' || 
+	        current_user.role == 'admin' %>
+         <td><%= link_to "Editer", edit_patient_path(patient) %></td>
+		 <td><%= link_to "Nouvelle Consultation", enlace_url(:id =>  patient.id) %></td>
+         <% if current_user.role == 'admin'%>
+           <td><%= link_to "Eliminer", patient, :confirm => 'Etez vous sure?', :method => :delete %></td>
+                <% end %>
+      <% end %>
     </tr>
   <% end %>
 </table>
 <%= will_paginate @patients %>
+<% if current_user.role == 'sanitaire' || 
+      current_user.role == 'admin' %>
+
 <p><%= link_to "Nouveau Patient", new_patient_path %></p>
+<% end %>

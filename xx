@@ -1,0 +1,735 @@
+Run options: 
+
+# Running tests:
+
+..........................................................................
+
+Finished tests in 0.345215s, 214.3592 tests/s, 214.3592 assertions/s.
+
+74 tests, 74 assertions, 0 failures, 0 errors, 0 skips
+Run options: 
+
+# Running tests:
+
+FEFF.F.FFEEEEEEEEEEEEEEEEEEFEFFF.FFFEFF.F.FFFEFF.F.FFFEFF.F.FFFEFF.FF.FFFEFF.F.FF.FEFF.F.FFFEFF.F.FFFEFF.F.FFFEFF.F.FF
+
+Finished tests in 1.316179s, 89.6535 tests/s, 85.0948 assertions/s.
+
+  1) Failure:
+test_create_invalid(CommunesControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/communes_controller_test.rb:26]:
+expecting <"new"> but rendering with <"">
+
+  2) Error:
+test_create_valid(CommunesControllerTest):
+ActionController::RoutingError: No route matches {:action=>"show", :controller=>"communes", :id=>#<Commune id: nil, nom: nil, created_at: nil, updated_at: nil>}
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:425:in `raise_routing_error'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:398:in `generate'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:454:in `generate'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:482:in `url_for'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/url_for.rb:131:in `url_for'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:195:in `commune_url'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/testing/assertions/routing.rb:173:in `method_missing'
+    /Users/zubi/rails_apps/Dispensaire/test/functional/communes_controller_test.rb:32:in `test_create_valid'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/mocha-0.10.4/lib/mocha/integration/mini_test/version_230_to_262.rb:28:in `run'
+
+  3) Failure:
+test_destroy(CommunesControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/communes_controller_test.rb:55]:
+Expected response to be a redirect to <http://test.host/communes> but was a redirect to <http://test.host/>
+
+  4) Failure:
+test_edit(CommunesControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/communes_controller_test.rb:37]:
+expecting <"edit"> but rendering with <"">
+
+  5) Failure:
+test_new(CommunesControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/communes_controller_test.rb:20]:
+expecting <"new"> but rendering with <"">
+
+  6) Failure:
+test_update_invalid(CommunesControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/communes_controller_test.rb:43]:
+expecting <"edit"> but rendering with <"">
+
+  7) Failure:
+test_update_valid(CommunesControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/communes_controller_test.rb:49]:
+Expected response to be a redirect to <http://test.host/communes/1> but was a redirect to <http://test.host/>
+
+  8) Error:
+test_create_invalid(ConsulDiagsControllerTest):
+LoadError: Expected /Users/zubi/rails_apps/Dispensaire/app/controllers/consul_diags_controller.rb to define ConsulDiagsController
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:492:in `load_missing_constant'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:183:in `block in const_missing'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:181:in `each'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:181:in `const_missing'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/inflector/methods.rb:124:in `block in constantize'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/inflector/methods.rb:123:in `each'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/inflector/methods.rb:123:in `constantize'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/core_ext/string/inflections.rb:43:in `constantize'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_controller/test_case.rb:337:in `determine_default_controller_class'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_controller/test_case.rb:332:in `controller_class'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_controller/test_case.rb:421:in `setup_controller_request_and_response'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:420:in `_run_setup_callbacks'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/testing/setup_and_teardown.rb:34:in `run'
+
+  9) Error:
+test_create_valid(ConsulDiagsControllerTest):
+LoadError: Expected /Users/zubi/rails_apps/Dispensaire/app/controllers/consul_diags_controller.rb to define ConsulDiagsController
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:492:in `load_missing_constant'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:183:in `block in const_missing'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:181:in `each'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:181:in `const_missing'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/inflector/methods.rb:124:in `block in constantize'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/inflector/methods.rb:123:in `each'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/inflector/methods.rb:123:in `constantize'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/core_ext/string/inflections.rb:43:in `constantize'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_controller/test_case.rb:337:in `determine_default_controller_class'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_controller/test_case.rb:332:in `controller_class'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_controller/test_case.rb:421:in `setup_controller_request_and_response'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:420:in `_run_setup_callbacks'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/testing/setup_and_teardown.rb:34:in `run'
+
+ 10) Error:
+test_destroy(ConsulDiagsControllerTest):
+LoadError: Expected /Users/zubi/rails_apps/Dispensaire/app/controllers/consul_diags_controller.rb to define ConsulDiagsController
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:492:in `load_missing_constant'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:183:in `block in const_missing'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:181:in `each'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:181:in `const_missing'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/inflector/methods.rb:124:in `block in constantize'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/inflector/methods.rb:123:in `each'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/inflector/methods.rb:123:in `constantize'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/core_ext/string/inflections.rb:43:in `constantize'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_controller/test_case.rb:337:in `determine_default_controller_class'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_controller/test_case.rb:332:in `controller_class'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_controller/test_case.rb:421:in `setup_controller_request_and_response'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:420:in `_run_setup_callbacks'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/testing/setup_and_teardown.rb:34:in `run'
+
+ 11) Error:
+test_edit(ConsulDiagsControllerTest):
+LoadError: Expected /Users/zubi/rails_apps/Dispensaire/app/controllers/consul_diags_controller.rb to define ConsulDiagsController
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:492:in `load_missing_constant'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:183:in `block in const_missing'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:181:in `each'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:181:in `const_missing'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/inflector/methods.rb:124:in `block in constantize'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/inflector/methods.rb:123:in `each'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/inflector/methods.rb:123:in `constantize'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/core_ext/string/inflections.rb:43:in `constantize'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_controller/test_case.rb:337:in `determine_default_controller_class'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_controller/test_case.rb:332:in `controller_class'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_controller/test_case.rb:421:in `setup_controller_request_and_response'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:420:in `_run_setup_callbacks'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/testing/setup_and_teardown.rb:34:in `run'
+
+ 12) Error:
+test_index(ConsulDiagsControllerTest):
+LoadError: Expected /Users/zubi/rails_apps/Dispensaire/app/controllers/consul_diags_controller.rb to define ConsulDiagsController
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:492:in `load_missing_constant'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:183:in `block in const_missing'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:181:in `each'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:181:in `const_missing'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/inflector/methods.rb:124:in `block in constantize'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/inflector/methods.rb:123:in `each'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/inflector/methods.rb:123:in `constantize'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/core_ext/string/inflections.rb:43:in `constantize'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_controller/test_case.rb:337:in `determine_default_controller_class'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_controller/test_case.rb:332:in `controller_class'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_controller/test_case.rb:421:in `setup_controller_request_and_response'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:420:in `_run_setup_callbacks'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/testing/setup_and_teardown.rb:34:in `run'
+
+ 13) Error:
+test_new(ConsulDiagsControllerTest):
+LoadError: Expected /Users/zubi/rails_apps/Dispensaire/app/controllers/consul_diags_controller.rb to define ConsulDiagsController
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:492:in `load_missing_constant'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:183:in `block in const_missing'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:181:in `each'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:181:in `const_missing'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/inflector/methods.rb:124:in `block in constantize'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/inflector/methods.rb:123:in `each'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/inflector/methods.rb:123:in `constantize'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/core_ext/string/inflections.rb:43:in `constantize'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_controller/test_case.rb:337:in `determine_default_controller_class'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_controller/test_case.rb:332:in `controller_class'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_controller/test_case.rb:421:in `setup_controller_request_and_response'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:420:in `_run_setup_callbacks'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/testing/setup_and_teardown.rb:34:in `run'
+
+ 14) Error:
+test_show(ConsulDiagsControllerTest):
+LoadError: Expected /Users/zubi/rails_apps/Dispensaire/app/controllers/consul_diags_controller.rb to define ConsulDiagsController
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:492:in `load_missing_constant'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:183:in `block in const_missing'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:181:in `each'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:181:in `const_missing'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/inflector/methods.rb:124:in `block in constantize'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/inflector/methods.rb:123:in `each'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/inflector/methods.rb:123:in `constantize'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/core_ext/string/inflections.rb:43:in `constantize'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_controller/test_case.rb:337:in `determine_default_controller_class'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_controller/test_case.rb:332:in `controller_class'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_controller/test_case.rb:421:in `setup_controller_request_and_response'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:420:in `_run_setup_callbacks'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/testing/setup_and_teardown.rb:34:in `run'
+
+ 15) Error:
+test_update_invalid(ConsulDiagsControllerTest):
+LoadError: Expected /Users/zubi/rails_apps/Dispensaire/app/controllers/consul_diags_controller.rb to define ConsulDiagsController
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:492:in `load_missing_constant'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:183:in `block in const_missing'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:181:in `each'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:181:in `const_missing'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/inflector/methods.rb:124:in `block in constantize'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/inflector/methods.rb:123:in `each'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/inflector/methods.rb:123:in `constantize'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/core_ext/string/inflections.rb:43:in `constantize'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_controller/test_case.rb:337:in `determine_default_controller_class'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_controller/test_case.rb:332:in `controller_class'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_controller/test_case.rb:421:in `setup_controller_request_and_response'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:420:in `_run_setup_callbacks'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/testing/setup_and_teardown.rb:34:in `run'
+
+ 16) Error:
+test_update_valid(ConsulDiagsControllerTest):
+LoadError: Expected /Users/zubi/rails_apps/Dispensaire/app/controllers/consul_diags_controller.rb to define ConsulDiagsController
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:492:in `load_missing_constant'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:183:in `block in const_missing'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:181:in `each'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:181:in `const_missing'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/inflector/methods.rb:124:in `block in constantize'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/inflector/methods.rb:123:in `each'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/inflector/methods.rb:123:in `constantize'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/core_ext/string/inflections.rb:43:in `constantize'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_controller/test_case.rb:337:in `determine_default_controller_class'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_controller/test_case.rb:332:in `controller_class'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_controller/test_case.rb:421:in `setup_controller_request_and_response'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:420:in `_run_setup_callbacks'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/testing/setup_and_teardown.rb:34:in `run'
+
+ 17) Error:
+test_create_invalid(ConsulTratsControllerTest):
+LoadError: Expected /Users/zubi/rails_apps/Dispensaire/app/controllers/consul_trats_controller.rb to define ConsulTratsController
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:492:in `load_missing_constant'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:183:in `block in const_missing'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:181:in `each'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:181:in `const_missing'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/inflector/methods.rb:124:in `block in constantize'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/inflector/methods.rb:123:in `each'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/inflector/methods.rb:123:in `constantize'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/core_ext/string/inflections.rb:43:in `constantize'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_controller/test_case.rb:337:in `determine_default_controller_class'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_controller/test_case.rb:332:in `controller_class'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_controller/test_case.rb:421:in `setup_controller_request_and_response'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:420:in `_run_setup_callbacks'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/testing/setup_and_teardown.rb:34:in `run'
+
+ 18) Error:
+test_create_valid(ConsulTratsControllerTest):
+LoadError: Expected /Users/zubi/rails_apps/Dispensaire/app/controllers/consul_trats_controller.rb to define ConsulTratsController
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:492:in `load_missing_constant'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:183:in `block in const_missing'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:181:in `each'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:181:in `const_missing'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/inflector/methods.rb:124:in `block in constantize'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/inflector/methods.rb:123:in `each'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/inflector/methods.rb:123:in `constantize'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/core_ext/string/inflections.rb:43:in `constantize'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_controller/test_case.rb:337:in `determine_default_controller_class'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_controller/test_case.rb:332:in `controller_class'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_controller/test_case.rb:421:in `setup_controller_request_and_response'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:420:in `_run_setup_callbacks'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/testing/setup_and_teardown.rb:34:in `run'
+
+ 19) Error:
+test_destroy(ConsulTratsControllerTest):
+LoadError: Expected /Users/zubi/rails_apps/Dispensaire/app/controllers/consul_trats_controller.rb to define ConsulTratsController
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:492:in `load_missing_constant'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:183:in `block in const_missing'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:181:in `each'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:181:in `const_missing'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/inflector/methods.rb:124:in `block in constantize'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/inflector/methods.rb:123:in `each'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/inflector/methods.rb:123:in `constantize'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/core_ext/string/inflections.rb:43:in `constantize'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_controller/test_case.rb:337:in `determine_default_controller_class'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_controller/test_case.rb:332:in `controller_class'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_controller/test_case.rb:421:in `setup_controller_request_and_response'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:420:in `_run_setup_callbacks'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/testing/setup_and_teardown.rb:34:in `run'
+
+ 20) Error:
+test_edit(ConsulTratsControllerTest):
+LoadError: Expected /Users/zubi/rails_apps/Dispensaire/app/controllers/consul_trats_controller.rb to define ConsulTratsController
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:492:in `load_missing_constant'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:183:in `block in const_missing'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:181:in `each'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:181:in `const_missing'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/inflector/methods.rb:124:in `block in constantize'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/inflector/methods.rb:123:in `each'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/inflector/methods.rb:123:in `constantize'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/core_ext/string/inflections.rb:43:in `constantize'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_controller/test_case.rb:337:in `determine_default_controller_class'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_controller/test_case.rb:332:in `controller_class'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_controller/test_case.rb:421:in `setup_controller_request_and_response'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:420:in `_run_setup_callbacks'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/testing/setup_and_teardown.rb:34:in `run'
+
+ 21) Error:
+test_index(ConsulTratsControllerTest):
+LoadError: Expected /Users/zubi/rails_apps/Dispensaire/app/controllers/consul_trats_controller.rb to define ConsulTratsController
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:492:in `load_missing_constant'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:183:in `block in const_missing'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:181:in `each'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:181:in `const_missing'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/inflector/methods.rb:124:in `block in constantize'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/inflector/methods.rb:123:in `each'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/inflector/methods.rb:123:in `constantize'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/core_ext/string/inflections.rb:43:in `constantize'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_controller/test_case.rb:337:in `determine_default_controller_class'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_controller/test_case.rb:332:in `controller_class'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_controller/test_case.rb:421:in `setup_controller_request_and_response'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:420:in `_run_setup_callbacks'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/testing/setup_and_teardown.rb:34:in `run'
+
+ 22) Error:
+test_new(ConsulTratsControllerTest):
+LoadError: Expected /Users/zubi/rails_apps/Dispensaire/app/controllers/consul_trats_controller.rb to define ConsulTratsController
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:492:in `load_missing_constant'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:183:in `block in const_missing'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:181:in `each'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:181:in `const_missing'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/inflector/methods.rb:124:in `block in constantize'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/inflector/methods.rb:123:in `each'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/inflector/methods.rb:123:in `constantize'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/core_ext/string/inflections.rb:43:in `constantize'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_controller/test_case.rb:337:in `determine_default_controller_class'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_controller/test_case.rb:332:in `controller_class'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_controller/test_case.rb:421:in `setup_controller_request_and_response'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:420:in `_run_setup_callbacks'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/testing/setup_and_teardown.rb:34:in `run'
+
+ 23) Error:
+test_show(ConsulTratsControllerTest):
+LoadError: Expected /Users/zubi/rails_apps/Dispensaire/app/controllers/consul_trats_controller.rb to define ConsulTratsController
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:492:in `load_missing_constant'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:183:in `block in const_missing'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:181:in `each'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:181:in `const_missing'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/inflector/methods.rb:124:in `block in constantize'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/inflector/methods.rb:123:in `each'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/inflector/methods.rb:123:in `constantize'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/core_ext/string/inflections.rb:43:in `constantize'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_controller/test_case.rb:337:in `determine_default_controller_class'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_controller/test_case.rb:332:in `controller_class'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_controller/test_case.rb:421:in `setup_controller_request_and_response'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:420:in `_run_setup_callbacks'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/testing/setup_and_teardown.rb:34:in `run'
+
+ 24) Error:
+test_update_invalid(ConsulTratsControllerTest):
+LoadError: Expected /Users/zubi/rails_apps/Dispensaire/app/controllers/consul_trats_controller.rb to define ConsulTratsController
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:492:in `load_missing_constant'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:183:in `block in const_missing'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:181:in `each'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:181:in `const_missing'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/inflector/methods.rb:124:in `block in constantize'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/inflector/methods.rb:123:in `each'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/inflector/methods.rb:123:in `constantize'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/core_ext/string/inflections.rb:43:in `constantize'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_controller/test_case.rb:337:in `determine_default_controller_class'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_controller/test_case.rb:332:in `controller_class'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_controller/test_case.rb:421:in `setup_controller_request_and_response'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:420:in `_run_setup_callbacks'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/testing/setup_and_teardown.rb:34:in `run'
+
+ 25) Error:
+test_update_valid(ConsulTratsControllerTest):
+LoadError: Expected /Users/zubi/rails_apps/Dispensaire/app/controllers/consul_trats_controller.rb to define ConsulTratsController
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:492:in `load_missing_constant'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:183:in `block in const_missing'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:181:in `each'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/dependencies.rb:181:in `const_missing'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/inflector/methods.rb:124:in `block in constantize'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/inflector/methods.rb:123:in `each'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/inflector/methods.rb:123:in `constantize'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/core_ext/string/inflections.rb:43:in `constantize'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_controller/test_case.rb:337:in `determine_default_controller_class'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_controller/test_case.rb:332:in `controller_class'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_controller/test_case.rb:421:in `setup_controller_request_and_response'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:420:in `_run_setup_callbacks'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.7/lib/active_support/testing/setup_and_teardown.rb:34:in `run'
+
+ 26) Failure:
+test_create_invalid(ConsultationsControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/consultations_controller_test.rb:19]:
+expecting <"new"> but rendering with <"">
+
+ 27) Error:
+test_create_valid(ConsultationsControllerTest):
+ActionController::RoutingError: No route matches {:action=>"show", :controller=>"consultations", :id=>#<Consultation id: nil, fecha: nil, patient_id: nil, tipeconsultation_id: nil, observation: nil, created_at: nil, updated_at: nil, motif: nil, tension_arteriale_haute: nil, tension_arteriale_basse: nil, poul: nil, temperature: nil, respiration: nil, poid: nil, analyse: nil>}
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:425:in `raise_routing_error'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:398:in `generate'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:454:in `generate'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:482:in `url_for'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/url_for.rb:131:in `url_for'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:195:in `consultation_url'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/testing/assertions/routing.rb:173:in `method_missing'
+    /Users/zubi/rails_apps/Dispensaire/test/functional/consultations_controller_test.rb:25:in `test_create_valid'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/mocha-0.10.4/lib/mocha/integration/mini_test/version_230_to_262.rb:28:in `run'
+
+ 28) Failure:
+test_destroy(ConsultationsControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/consultations_controller_test.rb:48]:
+expecting <"patients/show"> but rendering with <"">
+
+ 29) Failure:
+test_edit(ConsultationsControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/consultations_controller_test.rb:30]:
+expecting <"edit"> but rendering with <"">
+
+ 30) Failure:
+test_new(ConsultationsControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/consultations_controller_test.rb:13]:
+expecting <"new"> but rendering with <"">
+
+ 31) Failure:
+test_update_invalid(ConsultationsControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/consultations_controller_test.rb:36]:
+expecting <"edit"> but rendering with <"">
+
+ 32) Failure:
+test_update_valid(ConsultationsControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/consultations_controller_test.rb:42]:
+Expected response to be a redirect to <http://test.host/consultations/1> but was a redirect to <http://test.host/>
+
+ 33) Failure:
+test_create_invalid(DiagnosticsControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/diagnostics_controller_test.rb:23]:
+expecting <"new"> but rendering with <"">
+
+ 34) Error:
+test_create_valid(DiagnosticsControllerTest):
+ActionController::RoutingError: No route matches {:action=>"show", :controller=>"diagnostics", :id=>#<Diagnostic id: nil, acronime: nil, description: nil, created_at: nil, updated_at: nil>}
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:425:in `raise_routing_error'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:398:in `generate'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:454:in `generate'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:482:in `url_for'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/url_for.rb:131:in `url_for'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:195:in `diagnostic_url'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/testing/assertions/routing.rb:173:in `method_missing'
+    /Users/zubi/rails_apps/Dispensaire/test/functional/diagnostics_controller_test.rb:29:in `test_create_valid'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/mocha-0.10.4/lib/mocha/integration/mini_test/version_230_to_262.rb:28:in `run'
+
+ 35) Failure:
+test_destroy(DiagnosticsControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/diagnostics_controller_test.rb:52]:
+Expected response to be a redirect to <http://test.host/diagnostics> but was a redirect to <http://test.host/>
+
+ 36) Failure:
+test_edit(DiagnosticsControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/diagnostics_controller_test.rb:34]:
+expecting <"edit"> but rendering with <"">
+
+ 37) Failure:
+test_new(DiagnosticsControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/diagnostics_controller_test.rb:17]:
+expecting <"new"> but rendering with <"">
+
+ 38) Failure:
+test_update_invalid(DiagnosticsControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/diagnostics_controller_test.rb:40]:
+expecting <"edit"> but rendering with <"">
+
+ 39) Failure:
+test_update_valid(DiagnosticsControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/diagnostics_controller_test.rb:46]:
+Expected response to be a redirect to <http://test.host/diagnostics/1> but was a redirect to <http://test.host/>
+
+ 40) Failure:
+test_create_invalid(EthniesControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/ethnies_controller_test.rb:23]:
+expecting <"new"> but rendering with <"">
+
+ 41) Error:
+test_create_valid(EthniesControllerTest):
+ActionController::RoutingError: No route matches {:action=>"show", :controller=>"ethnies", :id=>#<Ethnie id: nil, nom: nil, created_at: nil, updated_at: nil>}
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:425:in `raise_routing_error'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:398:in `generate'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:454:in `generate'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:482:in `url_for'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/url_for.rb:131:in `url_for'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:195:in `ethnie_url'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/testing/assertions/routing.rb:173:in `method_missing'
+    /Users/zubi/rails_apps/Dispensaire/test/functional/ethnies_controller_test.rb:29:in `test_create_valid'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/mocha-0.10.4/lib/mocha/integration/mini_test/version_230_to_262.rb:28:in `run'
+
+ 42) Failure:
+test_destroy(EthniesControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/ethnies_controller_test.rb:52]:
+Expected response to be a redirect to <http://test.host/ethnies> but was a redirect to <http://test.host/>
+
+ 43) Failure:
+test_edit(EthniesControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/ethnies_controller_test.rb:34]:
+expecting <"edit"> but rendering with <"">
+
+ 44) Failure:
+test_new(EthniesControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/ethnies_controller_test.rb:17]:
+expecting <"new"> but rendering with <"">
+
+ 45) Failure:
+test_update_invalid(EthniesControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/ethnies_controller_test.rb:40]:
+expecting <"edit"> but rendering with <"">
+
+ 46) Failure:
+test_update_valid(EthniesControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/ethnies_controller_test.rb:46]:
+Expected response to be a redirect to <http://test.host/ethnies/1> but was a redirect to <http://test.host/>
+
+ 47) Failure:
+test_create_invalid(GroupeTraitementsControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/groupe_traitements_controller_test.rb:23]:
+expecting <"new"> but rendering with <"">
+
+ 48) Error:
+test_create_valid(GroupeTraitementsControllerTest):
+ActionController::RoutingError: No route matches {:action=>"show", :controller=>"groupe_traitements", :id=>#<GroupeTraitement id: nil, description: nil, created_at: nil, updated_at: nil>}
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:425:in `raise_routing_error'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:398:in `generate'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:454:in `generate'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:482:in `url_for'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/url_for.rb:131:in `url_for'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:195:in `groupe_traitement_url'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/testing/assertions/routing.rb:173:in `method_missing'
+    /Users/zubi/rails_apps/Dispensaire/test/functional/groupe_traitements_controller_test.rb:29:in `test_create_valid'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/mocha-0.10.4/lib/mocha/integration/mini_test/version_230_to_262.rb:28:in `run'
+
+ 49) Failure:
+test_destroy(GroupeTraitementsControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/groupe_traitements_controller_test.rb:52]:
+Expected response to be a redirect to <http://test.host/groupe_traitements> but was a redirect to <http://test.host/>
+
+ 50) Failure:
+test_edit(GroupeTraitementsControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/groupe_traitements_controller_test.rb:34]:
+expecting <"edit"> but rendering with <"">
+
+ 51) Failure:
+test_new(GroupeTraitementsControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/groupe_traitements_controller_test.rb:17]:
+expecting <"new"> but rendering with <"">
+
+ 52) Failure:
+test_update_invalid(GroupeTraitementsControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/groupe_traitements_controller_test.rb:40]:
+expecting <"edit"> but rendering with <"">
+
+ 53) Failure:
+test_update_valid(GroupeTraitementsControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/groupe_traitements_controller_test.rb:46]:
+Expected response to be a redirect to <http://test.host/groupe_traitements/1> but was a redirect to <http://test.host/>
+
+ 54) Failure:
+test_create_invalid(PatientsControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/patients_controller_test.rb:23]:
+expecting <"new"> but rendering with <"">
+
+ 55) Error:
+test_create_valid(PatientsControllerTest):
+ActionController::RoutingError: No route matches {:action=>"show", :controller=>"patients", :id=>#<Patient id: nil, prenom: nil, nom: nil, carte_code: nil, fecha: nil, sex_id: nil, naissance: nil, village_id: nil, commune_id: nil, ethnie_id: nil, profession_id: nil, created_at: nil, updated_at: nil, mois: nil, jour: nil>}
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:425:in `raise_routing_error'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:398:in `generate'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:454:in `generate'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:482:in `url_for'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/url_for.rb:131:in `url_for'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:195:in `patient_url'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/testing/assertions/routing.rb:173:in `method_missing'
+    /Users/zubi/rails_apps/Dispensaire/test/functional/patients_controller_test.rb:29:in `test_create_valid'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/mocha-0.10.4/lib/mocha/integration/mini_test/version_230_to_262.rb:28:in `run'
+
+ 56) Failure:
+test_destroy(PatientsControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/patients_controller_test.rb:59]:
+Expected response to be a redirect to <http://test.host/patients> but was a redirect to <http://test.host/>
+
+ 57) Failure:
+test_edit(PatientsControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/patients_controller_test.rb:34]:
+expecting <"edit"> but rendering with <"">
+
+ 58) Failure:
+test_new(PatientsControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/patients_controller_test.rb:17]:
+expecting <"new"> but rendering with <"">
+
+ 59) Failure:
+test_not_destroy(PatientsControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/patients_controller_test.rb:52]:
+Expected response to be a redirect to <http://test.host/patients> but was a redirect to <http://test.host/>
+
+ 60) Failure:
+test_update_invalid(PatientsControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/patients_controller_test.rb:40]:
+expecting <"edit"> but rendering with <"">
+
+ 61) Failure:
+test_update_valid(PatientsControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/patients_controller_test.rb:46]:
+Expected response to be a redirect to <http://test.host/patients/1> but was a redirect to <http://test.host/>
+
+ 62) Failure:
+test_create_invalid(ProfessionsControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/professions_controller_test.rb:23]:
+expecting <"new"> but rendering with <"">
+
+ 63) Error:
+test_create_valid(ProfessionsControllerTest):
+ActionController::RoutingError: No route matches {:action=>"show", :controller=>"professions", :id=>#<Profession id: nil, nom: nil, created_at: nil, updated_at: nil>}
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:425:in `raise_routing_error'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:398:in `generate'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:454:in `generate'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:482:in `url_for'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/url_for.rb:131:in `url_for'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:195:in `profession_url'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/testing/assertions/routing.rb:173:in `method_missing'
+    /Users/zubi/rails_apps/Dispensaire/test/functional/professions_controller_test.rb:29:in `test_create_valid'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/mocha-0.10.4/lib/mocha/integration/mini_test/version_230_to_262.rb:28:in `run'
+
+ 64) Failure:
+test_destroy(ProfessionsControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/professions_controller_test.rb:52]:
+Expected response to be a redirect to <http://test.host/professions> but was a redirect to <http://test.host/>
+
+ 65) Failure:
+test_edit(ProfessionsControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/professions_controller_test.rb:34]:
+expecting <"edit"> but rendering with <"">
+
+ 66) Failure:
+test_new(ProfessionsControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/professions_controller_test.rb:17]:
+expecting <"new"> but rendering with <"">
+
+ 67) Failure:
+test_update_invalid(ProfessionsControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/professions_controller_test.rb:40]:
+expecting <"edit"> but rendering with <"">
+
+ 68) Failure:
+test_update_valid(ProfessionsControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/professions_controller_test.rb:46]:
+Expected response to be a redirect to <http://test.host/professions/1> but was a redirect to <http://test.host/>
+
+ 69) Failure:
+test_create_invalid(SexesControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/sexes_controller_test.rb:23]:
+expecting <"new"> but rendering with <"">
+
+ 70) Error:
+test_create_valid(SexesControllerTest):
+ActionController::RoutingError: No route matches {:action=>"show", :controller=>"sexes", :id=>#<Sex id: nil, description: nil, created_at: nil, updated_at: nil>}
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:425:in `raise_routing_error'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:398:in `generate'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:454:in `generate'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:482:in `url_for'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/url_for.rb:131:in `url_for'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:195:in `sex_url'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/testing/assertions/routing.rb:173:in `method_missing'
+    /Users/zubi/rails_apps/Dispensaire/test/functional/sexes_controller_test.rb:29:in `test_create_valid'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/mocha-0.10.4/lib/mocha/integration/mini_test/version_230_to_262.rb:28:in `run'
+
+ 71) Failure:
+test_destroy(SexesControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/sexes_controller_test.rb:52]:
+Expected response to be a redirect to <http://test.host/sexes> but was a redirect to <http://test.host/>
+
+ 72) Failure:
+test_edit(SexesControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/sexes_controller_test.rb:34]:
+expecting <"edit"> but rendering with <"">
+
+ 73) Failure:
+test_new(SexesControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/sexes_controller_test.rb:17]:
+expecting <"new"> but rendering with <"">
+
+ 74) Failure:
+test_update_invalid(SexesControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/sexes_controller_test.rb:40]:
+expecting <"edit"> but rendering with <"">
+
+ 75) Failure:
+test_update_valid(SexesControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/sexes_controller_test.rb:46]:
+Expected response to be a redirect to <http://test.host/sexes/1> but was a redirect to <http://test.host/>
+
+ 76) Failure:
+test_create_invalid(TipeconsultationsControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/tipeconsultations_controller_test.rb:23]:
+expecting <"new"> but rendering with <"">
+
+ 77) Error:
+test_create_valid(TipeconsultationsControllerTest):
+ActionController::RoutingError: No route matches {:action=>"show", :controller=>"tipeconsultations", :id=>#<Tipeconsultation id: nil, tipe: nil, created_at: nil, updated_at: nil>}
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:425:in `raise_routing_error'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:398:in `generate'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:454:in `generate'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:482:in `url_for'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/url_for.rb:131:in `url_for'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:195:in `tipeconsultation_url'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/testing/assertions/routing.rb:173:in `method_missing'
+    /Users/zubi/rails_apps/Dispensaire/test/functional/tipeconsultations_controller_test.rb:29:in `test_create_valid'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/mocha-0.10.4/lib/mocha/integration/mini_test/version_230_to_262.rb:28:in `run'
+
+ 78) Failure:
+test_destroy(TipeconsultationsControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/tipeconsultations_controller_test.rb:52]:
+Expected response to be a redirect to <http://test.host/tipeconsultations> but was a redirect to <http://test.host/>
+
+ 79) Failure:
+test_edit(TipeconsultationsControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/tipeconsultations_controller_test.rb:34]:
+expecting <"edit"> but rendering with <"">
+
+ 80) Failure:
+test_new(TipeconsultationsControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/tipeconsultations_controller_test.rb:17]:
+expecting <"new"> but rendering with <"">
+
+ 81) Failure:
+test_update_invalid(TipeconsultationsControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/tipeconsultations_controller_test.rb:40]:
+expecting <"edit"> but rendering with <"">
+
+ 82) Failure:
+test_update_valid(TipeconsultationsControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/tipeconsultations_controller_test.rb:46]:
+Expected response to be a redirect to <http://test.host/tipeconsultations/1> but was a redirect to <http://test.host/>
+
+ 83) Failure:
+test_create_invalid(TraitementsControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/traitements_controller_test.rb:23]:
+expecting <"new"> but rendering with <"">
+
+ 84) Error:
+test_create_valid(TraitementsControllerTest):
+ActionController::RoutingError: No route matches {:action=>"show", :controller=>"traitements", :id=>#<Traitement id: nil, groupe_traitement_id: nil, acronime: nil, description: nil, created_at: nil, updated_at: nil>}
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:425:in `raise_routing_error'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:398:in `generate'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:454:in `generate'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:482:in `url_for'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/url_for.rb:131:in `url_for'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:195:in `traitement_url'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/testing/assertions/routing.rb:173:in `method_missing'
+    /Users/zubi/rails_apps/Dispensaire/test/functional/traitements_controller_test.rb:29:in `test_create_valid'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/mocha-0.10.4/lib/mocha/integration/mini_test/version_230_to_262.rb:28:in `run'
+
+ 85) Failure:
+test_destroy(TraitementsControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/traitements_controller_test.rb:52]:
+Expected response to be a redirect to <http://test.host/traitements> but was a redirect to <http://test.host/>
+
+ 86) Failure:
+test_edit(TraitementsControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/traitements_controller_test.rb:34]:
+expecting <"edit"> but rendering with <"">
+
+ 87) Failure:
+test_new(TraitementsControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/traitements_controller_test.rb:17]:
+expecting <"new"> but rendering with <"">
+
+ 88) Failure:
+test_update_invalid(TraitementsControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/traitements_controller_test.rb:40]:
+expecting <"edit"> but rendering with <"">
+
+ 89) Failure:
+test_update_valid(TraitementsControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/traitements_controller_test.rb:46]:
+Expected response to be a redirect to <http://test.host/traitements/1> but was a redirect to <http://test.host/>
+
+ 90) Failure:
+test_create_invalid(VillagesControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/villages_controller_test.rb:24]:
+expecting <"new"> but rendering with <"">
+
+ 91) Error:
+test_create_valid(VillagesControllerTest):
+ActionController::RoutingError: No route matches {:action=>"show", :controller=>"villages", :id=>#<Village id: nil, nom: nil, commune_id: nil, created_at: nil, updated_at: nil>}
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:425:in `raise_routing_error'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:398:in `generate'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:454:in `generate'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:482:in `url_for'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/url_for.rb:131:in `url_for'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:195:in `village_url'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.7/lib/action_dispatch/testing/assertions/routing.rb:173:in `method_missing'
+    /Users/zubi/rails_apps/Dispensaire/test/functional/villages_controller_test.rb:30:in `test_create_valid'
+    /Users/zubi/.rvm/gems/ruby-1.9.3-p194/gems/mocha-0.10.4/lib/mocha/integration/mini_test/version_230_to_262.rb:28:in `run'
+
+ 92) Failure:
+test_destroy(VillagesControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/villages_controller_test.rb:56]:
+Expected response to be a redirect to <http://test.host/villages> but was a redirect to <http://test.host/>
+
+ 93) Failure:
+test_edit(VillagesControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/villages_controller_test.rb:35]:
+expecting <"edit"> but rendering with <"">
+
+ 94) Failure:
+test_new(VillagesControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/villages_controller_test.rb:18]:
+expecting <"new"> but rendering with <"">
+
+ 95) Failure:
+test_update_invalid(VillagesControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/villages_controller_test.rb:41]:
+expecting <"edit"> but rendering with <"">
+
+ 96) Failure:
+test_update_valid(VillagesControllerTest) [/Users/zubi/rails_apps/Dispensaire/test/functional/villages_controller_test.rb:47]:
+Expected response to be a redirect to <http://test.host/villages/1> but was a redirect to <http://test.host/>
+
+118 tests, 112 assertions, 67 failures, 29 errors, 0 skips
