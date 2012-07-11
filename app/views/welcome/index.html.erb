@@ -16,15 +16,16 @@
 		          <%= submit_tag("Cherchez") %>
 		        <% end %>
 		  </li>
-		
-		   <h3>Administration</h3>
-		   <li><a href="/communes">Communes</a></li>
-		   <li><a href="/ethnies">Ethnies</a></li>
-		   <li><a href="/professions">Professions</a></li>
-		   <li><a href="/villages">Villages</a></li>
-		   <li><a href="/diagnostics">Diagnostics</a></li>
-		   <li><a href="/traitements">Traitements</a></li>
-		   <li><a href="/users/new">Nouveau utilizateur</li>
+		  <% if current_user.role == 'admin' %>
+		    <h3>Administration</h3>
+		    <li><a href="/communes">Communes</a></li>
+		    <li><a href="/ethnies">Ethnies</a></li>
+		    <li><a href="/professions">Professions</a></li>
+		    <li><a href="/villages">Villages</a></li>
+		    <li><a href="/diagnostics">Diagnostics</a></li>
+		    <li><a href="/traitements">Traitements</a></li>
+		    <li><a href="/users/new">Nouveau utilizateur</li>
+		  <% end %>
         <%end %>
 	  <% else %>
 		Vous avez besoin de faire log-in pour entrer dans la aplication
