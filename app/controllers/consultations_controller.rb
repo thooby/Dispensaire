@@ -9,6 +9,7 @@ class ConsultationsController < ApplicationController
       end
   end
   def new
+    @patient = Patient.find(params[:id])
     @consultation.consul_diags.build
     @consultation.consul_trats.build
     respond_to do |format|
