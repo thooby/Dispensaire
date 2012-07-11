@@ -7,10 +7,11 @@ class Ability
       can :manage, :all
       can :assign_roles, User
     elsif user.role == "visiteur"
+      can :find, ConsulDiag
     elsif user.role == "chercheur"
-      can :read, :patient
+      can :read, Patient
     elsif user.role == "sanitaire"
-      can :manage, Patient
+      can :manage, Patient 
       cannot :destroy, Patient 
     elsif user.role == "local_admin"
       can :read, :all
