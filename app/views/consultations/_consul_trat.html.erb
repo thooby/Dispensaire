@@ -1,8 +1,12 @@
 <div class="consul_trat">
-  <p>Traitement:
+  <p>
+  Traitement:
     <!-- f.collection_select(:traitement_id, Traitement.order("description"),:id,:description, :include_blank => true ) %> -->
+    
 	  <%= f.text_field :traitement_name, :size => 60, :class => 'autocomplete' %>
     <%= f.hidden_field :traitement_id %>
+    
     <%= link_to_remove_fields "Éliminer", f %>
-  </p>
+    <span class="spinner" style = 'display:none'><%= image_tag 'spinner.gif' %></span>
+  </p>  
 </div>
