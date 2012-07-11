@@ -11,6 +11,10 @@ class ConsulDiagsController < ApplicationController
  
   end
 
+  def find
+   @find_diags = ConsulDiag.find_diag
+  end
+
   def show
     respond_to do |format|
       format.html # show.html.erb
