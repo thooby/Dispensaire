@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Patients</title>
+    <link href="/stylesheets/application.css?1301248128" media="screen" rel="stylesheet" type="text/css" />
+    <meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="8wk9+qtTEORdoBDczlI970aXT0uaWxUZxmJFrRUY8GA="/>
+    
+  </head>
+  <body>
+	<h1 class="white">Dispensaire de la Mission Catolique de Beleko</h1>
+	<div id="container">
+	<h2>Registre de Patients</h2>
+	<ul id="home">
+		<li><a href="/patients">Liste generale de patients</a></li>
+		<li><a href="/patients/new">Nouveau patient</a></li>
+		<li><div id="search">
+		<form accept-charset="UTF-8" action="/search?method=get" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="+vX0bsVn3popubM3HOOqWNmA3Gvba+W9rLmm025YN5c=" /></div>  <label for="q">Cherchez un patient par le code: </label>
+		  <input id="q" name="q" size="6" type="search" />
+		 <input name="commit" type="submit" value="Cherchez" />
+		</form>	</div>
+		</li>
+		<li> <a href="/consul_diags/find">Statistiques</a></li>
+		<h3>Administration</h3>
+		<li><a href="/communes">Communes</a></li>
+		<li><a href="/ethnies">Ethnies</a></li>
+		<li><a href="/professions">Professions</a></li>
+		<li><a href="/villages">Villages</a></li>
+		<li><a href="/diagnostics">Diagnostics</a></li>
+		<li><a href="/traitements">Traitements</a></li>
+		</ul>
+	</div>
+	</body>
+	</html>
