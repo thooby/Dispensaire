@@ -2,11 +2,15 @@
 require 'test_helper'
 
 class ProfessionTest < ActiveSupport::TestCase
-  def test_should_be_valid
-    assert Profession.new(:nom =>"Agriculteur").valid?
-  end
+  subject {FactoryGirl.create(:profession)}
+  
   should have_many :patients
   should validate_presence_of :nom
   should validate_uniqueness_of :nom
+  
+  should "be valid" do
+    profession = FactoryGirl.build(:profession)
+    assert_equal true, profession.valid?
+  end
   
 end

@@ -27,11 +27,15 @@ gem 'nokogiri'
 # and rake tasks are available in development mode:
 gem "nifty-generators", :group => :development
 gem 'faker'
-gem "shoulda"
-gem "mocha"
 gem "will_paginate" , "~> 3.0.pre2"
 gem "hoe"
 gem "rdoc"
 gem "magic_encoding"
 gem "authlogic"
 gem "cancan"
+
+group :test do
+  gem 'factory_girl_rails', '3.2.0'
+  gem "shoulda"
+  gem "mocha"
+end  

@@ -38,6 +38,11 @@ GEM
     columnize (0.3.6)
     erubis (2.6.6)
       abstract (>= 1.0.0)
+    factory_girl (3.2.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (3.2.0)
+      factory_girl (~> 3.2.0)
+      railties (>= 3.0.0)
     faker (0.9.5)
       i18n (~> 0.4)
     hoe (2.9.4)
@@ -106,6 +111,7 @@ PLATFORMS
 DEPENDENCIES
   authlogic
   cancan
+  factory_girl_rails (= 3.2.0)
   faker
   hoe
   magic_encoding
