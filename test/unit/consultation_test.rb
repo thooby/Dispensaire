@@ -14,4 +14,9 @@ class ConsultationTest < ActiveSupport::TestCase
   should validate_presence_of :consul_trats
   should validate_presence_of :consul_diags
   
+  should "be valid" do
+    consultation = FactoryGirl.build(:consultation)
+    assert_equal true, consultation.valid?
+  end  
+  
 end

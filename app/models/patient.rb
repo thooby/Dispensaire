@@ -32,13 +32,17 @@ class Patient < ActiveRecord::Base
   scope :tranche4, lambda {where('naissance  > ? and naissance < ?',(Date.today.year-18),(Date.today.year-13))}
   scope :tranche5, lambda {where('naissance  > ? and naissance < ?',(Date.today.year-25),(Date.today.year-17))}
   scope :tranche6, lambda {where('naissance < ?',(Date.today.year-24))}
+  
   def self.find_code(carte_code)
     patient = Patient.where("carte_code = ?", carte_code).first
   end
+  
   def check_for_consultation
-      unless consultations.count == 0
-        errors.add(:patient, "Il n'est pas posible eliminer un patient sans eliminer ses consultations")
-        return false
-      end
+    unless consultations.count == 0
+      errors.add(:patient, "Il n'est pas posible eliminer un patient sans eliminer ses consultations")
+      return false
     end
+  end
+  
+  
 end

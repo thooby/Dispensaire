@@ -42,35 +42,46 @@ function add_fields(link, association, content, autocomplete) {
 
 function setAutoCompleters() {
   $('input.autocomplete').each(function(){
+    var spinner = $(this).siblings('span.spinner');
     var url = new String();
     if ($(this).attr('id').match(/consultation_consul_diags*/)) {
       url = "/diagnostics.json";
     } else if ($(this).attr('id').match(/consultation_consul_trats*/)) {  
-      url = "/traitements.json";
+      url = "/traitements.json";      
     }
+    
     $(this).autocomplete({
       source: function (request, response) {
-       $.ajax({
-         url: url + '?q=' + request.term,
-         dataType: "json",
-      	success: function( data ) {
-          response($.map(data, function(item){
+        var gt_id = this.element.siblings('select').val();
+        $.ajax({
+          url: url + '?q=' + request.term + '&groupe_traitement_id=' + gt_id,
+          dataType: "json",
+      	  success: function( data ) {
+            response($.map(data, function(item){
       	    return { 
       	      value: item[0],
       	      label: item[1] 
             }
+          spinner.hide();
       	  }));
       	}	
       });
+      },
+      search: function() {
+        spinner.show();
       },
       focus: function( event, ui ) {
        $(this).attr('value', ui.item.label );
       	 return false;
       },
       select: function(event, ui) {
-       $(this).attr('value', ui.item.label);
-       $(this).siblings('input[type=hidden]:first').attr('value', ui.item.value);
-       return false;
+        spinner.hide();
+        $(this).attr('value', ui.item.label);
+        $(this).siblings('input[type=hidden]:first').attr('value', ui.item.value);
+        return false;
+      },
+      close: function(event, ui){
+        spinner.hide();
       }
   });
   })

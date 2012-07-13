@@ -8,6 +8,7 @@ class ConsultationsController < ApplicationController
         format.xml  { render :xml => @consultation }
       end
   end
+  
   def new
     @patient = Patient.find(params[:id])
     @consultation.consul_diags.build
@@ -23,7 +24,6 @@ class ConsultationsController < ApplicationController
     if @consultation.save
       redirect_to consultation_path(@consultation), :notice => "Successfully created consultation."
     else
-      debugger
       @patient = Patient.find(params[:consultation][:patient_id])
       render :action => 'new'
     end
