@@ -389,7 +389,7 @@ form ol li.file {
 form abbr {
   border-bottom: 0; }
 
-#label {
+label {
   display: block; }
 
 .required label {
