@@ -47,15 +47,17 @@ function setAutoCompleters() {
     if ($(this).attr('id').match(/consultation_consul_diags*/)) {
       url = "/diagnostics.json";
     } else if ($(this).attr('id').match(/consultation_consul_trats*/)) {  
-      url = "/traitements.json";
+      url = "/traitements.json";      
     }
+    
     $(this).autocomplete({
       source: function (request, response) {
-       $.ajax({
-         url: url + '?q=' + request.term,
-         dataType: "json",
-      	success: function( data ) {
-          response($.map(data, function(item){
+        var gt_id = this.element.siblings('select').val();
+        $.ajax({
+          url: url + '?q=' + request.term + '&groupe_traitement_id=' + gt_id,
+          dataType: "json",
+      	  success: function( data ) {
+            response($.map(data, function(item){
       	    return { 
       	      value: item[0],
       	      label: item[1] 

@@ -9,6 +9,7 @@ class TraitementsController < ApplicationController
       }
       format.json { 
         @traitements =  Traitement.where("description like ?", "%#{params[:q]}%")
+        @traitements = @traitements.where("groupe_traitement_id = ?", params[:groupe_traitement_id]) if params[:groupe_traitement_id].present?
         render :json => @traitements.map{|d| [d.id, d.description]}
       }
     end  

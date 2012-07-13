@@ -6,10 +6,14 @@ class ConsulTrat < ActiveRecord::Base
   
   validates  :traitement_id, :presence => true
 
-  attr_accessor :traitement_name
+  attr_accessor :traitement_name, :groupe_traitement_id
   
   def traitement_name
     self.traitement.description if self.traitement
+  end
+  
+  def groupe_traitement_id
+    self.traitement.groupe_traitement_id if self.traitement
   end
 
   def self.find_trat
