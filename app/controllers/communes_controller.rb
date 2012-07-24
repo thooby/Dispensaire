@@ -50,7 +50,16 @@ class CommunesController < ApplicationController
     if @commune.destroy
         redirect_to(communes_url, :notice => "La commune a eté eliminé.")
     else
-        redirect_to(communes_url, :alert => "Il n'est pas posible eliminer une commune sans eliminer ses villages")
+      n_mess = 0
+      n_mess += 1 if @commune.villages[0]
+      n_mess += 2 if @commune.patients[0]
+      mes_info = "Il n'est pas posible eliminer une commune sans eliminer ses " 
+      mes_info += case n_mess
+        when 1 then "villages"
+        when 2 then "patients"
+        when 3 then "patients et ses villages"
+      end  
+      redirect_to(communes_url, :alert => mes_info)
     end
   end
 end

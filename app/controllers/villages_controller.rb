@@ -29,9 +29,12 @@ class VillagesController < ApplicationController
       render :action => 'edit'
     end
   end
-
   def destroy
-    @village.destroy
-    redirect_to villages_url, :notice => "Successfully destroyed village."
+    if @village.destroy
+        redirect_to(villages_url, :notice => "Le village a eté eliminé.")
+    else
+      mes_info = "Il n'est pas posible eliminer un village sans eliminer ses patients" 
+      redirect_to(villages_url, :alert => mes_info)
+    end
   end
 end
