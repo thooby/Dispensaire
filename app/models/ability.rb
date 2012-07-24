@@ -1,6 +1,5 @@
 class Ability
   include CanCan::Ability
-
   def initialize(user)   
     user ||= User.new # guest user (not logged in)
     if user.role == "admin"
@@ -10,27 +9,21 @@ class Ability
       can :find, ConsulDiag
     elsif user.role == "chercheur"
       can :read, Patient
+      can :read, Consultation
+      can :read, ConsulDiag
+      can :read, ConsulTrat
+      can :find, ConsulDiag
     elsif user.role == "sanitaire"
       can :manage, Patient 
       cannot :destroy, Patient 
+      can :manage, User
     elsif user.role == "local_admin"
       can :read, :all
+      can :assign_roles, User
+      can :manage, Patient 
+      can :manage, User
     else            
       can :read, :all
     end
-    #
-    # The first argument to `can` is the action you are giving the user permission to do.
-    # If you pass :manage it will apply to every action. Other common actions here are
-    # :read, :create, :update and :destroy.
-    #
-    # The second argument is the resource the user can perform the action on. If you pass
-    # :all it will apply to every resource. Otherwise pass a Ruby class of the resource.
-    #
-    # The third argument is an optional hash of conditions to further filter the objects.
-    # For example, here the user can only update published articles.
-    #
-    #   can :update, Article, :published => true
-    #
-    # See the wiki for details: https://github.com/ryanb/cancan/wiki/Defining-Abilities
   end
 end
