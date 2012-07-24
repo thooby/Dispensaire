@@ -17,11 +17,17 @@ class Ability
       can :manage, Patient 
       cannot :destroy, Patient 
       can :manage, User
-    elsif user.role == "local_admin"
-      can :read, :all
+    elsif user.role == "local_admin"      
       can :assign_roles, User
-      can :manage, Patient 
-      can :manage, User
+      can :manage, :all
+      cannot :manage, ConsulDiag
+      cannot :manage, ConsulTrat 
+      cannot :manage, Diagnostic
+      cannot :manage, Traitement 
+      can :read, ConsulDiag
+      can :read, ConsulTrat
+      can :read, Diagnostic
+      can :read, Traitement
     else            
       can :read, :all
     end

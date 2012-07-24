@@ -20,11 +20,11 @@
                   current_user.role == 'local_admin'%>
 		      <h3>Administration</h3>
 		      <li><a href="/users/new">Nouveau utilisateur</li>
+			  <li><a href="/communes">Communes</a></li>
+		      <li><a href="/ethnies">Ethnies</a></li>
+		      <li><a href="/professions">Professions</a></li>
+		      <li><a href="/villages">Villages</a></li>
 			  <% if current_user.role == 'admin' %>			
-		        <li><a href="/communes">Communes</a></li>
-		        <li><a href="/ethnies">Ethnies</a></li>
-		        <li><a href="/professions">Professions</a></li>
-		        <li><a href="/villages">Villages</a></li>
 		        <li><a href="/diagnostics">Diagnostics</a></li>
 		        <li><a href="/traitements">Traitements</a></li>
 		      <% end %>
