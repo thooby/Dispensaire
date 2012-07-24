@@ -1,18 +1,22 @@
 <% title "Consultations" %>
-<%= will_paginate @patients %>
 <table>
   <tr>
-    <th>Date</th>
+
     <th>Patient</th>
+    <th>Date</th>
     <th>Tipe</th>
     <th>Diagnostics</th>
 <th>Traitements</th>
     <th>Observations</th>
   </tr>
+  <% n=0 %>
   <% for consultation in @consultations %>
+    <% if consultation.patient %>
+<% n += 1%>
     <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
-      <td><%= consultation.fecha %></td>
-      <td><%= consultation.patient.carte_code %> <%= consultation.patient.prenom %> <%= consultation.patient.nom %></td>
+      	      <td><%= consultation.patient.carte_code %> 
+		<%= consultation.patient.prenom %> <%= consultation.patient.nom %></td><td><%= consultation.fecha %></td>
+
       <td><%= consultation.tipeconsultation_tipe %></td>
       <td><% consultation.consul_diags.each do |h| %>
 	      <%= h.diagnostic.description %><br />
@@ -22,11 +26,8 @@
 		      <% end %>
 	      </td>
       <td><%= consultation.observation %></td>
-      <td><%= link_to "Montrer", consultation %></td>
-      <td><%= link_to "Editer", edit_consultation_path(consultation) %></td>
-      <td><%= link_to "Eliminer", consultation, :confirm => 'Are you sure?', :method => :delete %></td>
     </tr>
+   <% end %>
   <% end %>
 </table>
-<%= will_paginate @patients %>
-<p><%= link_to "New Consultation", new_consultation_path %></p>
+<p>Nombre de consultations <%=  n %></p>

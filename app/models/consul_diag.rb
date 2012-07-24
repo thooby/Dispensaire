@@ -13,7 +13,7 @@ class ConsulDiag < ActiveRecord::Base
   
   def self.tranch(t,date_report)
     lev = 0
-    trozos =[0,12,60,120,240,360]
+    trozos =[0,12,49,111,169,301]
     niv = (date_report.year - t[0])*12    
     if t[1] then
       niv += (date_report.month - t[1])
