@@ -30,8 +30,13 @@ class ProfessionsController < ApplicationController
     end
   end
 
+
   def destroy
-    @profession.destroy
-    redirect_to professions_url, :notice => "Successfully destroyed profession."
+    if @profession.destroy
+      redirect_to professions_url, :notice => "La profession a eté eliminé."
+    else
+      mes_info = "Il n'est pas posible eliminer une profession sans eliminer ses patients" 
+      redirect_to(professions_url, :alert => mes_info)
+    end
   end
 end

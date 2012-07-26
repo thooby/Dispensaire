@@ -18,6 +18,8 @@ class ConsultationsController < ApplicationController
         format.xml  { render :xml => @consultation }
       end
   end
+  def index
+  end
 
   def create   
     debugger

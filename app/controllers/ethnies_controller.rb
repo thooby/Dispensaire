@@ -31,7 +31,12 @@ class EthniesController < ApplicationController
   end
 
   def destroy
-    @ethnie.destroy
-    redirect_to ethnies_url, :notice => "Successfully destroyed ethnie."
+    if @ethnie.destroy
+      redirect_to ethnies_url, :notice => "La ethnie a eté eliminé."
+    else
+      mes_info = "Il n'est pas posible eliminer une ethnie sans eliminer ses patients" 
+            redirect_to(ethnies_url, :alert => mes_info)
+
+    end
   end
 end
