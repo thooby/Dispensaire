@@ -8,7 +8,7 @@ class Ethnie < ActiveRecord::Base
   def check_for_patient
     unless patients.count == 0
       message_info = "Il n'est pas posible eliminer une ethnie sans eliminer ses patients"
-      errors.add(:ethnie, "message_info")
+      errors.add(:ethnie, message_info)
       return false
     end
   end    

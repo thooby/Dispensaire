@@ -33,7 +33,7 @@ gem "rdoc"
 gem "magic_encoding"
 gem "authlogic"
 gem "cancan"
-
+gem "prawn"
 group :test do
   gem 'factory_girl_rails', '3.2.0'
   gem "shoulda"

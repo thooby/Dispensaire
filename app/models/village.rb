@@ -4,7 +4,7 @@ class Village < ActiveRecord::Base
   has_many :patients
   belongs_to :commune
   validates  :nom, :presence => true
-  validate :must_be_unique
+  validates_uniqueness_of :nom,  :scope => :commune_id, :message => 'Le pair Commune-Village doit être unique'
     def must_be_unique
       if self.class.where(nom: nom, commune_id: commune_id).exists?
         errors.add(:base, 'Le pair Commune-Village doit être unique')
@@ -12,9 +12,9 @@ class Village < ActiveRecord::Base
     end
     before_destroy :check_for_patient
     def check_for_patient
-      unless commune.patients.count == 0
+      unless patients.count == 0
         message_info = "Il n'est pas posible eliminer une commune sans eliminer ses patients"
-        errors.add(:commune, "message_info")
+        errors.add(:nom, "message_info")
         return false
       end
     end    

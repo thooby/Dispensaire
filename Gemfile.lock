@@ -1,6 +1,7 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    Ascii85 (1.0.1)
     abstract (1.0.0)
     actionmailer (3.0.7)
       actionpack (= 3.0.7)
@@ -63,7 +64,13 @@ GEM
       metaclass (~> 0.0.1)
     nifty-generators (0.4.6)
     nokogiri (1.4.4)
+    pdf-reader (1.1.1)
+      Ascii85 (~> 1.0.0)
+      ruby-rc4
     polyglot (0.3.1)
+    prawn (0.12.0)
+      pdf-reader (>= 0.9.0)
+      ttfunk (~> 1.0.2)
     rack (1.2.2)
     rack-mount (0.6.14)
       rack (>= 1.0.0)
@@ -93,6 +100,7 @@ GEM
       columnize (>= 0.3.1)
       linecache19 (>= 0.5.11)
       ruby-debug-base19 (>= 0.11.19)
+    ruby-rc4 (0.1.5)
     ruby_core_source (0.1.5)
       archive-tar-minitar (>= 0.5.2)
     shoulda (2.11.3)
@@ -102,6 +110,7 @@ GEM
     thor (0.14.6)
     treetop (1.4.9)
       polyglot (>= 0.3.1)
+    ttfunk (1.0.3)
     tzinfo (0.3.27)
     will_paginate (3.0.pre2)
 
@@ -118,6 +127,7 @@ DEPENDENCIES
   mocha
   nifty-generators
   nokogiri
+  prawn
   rails (= 3.0.7)
   rdoc
   ruby-debug19
