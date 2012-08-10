@@ -1,0 +1,32 @@
+<% title "Consultations" %>
+<table>
+  <tr>
+    <th>Patient</th>
+    <th>Date</th>
+    <th>Tipe</th>
+    <th>Diagnostics</th>
+    <th>Traitements</th>
+    <th>Observations</th>
+  </tr>
+  <% n=0 %>
+  <% for consultation in @consultations %>
+    <% if consultation.patient %>
+<% n += 1%>
+    <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+      	      <td><strong class="rouge"><%= consultation.patient.carte_code %></strong> 
+		<%= consultation.patient.prenom %> <%= consultation.patient.nom %></td><td><%= consultation.fecha %></td>
+
+      <td><%= consultation.tipeconsultation_tipe %></td>
+      <td><% consultation.consul_diags.each do |h| %>
+	      <%= h.diagnostic.description %><br />
+	      <% end %>
+      </td>	<td><% consultation.consul_trats.each do |h| %>
+		      <%= h.traitement.description %><br />
+		      <% end %>
+	      </td>
+      <td><%= consultation.observation %></td>
+    </tr>
+   <% end %>
+  <% end %>
+</table>
+<p>Nombre de consultations <%=  n %></p>

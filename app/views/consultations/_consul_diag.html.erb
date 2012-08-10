@@ -1,6 +1,9 @@
 <div class="consul_diag">
   <p>Diagnostique:	
-    <%= f.collection_select(:diagnostic_id,Diagnostic.order("description"),:id,:description, :include_blank => true ) %>
-    <%= link_to_function "remove", "$(this).up('.consul_diag').remove()" %>
+    <!-- f.collection_select(:diagnostic_id,Diagnostic.order("description"),:id,:description, :include_blank => true ) %> -->
+    <%= f.text_field :diagnostic_name, :size => 60, :class => 'autocomplete' %>
+    <%= f.hidden_field :diagnostic_id %>
+    <span class="spinner" style = 'display:none'><%= image_tag 'spinner.gif' %></span>
+    <%= link_to_remove_fields "Éliminer", f %>
   </p>
 </div>

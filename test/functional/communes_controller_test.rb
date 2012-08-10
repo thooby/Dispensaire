@@ -2,6 +2,9 @@
 require 'test_helper'
 
 class CommunesControllerTest < ActionController::TestCase
+  def setup
+    @current_user = "admin"
+  end
   def test_index
     get :index
     assert_template 'index'

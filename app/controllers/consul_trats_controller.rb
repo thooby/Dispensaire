@@ -1,42 +1,54 @@
 # -*- encoding : utf-8 -*-
 class ConsulTratsController < ApplicationController
-  def index
-    @consul_trats = ConsulTrat.all
+  load_and_authorize_resource
+  
+  def index    
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @consul_trats }
+    end 
   end
 
   def show
-    @consul_trat = ConsulTrat.find(params[:id])
+    respond_to do |format|
+      format.html # show.html.erb
+      format.xml  { render :xml => @consul_trat }
+    end
   end
 
   def new
-    @consul_trat = ConsulTrat.new
+    respond_to do |format|
+      format.html # new.html.erb
+      format.xml  { render :xml => @consul_trat }
+    end 
   end
 
   def create
-    @consul_trat = ConsulTrat.new(params[:consul_trat])
     if @consul_trat.save
-      redirect_to @consul_trat, :notice => "Successfully created consul trat."
-    else
-      render :action => 'new'
-    end
+       format.html { redirect_to(@consul_trat, :notice => 'La consul_trat a eté  creé.') }
+       format.xml  { render :xml => @consul_trat, :status => :created, :location => @consul_trat }
+     else
+       format.html { render :action => "new" }
+       format.xml  { render :xml => @consul_trat.errors, :status => :unprocessable_entity }
+     end
   end
-
+  
   def edit
-    @consul_trat = ConsulTrat.find(params[:id])
   end
 
   def update
-    @consul_trat = ConsulTrat.find(params[:id])
     if @consul_trat.update_attributes(params[:consul_trat])
-      redirect_to @consul_trat, :notice  => "Successfully updated consul trat."
-    else
-      render :action => 'edit'
-    end
+        format.html { redirect_to(@consul_trat, :notice => 'La consul_trat a eté mis a jour.') }
+        format.xml  { head :ok }
+      else
+        format.html { render :action => "edit" }
+        format.xml  { render :xml => @consul_trat.errors, :status => :unprocessable_entity }
+      end
   end
 
   def destroy
-    @consul_trat = ConsulTrat.find(params[:id])
-    @consul_trat.destroy
-    redirect_to consul_trats_url, :notice => "Successfully destroyed consul trat."
-  end
+      if @consul_trat.destroy
+        redirect_to(consul_trats_url, :notice => "La consul_trat a eté eliminé.")
+      end
+    end
 end

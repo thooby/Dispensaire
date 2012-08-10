@@ -1,5 +1,6 @@
 # -*- encoding : utf-8 -*-
 class PatientsController < ApplicationController
+  load_and_authorize_resource :except => :update_village_select
   def index
     @alfaorig = Array.new(26) {|i| (i+65).chr}
     @alfabeto = Array.new(26) {|i| (i+65).chr}
@@ -16,8 +17,6 @@ class PatientsController < ApplicationController
   end
 
   def show
-    @patient = Patient.find(params[:id])
-    
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @patient }
@@ -25,8 +24,6 @@ class PatientsController < ApplicationController
   end
   
   def new
-    @patient = Patient.new
-    
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @patient }
@@ -34,7 +31,7 @@ class PatientsController < ApplicationController
   end
 
   def create
-    @patient = Patient.new(params[:patient])
+    # @patient = Patient.new(params[:patient])
     respond_to do |format|
      if @patient.save
         format.html { redirect_to(@patient, :notice => 'Le patient a ete  cree.') }
@@ -47,11 +44,9 @@ class PatientsController < ApplicationController
   end
 
   def edit
-    @patient = Patient.find(params[:id])
   end
 
   def update
-    @patient = Patient.find(params[:id])
     respond_to do |format|
       if @patient.update_attributes(params[:patient])
         format.html { redirect_to(@patient, :notice => 'Patient was successfully updated.') }
@@ -64,15 +59,17 @@ class PatientsController < ApplicationController
   end
 
   def destroy
-    @patient = Patient.find(params[:id])
-    @patient.destroy
-     respond_to do |format|
-        format.html { redirect_to(patients_url,:notice => "Successfully destroyed patient.") }
-        format.xml  { head :ok }
-      end
+    if @patient.destroy
+      redirect_to(patients_url, :notice => "Successfully destroyed patient.")
+    else
+      redirect_to(patients_url, :alert => "Il n'est pas posible eliminer un patient sans eliminer ses consultations")
+    end
   end
+  
   def update_village_select
+      authorize! :create, User
       villages = Village.where(:commune_id => params[:id]).order(:nom) unless params[:id].blank?
       render :partial => "villages", :locals => { :villages => villages }
   end
+  
 end

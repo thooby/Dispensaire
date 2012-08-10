@@ -18,6 +18,19 @@
     <%= form.password_field :password_confirmation %>
   </li>
   <li>
+    <%= form.label :role, "Role" %>
+      <% if can? :assign_roles, @user %>
+        <% if current_user.role == 'admin'%>
+          <%= form.collection_select :role, User::ROLES, :to_s, :humanize %>
+        <% elsif current_user.role == 'local_admin'%>
+          <%= form.collection_select :role, User::ROLES2, :to_s, :humanize %>
+        <% end %>
+      <% else %>
+        <%= form.hidden_field :role, :value => "visiteur" %>
+        visiteur
+    <% end %>
+  </li>
+  <li>
     <%= form.submit "Submit" %>
   </li>
 </ol>

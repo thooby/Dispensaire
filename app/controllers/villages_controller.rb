@@ -1,19 +1,17 @@
 # -*- encoding : utf-8 -*-
 class VillagesController < ApplicationController
+  load_and_authorize_resource
+  
   def index
-    @villages = Village.all
   end
 
   def show
-    @village = Village.find(params[:id])
   end
 
   def new
-    @village = Village.new
   end
 
   def create
-    @village = Village.new(params[:village])
     if @village.save
       redirect_to @village, :notice => "Successfully created village."
     else
@@ -22,21 +20,21 @@ class VillagesController < ApplicationController
   end
 
   def edit
-    @village = Village.find(params[:id])
   end
 
   def update
-    @village = Village.find(params[:id])
     if @village.update_attributes(params[:village])
       redirect_to @village, :notice  => "Successfully updated village."
     else
       render :action => 'edit'
     end
   end
-
   def destroy
-    @village = Village.find(params[:id])
-    @village.destroy
-    redirect_to villages_url, :notice => "Successfully destroyed village."
+    if @village.destroy
+        redirect_to(villages_url, :notice => "Le village a eté eliminé.")
+    else
+      mes_info = "Il n'est pas posible eliminer un village sans eliminer ses patients" 
+      redirect_to(villages_url, :alert => mes_info)
+    end
   end
 end

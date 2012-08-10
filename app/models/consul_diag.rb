@@ -3,11 +3,17 @@ class ConsulDiag < ActiveRecord::Base
   attr_accessible :consultation_id, :diagnostic_id
   belongs_to :diagnostic
   belongs_to :consultation
-  validates  :diagnostic_id, :consultation_id, :presence => true 
+  validates  :diagnostic_id, :presence => true 
+  
+  attr_accessor :diagnostic_name
+  
+  def diagnostic_name
+    self.diagnostic.description if self.diagnostic
+  end
   
   def self.tranch(t,date_report)
     lev = 0
-    trozos =[0,12,60,120,240,360]
+    trozos =[0,12,49,111,169,301]
     niv = (date_report.year - t[0])*12    
     if t[1] then
       niv += (date_report.month - t[1])
@@ -44,8 +50,6 @@ class ConsulDiag < ActiveRecord::Base
     clasf(lista,date_report)   
   end
 
-    
-      
   def self.find_diag2
     tot_diag=ConsulDiag.all
     diag_dic=Hash.new(0)

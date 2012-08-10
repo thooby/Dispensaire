@@ -46,8 +46,15 @@ class PatientsControllerTest < ActionController::TestCase
     assert_redirected_to patient_url(assigns(:patient))
   end
 
-  def test_destroy
+  def test_not_destroy
     patient = Patient.first
+    delete :destroy, :id => patient
+    assert_redirected_to patients_url
+    assert Patient.exists?(patient.id)
+  end
+
+  def test_destroy
+    patient = Patient.all[1]
     delete :destroy, :id => patient
     assert_redirected_to patients_url
     assert !Patient.exists?(patient.id)

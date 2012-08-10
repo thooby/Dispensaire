@@ -14,8 +14,7 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 # gem 'capistrano'
 
 # To use debugger (ruby-debug for Ruby 1.8.7+, ruby-debug19 for Ruby 1.9.2+)
-# gem 'ruby-debug'
-# gem 'ruby-debug19'
+gem 'ruby-debug19'
 
 # Bundle the extra gems:
 # gem 'bj'
@@ -28,10 +27,15 @@ gem 'nokogiri'
 # and rake tasks are available in development mode:
 gem "nifty-generators", :group => :development
 gem 'faker'
-gem "shoulda"
-gem "mocha"
 gem "will_paginate" , "~> 3.0.pre2"
 gem "hoe"
 gem "rdoc"
 gem "magic_encoding"
 gem "authlogic"
+gem "cancan"
+gem "prawn"
+group :test do
+  gem 'factory_girl_rails', '3.2.0'
+  gem "shoulda"
+  gem "mocha"
+end  

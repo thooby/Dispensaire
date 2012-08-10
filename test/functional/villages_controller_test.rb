@@ -2,6 +2,7 @@
 require 'test_helper'
 
 class VillagesControllerTest < ActionController::TestCase
+  setup :activate_authlogic
   def test_index
     get :index
     assert_template 'index'
@@ -47,9 +48,13 @@ class VillagesControllerTest < ActionController::TestCase
   end
 
   def test_destroy
+    user = users(:one)
+    assert UserSession.create user
+    
     village = Village.first
     delete :destroy, :id => village
     assert_redirected_to villages_url
     assert !Village.exists?(village.id)
   end
+  
 end

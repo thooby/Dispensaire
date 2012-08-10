@@ -1,14 +1,15 @@
 // Place your application-specific JavaScript functions and classes here
 // This file is automatically included by javascript_include_tag :defaults
 
-#function add_fields(link, association, content) {
-#  var new_id = new Date().getTime();
-#  var regexp = new RegExp("new_" + association, "g")
-#  $(link).up().insert({
-#    before: content.replace(regexp, new_id)
-#  });
-#}
-jQuery(function($) {
+// #function add_fields(link, association, content) {
+// #  var new_id = new Date().getTime();
+// #  var regexp = new RegExp("new_" + association, "g")
+// #  $(link).up().insert({
+// #    before: content.replace(regexp, new_id)
+// #  });
+// #}
+
+$(document).ready(function() {
   // when the #country field changes
   $("#patient_commune_id").change(function() {
     // make a POST call and replace the content
@@ -19,5 +20,69 @@ jQuery(function($) {
     })
     return false;
   });
-
+  
+  setAutoCompleters();
 })
+
+function remove_fields(link) {
+  $(link).prev("input[type=hidden]").val("1");
+  $(link).closest("div").hide();
+}
+
+function add_fields(link, association, content, autocomplete) {
+  autocomplete = autocomplete || false
+  var new_id = new Date().getTime();
+  var regexp = new RegExp("new_" + association, "g")
+  $(link).parents(".fields").find('div:last').after(content.replace(regexp, new_id));
+  if (autocomplete == true) {
+    setAutoCompleters();
+  }
+  // $(this).parents(".fields").find('div').attr("id", 'tr_' + new_id);
+}
+
+function setAutoCompleters() {
+  $('input.autocomplete').each(function(){
+    var spinner = $(this).siblings('span.spinner');
+    var url = new String();
+    if ($(this).attr('id').match(/consultation_consul_diags*/)) {
+      url = "/diagnostics.json";
+    } else if ($(this).attr('id').match(/consultation_consul_trats*/)) {  
+      url = "/traitements.json";      
+    }
+    
+    $(this).autocomplete({
+      source: function (request, response) {
+        var gt_id = this.element.siblings('select').val();
+        $.ajax({
+          url: url + '?q=' + request.term + '&groupe_traitement_id=' + gt_id,
+          dataType: "json",
+      	  success: function( data ) {
+            response($.map(data, function(item){
+      	    return { 
+      	      value: item[0],
+      	      label: item[1] 
+            }
+          spinner.hide();
+      	  }));
+      	}	
+      });
+      },
+      search: function() {
+        spinner.show();
+      },
+      focus: function( event, ui ) {
+       $(this).attr('value', ui.item.label );
+      	 return false;
+      },
+      select: function(event, ui) {
+        spinner.hide();
+        $(this).attr('value', ui.item.label);
+        $(this).siblings('input[type=hidden]:first').attr('value', ui.item.value);
+        return false;
+      },
+      close: function(event, ui){
+        spinner.hide();
+      }
+  });
+  })
+}

@@ -44,37 +44,46 @@ a {
   border: solid 1px #C66;
 }
 
-.fieldWithErrors {
+.field_with_errors label{
+  padding: 2px;
+  background-color: red;
   display: inline;
 }
 
-.error_messages {
+#errorExplanation {
   width: 400px;
-  border: 2px solid #CF0000;
-  padding: 0px;
+  border: 2px solid red;
+  padding: 7px;
   padding-bottom: 12px;
   margin-bottom: 20px;
   background-color: #f0f0f0;
-  font-size: 12px;
 }
 
-.error_messages h2 {
+#errorExplanation h2 {
   text-align: left;
   font-weight: bold;
-  padding: 5px 10px;
+  padding: 5px 5px 5px 15px;
   font-size: 12px;
-  margin: 0;
+  margin: -7px -7px 4px -7px;
   background-color: #c00;
   color: #fff;
 }
 
-.error_messages p {
-  margin: 8px 10px;
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
 }
 
-.error_messages ul {
-  margin: 0;
+#errorExplanation ul {
+  margin-left: 20px;
 }
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
 .list_line_even {
 	background-color: #EED;
 }
@@ -104,3 +113,7 @@ a {
         font-size: 16px;
       }
 div#user_nav { float: right; font-size: 0.9em; }
+
+span.item_id {
+  display: none;
+}
