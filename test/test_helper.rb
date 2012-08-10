@@ -13,6 +13,11 @@ class ActiveSupport::TestCase
   # Add more helper methods to be used by all tests here...
 end
 
-def user_login(user)
-  UserSession.create(user ? user : nil)
+def login_as(role)
+  user = FactoryGirl.create(:user, :role => role)
+  old_controller = @controller
+  @controller = UserSessionsController.new
+  post :create, :user_session => {:username => user.username, :password => '1234'}
+  assert_not_nil(UserSession.find)
+  @controller = old_controller
 end

@@ -43,18 +43,21 @@ function add_fields(link, association, content, autocomplete) {
 function setAutoCompleters() {
   $('input.autocomplete').each(function(){
     var spinner = $(this).siblings('span.spinner');
-    var url = new String();
+    var url = new String();                 
+    var params = new String();                     
     if ($(this).attr('id').match(/consultation_consul_diags*/)) {
-      url = "/diagnostics.json";
+      url = "/diagnostics.json";    
+      params = '&groupe_diagnostic_id=';
     } else if ($(this).attr('id').match(/consultation_consul_trats*/)) {  
-      url = "/traitements.json";      
+      url = "/traitements.json";            
+      params = '&groupe_traitement_id=';
     }
     
     $(this).autocomplete({
-      source: function (request, response) {
-        var gt_id = this.element.siblings('select').val();
+      source: function (request, response) {       
+        var param_value = this.element.siblings('select').val();
         $.ajax({
-          url: url + '?q=' + request.term + '&groupe_traitement_id=' + gt_id,
+          url: url + '?q=' + request.term + params + param_value,
           dataType: "json",
       	  success: function( data ) {
             response($.map(data, function(item){

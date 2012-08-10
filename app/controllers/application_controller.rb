@@ -16,6 +16,7 @@ class ApplicationController < ActionController::Base
   def logged_in?
     current_user ? true : false 
   end
+  
   def access_denied
     
   end
