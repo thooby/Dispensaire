@@ -1,0 +1,19 @@
+<% title "Consul Motifs" %>
+<table>
+  <tr>
+    <th>Consultation</th>
+    <th>Acronime</th>
+    <th>Motif</th>
+  </tr>
+  <% for consul_motif in @consul_motifs %>
+    <tr>
+      <td><%= consul_motif.consultation_id %></td>
+      <td><%= consul_motif.motif.description %></td>
+      <td><%= link_to "Show", consul_motif %></td>
+      <td><%= link_to "Edit", edit_consul_motif_path(consul_motif) %></td>
+      <td><%= link_to "Destroy", consul_motif, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Consul Motif", new_consul_motif_path %></p>

@@ -1,0 +1,17 @@
+<% title "Motifs" %>
+
+<table>
+  <tr>
+    <th>Description</th>
+  </tr>
+  <% for motif in @motifs %>
+    <tr>
+      <td><%= motif.description %></td>
+      <td><%= link_to "Show", motif %></td>
+      <td><%= link_to "Edit", edit_motif_path(motif) %></td>
+      <td><%= link_to "Destroy", motif, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Motif", new_motif_path %></p>

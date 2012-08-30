@@ -51,6 +51,10 @@ function setAutoCompleters() {
     } else if ($(this).attr('id').match(/consultation_consul_trats*/)) {  
       url = "/traitements.json";            
       params = '&groupe_traitement_id=';
+    } else if ($(this).attr('id').match(/consultation_consul_motifs*/)) {  
+      url = "/motifs.json"; 
+      params = '&groupe_traitement_id=';
+
     }
     
     $(this).autocomplete({

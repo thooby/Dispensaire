@@ -16,5 +16,12 @@ module ConsultationsHelper
     end
     link_to_function(name, "add_fields(this, 'consul_trats', \"#{escape_javascript(fields)}\", true)")
   end
+  def add_consul_motif_link(name, f)
+    new_object = f.object.class.reflect_on_association(:consul_motifs).klass.new
+    fields = f.fields_for('consul_motifs', new_object, :child_index => "new_consul_motifs") do |builder|
+      render('consul_motif', :f => builder)
+    end
+    link_to_function(name, "add_fields(this, 'consul_motifs', \"#{escape_javascript(fields)}\", true)")
+  end
   
 end

@@ -5,6 +5,7 @@ class Consultation < ActiveRecord::Base
   belongs_to :tipeconsultation
   has_many :consul_diags, :dependent => :destroy
   has_many :consul_trats, :dependent => :destroy
+  has_many :consul_motifs, :dependent => :destroy
 
   validates  :fecha, :patient_id, :tipeconsultation_id, :motif, :consul_trats, :consul_diags, :presence => true
   #validates_numericality_of :temperature, :if => "self.temperature.exists?"

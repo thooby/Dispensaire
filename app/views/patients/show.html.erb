@@ -53,6 +53,7 @@
    <% if k.motif %> 
      <strong>Motif ou symptomes:</strong> <%= k.motif %><br />
    <% end %>
+
    <% if k.tension_arteriale_haute %>   
       <strong>TA:</strong> <%= k.tension_arteriale_haute %>/<%= k.tension_arteriale_basse %> mm Hg
    <% end %>
@@ -73,6 +74,11 @@
   
       <br />
 	<% end %>
+	
+   <strong>Motif:</strong> <% k.consul_motifs.each do |h| %>
+      <%= h.motif.description %><br />
+      <% end %>
+	
    <strong>Diagnostic:</strong> <% k.consul_diags.each do |h| %>
       <%= h.diagnostic.description %><br />
       <% end %>

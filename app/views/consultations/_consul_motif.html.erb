@@ -1,0 +1,9 @@
+<div class="consul_motif">
+  <p>Motif:	
+    <!-- f.collection_select(:motif_id,Motif.order("description"),:id,:description, :include_blank => true ) %> -->
+    <%= f.text_field :motif_name, :size => 60, :class => 'autocomplete' %>
+    <%= f.hidden_field :motif_id %>
+    <span class="spinner" style = 'display:none'><%= image_tag 'spinner.gif' %></span>
+    <%= link_to_remove_fields "Éliminer", f %>
+  </p>
+</div>

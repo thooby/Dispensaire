@@ -1,0 +1,12 @@
+<%= form_for @consul_motif do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :consultation_id %><br />
+    <%= f.text_field :consultation_id %>
+  </p>
+  <p>
+    <%= f.label :motif_id %><br />
+    <%= f.text_field :motif_id %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

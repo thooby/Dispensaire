@@ -1,5 +1,7 @@
 # -*- encoding : utf-8 -*-
 Dispen3::Application.routes.draw do
+  resources :motifs
+
   resources :users
   resources :user_sessions
   match 'login' => "user_sessions#new",      :as => :login
@@ -8,7 +10,7 @@ Dispen3::Application.routes.draw do
   match 'consultations/:id/new' => 'consultations#new',  :as => :enlace
   get 'consultations/:id' => 'consultations#show',  :as => :enlace2
   match 'search' => 'search#show', :as => :search
-
+  resources :consul_motifs
   resources :consul_diags
   resources :consul_trats
   resources :diagnostics

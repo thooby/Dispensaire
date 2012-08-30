@@ -4,7 +4,7 @@ class Village < ActiveRecord::Base
   has_many :patients
   belongs_to :commune
   validates  :nom, :presence => true
-  validates_uniqueness_of :nom,  :scope => :commune_id, :message => 'Le pair Commune-Village doit être unique'
+  validates_uniqueness_of :nom, :scope => :commune_id, :message => 'Le pair Commune-Village doit être unique'
     def must_be_unique
       if self.class.where(nom: nom, commune_id: commune_id).exists?
         errors.add(:base, 'Le pair Commune-Village doit être unique')

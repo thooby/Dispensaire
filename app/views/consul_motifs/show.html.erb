@@ -1,0 +1,16 @@
+<% title "Consul Motif" %>
+
+<p>
+  <strong>Consultation:</strong>
+  <%= @consul_motif.consultation_id %>
+</p>
+<p>
+  <strong>Motif</strong>
+  <%= @consul_motif.motif_id %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_consul_motif_path(@consul_motif) %> |
+  <%= link_to "Destroy", @consul_motif, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", consul_motifs_path %>
+</p>

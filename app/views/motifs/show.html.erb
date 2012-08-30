@@ -1,0 +1,12 @@
+<% title "Motif" %>
+
+<p>
+  <strong>Description:</strong>
+  <%= @motif.description %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_motif_path(@motif) %> |
+  <%= link_to "Destroy", @motif, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", motifs_path %>
+</p>
