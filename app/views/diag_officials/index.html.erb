@@ -1,0 +1,23 @@
+<h1>Listing diag_officials</h1>
+
+<table>
+  <tr>
+    <th>Official desc</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @diag_officials.each do |diag_official| %>
+  <tr>
+    <td><%= diag_official.official_desc %></td>
+    <td><%= link_to 'Show', diag_official %></td>
+    <td><%= link_to 'Edit', edit_diag_official_path(diag_official) %></td>
+    <td><%= link_to 'Destroy', diag_official, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Diag official', new_diag_official_path %>

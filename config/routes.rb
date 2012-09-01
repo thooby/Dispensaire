@@ -1,5 +1,7 @@
 # -*- encoding : utf-8 -*-
 Dispen3::Application.routes.draw do
+  resources :diag_officials
+
   resources :motifs
 
   resources :users

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120828115848) do
+ActiveRecord::Schema.define(:version => 20120831081808) do
 
   create_table "communes", :force => true do |t|
     t.string   "nom"
@@ -56,11 +56,18 @@ ActiveRecord::Schema.define(:version => 20120828115848) do
     t.string   "analyse"
   end
 
+  create_table "diag_officials", :force => true do |t|
+    t.string   "official_desc"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "diagnostics", :force => true do |t|
     t.string   "acronime"
     t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "diag_official_id"
   end
 
   create_table "ethnies", :force => true do |t|

@@ -1,0 +1,21 @@
+<%= form_for(@diag_official) do |f| %>
+  <% if @diag_official.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@diag_official.errors.count, "error") %> prohibited this diag_official from being saved:</h2>
+
+      <ul>
+      <% @diag_official.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :official_desc %><br />
+    <%= f.text_field :official_desc %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
