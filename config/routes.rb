@@ -10,6 +10,8 @@ Dispen3::Application.routes.draw do
   
   match 'consul_diags/find' => 'consul_diags#find'
   match 'consul_diags/find_offi' => 'consul_diags#find_offi'
+  match 'consul_diags/find_date_offi' => 'consul_diags#find_date_offi'
+  
   match 'consul_diags/find_date' => 'consul_diags#find_date'
   match 'consultations/:id/new' => 'consultations#new',  :as => :enlace
   get 'consultations/:id' => 'consultations#show',  :as => :enlace2

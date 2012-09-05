@@ -44,16 +44,16 @@ class ConsulDiag < ActiveRecord::Base
   def self.find_diag(date_ini,date_fin)
     date_report = date_ini
     lista=[]
-    ConsulDiag.joins(:consultation => :patient).select("naissance,mois,diagnostic_id").order("diagnostic_id","naissance","mois").where("consultations.fecha>?",date_ini).each do |cd|
+    ConsulDiag.joins(:consultation => :patient).select("naissance,mois,diagnostic_id").order("diagnostic_id","naissance","mois").where("consultations.fecha>? and consultations.fecha<?",date_ini,date_fin).each do |cd|
       lista << [cd.diagnostic_id,cd.naissance,cd.mois]
     end    
     clasf(lista,date_report)   
   end
-  def self.find_diag3
-    date_report=Time.local(2010,12,31)
+  def self.find_diag3(date_ini,date_fin)
+     date_report = date_ini
     lista=[]
     ConsulDiag.joins(:diagnostic, :consultation => :patient).select("patients.naissance, patients.mois, 
-                      diagnostics.diag_official_id").order("diag_official_id","naissance","mois").each do |cd|
+                      diagnostics.diag_official_id").order("diag_official_id","naissance","mois").where("consultations.fecha>? and consultations.fecha<?",date_ini,date_fin).each do |cd|
       lista << [cd.diag_official_id,cd.naissance,cd.mois]
     end    
     clasf(lista,date_report)   

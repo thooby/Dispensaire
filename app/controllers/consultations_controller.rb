@@ -22,7 +22,6 @@ class ConsultationsController < ApplicationController
   end
 
   def create   
-    debugger
     if @consultation.save
       redirect_to consultation_path(@consultation), :notice => "Successfully created consultation."
     else

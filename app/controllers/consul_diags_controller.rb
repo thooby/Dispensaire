@@ -29,7 +29,11 @@ class ConsulDiagsController < ApplicationController
     end
   end
   def find_offi
-    @find_diags3 = ConsulDiag.find_diag3
+    datos = params[:consul_diag]
+    fecha_ini =    Date.new(datos['fecha_ini(1i)'].to_i,datos['fecha_ini(2i)'].to_i,datos['fecha_ini(3i)'].to_i)
+    fecha_fin = Date.new(datos['fecha_fin(1i)'].to_i,datos['fecha_fin(2i)'].to_i,datos['fecha_fin(3i)'].to_i)
+    
+    @find_diags3 = ConsulDiag.find_diag3(fecha_ini,fecha_fin)
     respond_to do |format|
       format.html # show.html.erb
       format.pdf do
