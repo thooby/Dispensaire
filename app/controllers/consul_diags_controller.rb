@@ -12,7 +12,11 @@ class ConsulDiagsController < ApplicationController
   end
 
   def find
-    @find_diags = ConsulDiag.find_diag
+    datos = params[:consul_diag]
+    fecha_ini =    Date.new(datos['fecha_ini(1i)'].to_i,datos['fecha_ini(2i)'].to_i,datos['fecha_ini(3i)'].to_i)
+    fecha_fin = Date.new(datos['fecha_fin(1i)'].to_i,datos['fecha_fin(2i)'].to_i,datos['fecha_fin(3i)'].to_i)
+    #   @registros = Registro.sel_trozo(fecha_ini,fecha_fin,datos['lugar_id'])
+    @find_diags = ConsulDiag.find_diag(fecha_ini,fecha_fin)
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @consul_diag }
@@ -24,7 +28,6 @@ class ConsulDiagsController < ApplicationController
       end
     end
   end
-  
   def find_offi
     @find_diags3 = ConsulDiag.find_diag3
     respond_to do |format|

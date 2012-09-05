@@ -1,7 +1,7 @@
 	<h2>Registre de Patients</h2>
 	<ul id="home">
 	  <% if current_user %>
-	    <li> <a href="/consul_diags/find">Statistiques</a></li>
+	    <li> <a href="/consul_diags/find_date">Statistiques</a></li>
 	    <li> <a href="/consul_diags/find_offi">Statistiques oficielles</a></li>
 		<% if current_user && (current_user.role == 'sanitaire' || 
                                current_user.role == 'admin' || 

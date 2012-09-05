@@ -3,18 +3,23 @@ Dispen3::Application.routes.draw do
   resources :diag_officials
 
   resources :motifs
-
   resources :users
   resources :user_sessions
   match 'login' => "user_sessions#new",      :as => :login
   match 'logout' => "user_sessions#destroy", :as => :logout
+  
   match 'consul_diags/find' => 'consul_diags#find'
   match 'consul_diags/find_offi' => 'consul_diags#find_offi'
+  match 'consul_diags/find_date' => 'consul_diags#find_date'
   match 'consultations/:id/new' => 'consultations#new',  :as => :enlace
   get 'consultations/:id' => 'consultations#show',  :as => :enlace2
   match 'search' => 'search#show', :as => :search
+  
+  
   resources :consul_motifs
-  resources :consul_diags
+  resources :consul_diags do
+    post :find_date, :action => "find", :on => :collection
+  end
   resources :consul_trats
   resources :diagnostics
   resources :groupe_traitements
