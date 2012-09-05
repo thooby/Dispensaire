@@ -24,8 +24,8 @@ class RapportPdf < Prawn::Document
     points_row = mm_row.map {|h| mm2points*h}
     [points_col,points_row]
   end
-  def page1
-    
+  
+  def page1   
     start_new_page(:template => "#{Rails.root}/public/pdfs/raport1.pdf")
     config_font
      
@@ -38,8 +38,7 @@ class RapportPdf < Prawn::Document
               15.78, 16.22, 16.68, 17.09, 17.52, 17.98, 18.38, 18.84, 19.51, 19.95, 
               20.39, 20.82 ]
     points_col, points_row = points(mm_col,mm_row)
-          
-    
+              
     go_to_page(page_count)
 
      @find_diags.each do |h|
@@ -54,11 +53,10 @@ class RapportPdf < Prawn::Document
           draw_text h[1][n].to_s, :at => [ points_col[2*n+1]-desv(config_font,dsize), points_row[i]+3]         
         end
       end
-      end
-        
+    end        
   end
-  def page2
-    
+  
+  def page2    
     start_new_page(:template => "#{Rails.root}/public/pdfs/raport2.pdf")
     config_font
      
@@ -71,25 +69,22 @@ class RapportPdf < Prawn::Document
             17.06,  17.51, 17.96, 18.38, 18.84, 19.31, 19.75, 20.19,  20.62, 21.06,
             21.53,  21.97, 22.44, 22.89, 23.33, 23.80, 24.21, 24.67,  25.13]        
     points_col, points_row = points(mm_col,mm_row)
+
     go_to_page(page_count)
 
-\
     @find_diags.each do |h|
       if h[0] > 21  and h[0] <47         
-      (0..5).each do |n| 
-        #print "z ",n," "
-                i = 92 - 2*h[0] 
-                p i       
-        dsize = h[1][n].to_s.size
-        draw_text h[1][n].to_s, :at => [points_col[2*n+1]-desv(config_font,dsize), points_row[i]+3]
+        (0..5).each do |n| 
+          i = 92 - 2*h[0] 
+          p i       
+          dsize = h[1][n].to_s.size
+          draw_text h[1][n].to_s, :at => [points_col[2*n+1]-desv(config_font,dsize), points_row[i]+3]
+        end
       end
-    end
-    end
-    
-        
+    end    
   end
-  def page3
-    
+  
+  def page3  
     start_new_page(:template => "#{Rails.root}/public/pdfs/raport3.pdf")
     config_font
      
@@ -112,6 +107,7 @@ class RapportPdf < Prawn::Document
       end  
     end
   end
+  
 end
 
 

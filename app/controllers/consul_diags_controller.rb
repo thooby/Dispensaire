@@ -12,17 +12,30 @@ class ConsulDiagsController < ApplicationController
   end
 
   def find
-   @find_diags = ConsulDiag.find_diag
-   respond_to do |format|
-     format.html # show.html.erb
-     format.xml  { render :xml => @consul_diag }
-     format.pdf do
+    @find_diags = ConsulDiag.find_diag
+    respond_to do |format|
+      format.html # show.html.erb
+      format.xml  { render :xml => @consul_diag }
+      format.pdf do
            pdf = RapportPdf.new(@find_diags)
            send_data pdf.render , filename:    "rapport",
                                   type:        "application/pdf",
                                   disposition: "inline"
-         end
-   end
+      end
+    end
+  end
+  
+  def find_offi
+    @find_diags3 = ConsulDiag.find_diag3
+    respond_to do |format|
+      format.html # show.html.erb
+      format.pdf do
+           pdf = RapportPdf.new(@find_diags3)
+           send_data pdf.render , filename:    "rapport",
+                                  type:        "application/pdf",
+                                  disposition: "inline"
+      end
+    end
   end
 
   def show

@@ -117,3 +117,6 @@ div#user_nav { float: right; font-size: 0.9em; }
 span.item_id {
   display: none;
 }
+textarea {
+   vertical-align:text-top;
+}

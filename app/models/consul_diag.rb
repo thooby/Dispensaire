@@ -3,7 +3,7 @@ class ConsulDiag < ActiveRecord::Base
   attr_accessible :consultation_id, :diagnostic_id
   belongs_to :diagnostic
   belongs_to :consultation
-  validates  :diagnostic_id, :presence => true 
+  validates  :diagnostic_id, :presence => true                                                                                                                              
   
   attr_accessor :diagnostic_name
   
@@ -49,7 +49,14 @@ class ConsulDiag < ActiveRecord::Base
     end    
     clasf(lista,date_report)   
   end
-
+  def self.find_diag3
+    date_report=Time.local(2010,12,31)
+    lista=[]
+    ConsulDiag.joins(:diagnostic, :consultation => :patient).select("patients.naissance, patients.mois, diagnostics.diag_official_id").order("diag_official_id","naissance","mois").each do |cd|
+          lista << [cd.diag_official_id,cd.naissance,cd.mois]
+    end    
+    clasf(lista,date_report)   
+  end
   def self.find_diag2
     tot_diag=ConsulDiag.all
     diag_dic=Hash.new(0)
