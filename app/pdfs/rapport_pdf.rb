@@ -97,7 +97,7 @@ class RapportPdf < Prawn::Document
     points_col, points_row = points(mm_col,mm_row)
     go_to_page(page_count)
     @find_diags.each do |h|
-      if h[0] > 46  and h[0]<61
+      if h[0] > 46  and h[0]<62
         p h[0]        
         (0..5).each do |n| 
           i = 122 - 2*h[0]       

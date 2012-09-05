@@ -1,13 +1,13 @@
 
 
-<p><%= link_to "Version pour imprimante (PDF)", 'find.pdf', format: "pdf" %></p>
+<p><%= link_to "Version pour imprimante (PDF)", 'find_offi.pdf', format: "pdf" %></p>
 
 
 <table>
 	<tr><td>Diag</td><td>0-11 mois</td><td>1-4 ans</td><td>5-9 ans</td><td>10-14 ans</td><td>15-25 ans</td><td>25 ans +</td></tr>
 <% @find_diags3.each do |h| %> 
   <tr>
-  <td><%=   Diagnostic.find(h[0]).description %></td>
+  <td><%=   DiagOfficial.find(h[0]).official_desc %></td>
      <% (0..5).each do |n| %>
 <td><%= h[1][n] %></td>
 <% end %>

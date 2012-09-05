@@ -52,8 +52,9 @@ class ConsulDiag < ActiveRecord::Base
   def self.find_diag3
     date_report=Time.local(2010,12,31)
     lista=[]
-    ConsulDiag.joins(:diagnostic, :consultation => :patient).select("patients.naissance, patients.mois, diagnostics.diag_official_id").order("diag_official_id","naissance","mois").each do |cd|
-          lista << [cd.diag_official_id,cd.naissance,cd.mois]
+    ConsulDiag.joins(:diagnostic, :consultation => :patient).select("patients.naissance, patients.mois, 
+                      diagnostics.diag_official_id").order("diag_official_id","naissance","mois").each do |cd|
+      lista << [cd.diag_official_id,cd.naissance,cd.mois]
     end    
     clasf(lista,date_report)   
   end
