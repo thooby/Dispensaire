@@ -3,6 +3,8 @@
 	  <% if current_user %>
 	    <li> <a href="/consul_diags/find_date">Statistiques</a></li>
 	    <li> <a href="/consul_diags/find_date_offi">Statistiques oficielles</a></li>
+	    <li> <a href="/consul_diags/rapp">Statistiques oficielles mensuelles</a></li>
+	
 		<% if current_user && (current_user.role == 'sanitaire' || 
                                current_user.role == 'admin' || 
                                current_user.role == 'local_admin' || 

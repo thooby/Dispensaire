@@ -1,4 +1,4 @@
-<p><%= link_to "Version pour imprimante (PDF)", 'find_offi.pdf', format: "pdf" %></p>
+<p><%= link_to "Version pour imprimante (PDF)", :controller => :consul_diags, :action =>:find_offi, :format =>"pdf", :query => "ruby on rails", :query2 => "uno", :ini2 => "dos" %></p>
 <table>
 	<tr><td>Diag</td><td>0-11 mois</td><td>1-4 ans</td><td>5-9 ans</td><td>10-14 ans</td><td>15-25 ans</td><td>25 ans +</td></tr>
 <% @find_diags3.each do |h| %> 

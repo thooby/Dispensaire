@@ -9,6 +9,7 @@ Dispen3::Application.routes.draw do
   match 'logout' => "user_sessions#destroy", :as => :logout
   
   match 'consul_diags/find' => 'consul_diags#find'
+  match 'consul_diags/rapp' => 'consul_diags#rapp'
   match 'consul_diags/find_offi' => 'consul_diags#find_offi'
   match 'consul_diags/find_date_offi' => 'consul_diags#find_date_offi'
   

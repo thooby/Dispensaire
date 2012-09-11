@@ -12,9 +12,11 @@ class ConsulDiagsController < ApplicationController
   end
 
   def find
-    datos = params[:consul_diag]
-    fecha_ini =    Date.new(datos['fecha_ini(1i)'].to_i,datos['fecha_ini(2i)'].to_i,datos['fecha_ini(3i)'].to_i)
-    fecha_fin = Date.new(datos['fecha_fin(1i)'].to_i,datos['fecha_fin(2i)'].to_i,datos['fecha_fin(3i)'].to_i)
+    fechas = params[:consul_diag]
+    if fechas
+      fecha_ini =    Date.new(datos['fecha_ini(1i)'].to_i,datos['fecha_ini(2i)'].to_i,datos['fecha_ini(3i)'].to_i)
+      fecha_fin = Date.new(datos['fecha_fin(1i)'].to_i,datos['fecha_fin(2i)'].to_i,datos['fecha_fin(3i)'].to_i)
+    end
     #   @registros = Registro.sel_trozo(fecha_ini,fecha_fin,datos['lugar_id'])
     @find_diags = ConsulDiag.find_diag(fecha_ini,fecha_fin)
     respond_to do |format|
@@ -29,10 +31,17 @@ class ConsulDiagsController < ApplicationController
     end
   end
   def find_offi
-    datos = params[:consul_diag]
-    fecha_ini =    Date.new(datos['fecha_ini(1i)'].to_i,datos['fecha_ini(2i)'].to_i,datos['fecha_ini(3i)'].to_i)
-    fecha_fin = Date.new(datos['fecha_fin(1i)'].to_i,datos['fecha_fin(2i)'].to_i,datos['fecha_fin(3i)'].to_i)
-    
+    fechas = params[:consul_diag]
+    year = params[:anne]
+    month = params[:mois]
+    if fechas
+      fecha_ini =    Date.new(datos['fecha_ini(1i)'].to_i,datos['fecha_ini(2i)'].to_i,datos['fecha_ini(3i)'].to_i)
+      fecha_fin = Date.new(datos['fecha_fin(1i)'].to_i,datos['fecha_fin(2i)'].to_i,datos['fecha_fin(3i)'].to_i)
+    elsif year and month
+      fecha_ini = Date.new(year.to_i,month.to_i,1)
+      fecha_fin = Date.new(year.to_i,month.to_i,30)
+    end
+
     @find_diags3 = ConsulDiag.find_diag3(fecha_ini,fecha_fin)
     respond_to do |format|
       format.html # show.html.erb
