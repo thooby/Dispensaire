@@ -5,10 +5,14 @@ class ConsulDiag < ActiveRecord::Base
   belongs_to :consultation
   validates  :diagnostic_id, :presence => true                                                                                                                              
   
-  attr_accessor :diagnostic_name
+  attr_accessor :diagnostic_name, :diag_type_id
   
   def diagnostic_name
     self.diagnostic.description if self.diagnostic
+  end
+   
+  def diag_type_id
+    self.diagnostic.diag_type_id if self.diagnostic
   end
   
   def self.tranch(t,date_report)

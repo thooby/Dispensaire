@@ -47,7 +47,7 @@ function setAutoCompleters() {
     var params = new String();                     
     if ($(this).attr('id').match(/consultation_consul_diags*/)) {
       url = "/diagnostics.json";    
-      params = '&groupe_diagnostic_id=';
+      params = '&diag_type_id=';
     } else if ($(this).attr('id').match(/consultation_consul_trats*/)) {  
       url = "/traitements.json";            
       params = '&groupe_traitement_id=';

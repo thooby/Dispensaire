@@ -1,0 +1,23 @@
+<h1>Listing diag_types</h1>
+
+<table>
+  <tr>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @diag_types.each do |diag_type| %>
+  <tr>
+    <td><%= diag_type.description %></td>
+    <td><%= link_to 'Show', diag_type %></td>
+    <td><%= link_to 'Edit', edit_diag_type_path(diag_type) %></td>
+    <td><%= link_to 'Destroy', diag_type, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Diag type', new_diag_type_path %>

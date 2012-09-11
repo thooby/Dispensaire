@@ -5,10 +5,11 @@ class DiagnosticsController < ApplicationController
   def index
     respond_to do |format|
       format.html {
-        @diagnostics = Diagnostic.all
+        @diagnostics = Diagnostic.order('description')
       }
       format.json { 
         @diagnostics =  Diagnostic.where("description like ?", "%#{params[:q]}%")
+        @diagnostics = @diagnostics.where("diag_type_id = ?", params[:diag_type_id]) if params[:diag_type_id].present?
         render :json => @diagnostics.map{|d| [d.id, d.description]} }
     end
   end
