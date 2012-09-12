@@ -25,13 +25,14 @@
 	  <%= f.text_area :motif, :size => "40x3" %>
 	</p>
 	<p>
+	<p>
 		Tension arteriale: <%= f.text_field :tension_arteriale_haute, options={:size =>'3'} %>/<%= f.text_field :tension_arteriale_basse, options = {:size =>'3'} %> 
 		Pouls: <%= f.text_field :poul, options={:size =>'3'} %> 
 		Temperature: <%= f.text_field :temperature, options={:size =>'4'} %> 
 		Respiration: <%= f.text_field :respiration, options={:size =>'3'} %> 
 		Poids: <%= f.text_field :poid, options={:size =>'3'} %></p>
 	<p>
-		
+	<div class="consul_diag1">	
   <div class="consul_diags fields">
     <%= f.fields_for :consul_diags do |builder| %>
       <%= render "consul_diag", :f => builder %>
@@ -39,7 +40,8 @@
     <p>
       <%= add_consul_diag_link "Ajouter un diagnostique", f %>
     </p>    
-  </div>
+  </div></div>
+	<div class="consul_trat1">	
   <div class="consul_trats fields">
     <%= f.fields_for :consul_trats do |builder| %>
       <%= render "consul_trat", :f => builder %>
@@ -47,7 +49,7 @@
     <p>
       <%= add_consul_trat_link "Ajouter un traitement", f %>
     </p>
-  </div>
+  </div></div>
   <p>
     Observations: <%= f.text_field :observation %>
   </p>

@@ -20,6 +20,8 @@ a {
   overflow: hidden;
 }
 
+.consul_diag1 {background-color: #EFE;}
+.consul_trat1 {background-color: #EEF;}
 #container {
   width: 75%;
   margin: 0 auto;

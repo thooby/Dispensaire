@@ -124,6 +124,7 @@ DEPENDENCIES
   nokogiri (~> 1.5.5)
   prawn
   rails (= 3.0.7)
+  rake (= 0.9.2.2)
   rdoc
   shoulda
   sqlite3-ruby

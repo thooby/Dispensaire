@@ -42,16 +42,19 @@ class ConsulDiagsController < ApplicationController
       fecha_fin = Date.new(year.to_i,month.to_i,30)
     end
 
-    @find_diags3 = ConsulDiag.find_diag3(fecha_ini,fecha_fin)
-    respond_to do |format|
-      format.html # show.html.erb
-      format.pdf do
+    if @find_diags3 = ConsulDiag.find_diag3(fecha_ini,fecha_fin)
+      respond_to do |format|
+        format.html # show.html.erb
+        format.pdf do
            pdf = RapportPdf.new(@find_diags3)
            send_data pdf.render , filename:    "rapport",
                                   type:        "application/pdf",
                                   disposition: "inline"
+        end
       end
-    end
+    else
+      redirect_to consul_diags_rapp_url, :notice => "Pas de données dans ce mois."
+    end  
   end
 
   def show
