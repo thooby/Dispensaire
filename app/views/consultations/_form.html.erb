@@ -32,7 +32,7 @@
 		Respiration: <%= f.text_field :respiration, options={:size =>'3'} %> 
 		Poids: <%= f.text_field :poid, options={:size =>'3'} %></p>
 	<p>
-	<div class="consul_diag1">	
+ <div class="consul_diag1">	
   <div class="consul_diags fields">
     <%= f.fields_for :consul_diags do |builder| %>
       <%= render "consul_diag", :f => builder %>

@@ -15,8 +15,19 @@ class Ability
       can :find, ConsulDiag
     elsif user.role == "sanitaire"
       can :manage, Patient 
+      can :read, Diagnostic
+      can :read, Traitement
       cannot :destroy, Patient 
+      can :manage, Consultation
+      cannot :destroy, Consultation
       can :manage, User
+      cannot :destroy, User
+      can :manage, ConsulTrat
+      can :manage, ConsulDiag
+      can :manage, ConsulMotif
+      cannot :destroy, ConsulTrat
+      cannot :destroy, ConsulDiag
+      cannot :destroy, ConsulMotif
     elsif user.role == "local_admin"      
       can :assign_roles, User
       can :manage, :all

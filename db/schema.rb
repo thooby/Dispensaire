@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120909160620) do
+ActiveRecord::Schema.define(:version => 20120912171529) do
 
   create_table "communes", :force => true do |t|
     t.string   "nom"
@@ -73,6 +73,7 @@ ActiveRecord::Schema.define(:version => 20120909160620) do
     t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "diag_official_id"
     t.integer  "diag_type_id"
   end
 
@@ -109,6 +110,7 @@ ActiveRecord::Schema.define(:version => 20120909160620) do
     t.datetime "updated_at"
     t.integer  "mois"
     t.integer  "jour"
+    t.string   "observation"
   end
 
   create_table "professions", :force => true do |t|

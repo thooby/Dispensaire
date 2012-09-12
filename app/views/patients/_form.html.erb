@@ -40,5 +40,8 @@
 	<%= @professions=Profession.find(:all,:order=>"nom")
 	    f.collection_select(:profession_id,@professions,:id,:nom, :include_blank => true) %>
   </p>
+<p>
+    Observations: <%= f.text_field :observation %>
+  </p>
   <p><%= f.submit "Ajouter patient" %></p>
 <% end %>

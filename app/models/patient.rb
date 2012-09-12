@@ -1,6 +1,6 @@
 # -*- encoding : utf-8 -*-
 class Patient < ActiveRecord::Base
-  attr_accessible :prenom, :nom, :carte_code, :fecha, :sex_id, :naissance, :village_id, :commune_id, :ethnie_id, :profession_id, :mois, :jour
+  attr_accessible :prenom, :nom, :carte_code, :fecha, :sex_id, :naissance, :village_id, :commune_id, :ethnie_id, :profession_id, :mois, :jour, :observation
   validates  :prenom, :nom, :carte_code, :fecha, :sex_id, :naissance, :village_id, :commune_id, :ethnie_id, :profession_id, :presence => true
   validates  :carte_code, :uniqueness => true
   validates  :naissance,  :numericality => {:greater_than_or_equal_to => 1910}
