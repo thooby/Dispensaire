@@ -12,8 +12,8 @@ class ConsulDiagsController < ApplicationController
   end
 
   def find
-    fechas = params[:consul_diag]
-    if fechas
+    datos = params[:consul_diag]
+    if datos
       fecha_ini =    Date.new(datos['fecha_ini(1i)'].to_i,datos['fecha_ini(2i)'].to_i,datos['fecha_ini(3i)'].to_i)
       fecha_fin = Date.new(datos['fecha_fin(1i)'].to_i,datos['fecha_fin(2i)'].to_i,datos['fecha_fin(3i)'].to_i)
     end
@@ -31,11 +31,11 @@ class ConsulDiagsController < ApplicationController
     end
   end
   def find_offi
-    fechas = params[:consul_diag]
+    datos = params[:consul_diag]
     year = params[:anne]
     month = params[:mois]
-    if fechas
-      fecha_ini =    Date.new(datos['fecha_ini(1i)'].to_i,datos['fecha_ini(2i)'].to_i,datos['fecha_ini(3i)'].to_i)
+    if datos
+      fecha_ini = Date.new(datos['fecha_ini(1i)'].to_i,datos['fecha_ini(2i)'].to_i,datos['fecha_ini(3i)'].to_i)
       fecha_fin = Date.new(datos['fecha_fin(1i)'].to_i,datos['fecha_fin(2i)'].to_i,datos['fecha_fin(3i)'].to_i)
     elsif year and month
       fecha_ini = Date.new(year.to_i,month.to_i,1)
