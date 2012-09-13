@@ -2,3 +2,4 @@
 rdoc/
 *.sqlite3
 tmp/
+Gemfile.lock
