@@ -1,10 +1,11 @@
 <p><%= link_to "Version pour imprimante (PDF)", :controller => :consul_diags, :action =>:find_offi, :format =>"pdf", :query => "ruby on rails", :query2 => "uno", :ini2 => "dos" %></p>
 <table>
-	<tr><td>Diag</td><td>0-11 mois</td><td>1-4 ans</td><td>5-9 ans</td><td>10-14 ans</td><td>15-25 ans</td><td>25 ans +</td></tr>
+<tr><td>Diag</td><td colspan="2">0-11 mois</td><td colspan="2"> 1-4 ans</td><td colspan="2">5-9 ans</td><td colspan="2">10-14 ans</td colspan="2"><td colspan="2">15-25 ans</td><td colspan="2">25 ans +</td><td colspan="3">Total +</td></tr>
+<tr><td>M</td><td>F</td><td>M</td><td>F</td><td>M</td><td>F</td><td>M</td><td>F</td><td>M</td><td>F</td><td>M</td><td>F</td><td>M</td><td>F</td><td>Total</td></tr>
 <% @find_diags3.each do |h| %> 
   <tr>
   <td><%=   DiagOfficial.find(h[0]).official_desc %></td>
-     <% (0..5).each do |n| %>
+     <% (0..13).each do |n| %>
 <td><%= h[1][n] %></td>
 <% end %>
 </tr>

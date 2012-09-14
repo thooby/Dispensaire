@@ -18,7 +18,7 @@ class ConsulDiagsController < ApplicationController
       fecha_fin = Date.new(datos['fecha_fin(1i)'].to_i,datos['fecha_fin(2i)'].to_i,datos['fecha_fin(3i)'].to_i)
     end
     #   @registros = Registro.sel_trozo(fecha_ini,fecha_fin,datos['lugar_id'])
-    @find_diags = ConsulDiag.find_diag(fecha_ini,fecha_fin)
+    if @find_diags = ConsulDiag.find_diag(fecha_ini,fecha_fin)
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @consul_diag }
@@ -28,6 +28,9 @@ class ConsulDiagsController < ApplicationController
                                   type:        "application/pdf",
                                   disposition: "inline"
       end
+    end
+    else
+      redirect_to consul_diags_find_date_url, :notice => "Pas de données dans ce intervale temporel."
     end
   end
   def find_offi
@@ -53,7 +56,14 @@ class ConsulDiagsController < ApplicationController
         end
       end
     else
-      redirect_to consul_diags_rapp_url, :notice => "Pas de données dans ce mois."
+      respond_to do |format|
+        format.html do
+          redirect_to consul_diags_find_date_url, :notice => "Pas de données dans ce intervale temporel."
+        end
+        format.pdf do
+           redirect_to consul_diags_rapp_url, :notice => "Pas de données dans ce mois."
+        end
+      end
     end  
   end
 

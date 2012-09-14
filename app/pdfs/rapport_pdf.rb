@@ -48,9 +48,10 @@ class RapportPdf < Prawn::Document
      @find_diags[0..21].each do |h| 
         if h[0] < 22
         i = 42 - 2*h[0]
-        (0..5).each do |n| 
+        (0..14).each do |n| 
           dsize = h[1][n].to_s.size          
-          draw_text h[1][n].to_s, :at => [ points_col[2*n+1]-desv(config_font,dsize), points_row[i]+3]         
+          #draw_text h[1][n].to_s, :at => [ points_col[2*n+1]-desv(config_font,dsize), points_row[i]+3]         
+          draw_text h[1][n].to_s, :at => [ points_col[n+1]-desv(config_font,dsize), points_row[i]+3]         
         end
       end
     end        
@@ -74,11 +75,11 @@ class RapportPdf < Prawn::Document
 
     @find_diags.each do |h|
       if h[0] > 21  and h[0] <47         
-        (0..5).each do |n| 
-          i = 92 - 2*h[0] 
+        (0..14).each do |n| 
+          i = 90 - 2*h[0] 
           p i       
           dsize = h[1][n].to_s.size
-          draw_text h[1][n].to_s, :at => [points_col[2*n+1]-desv(config_font,dsize), points_row[i]+3]
+          draw_text h[1][n].to_s, :at => [points_col[n+1]-desv(config_font,dsize), points_row[i]+3]
         end
       end
     end    
@@ -99,10 +100,10 @@ class RapportPdf < Prawn::Document
     @find_diags.each do |h|
       if h[0] > 46  and h[0]<62
         p h[0]        
-        (0..5).each do |n| 
+        (0..14).each do |n| 
           i = 122 - 2*h[0]       
           dsize = h[1][n].to_s.size
-          draw_text h[1][n].to_s, :at => [points_col[2*n+1]-desv(config_font,dsize), points_row[i]+3]
+          draw_text h[1][n].to_s, :at => [points_col[n+1]-desv(config_font,dsize), points_row[i]+3]
         end
       end  
     end
