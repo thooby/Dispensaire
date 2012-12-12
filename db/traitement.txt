@@ -1,0 +1,326 @@
+1| Anti-Inflammatoires / Analgésiques| Paracétamol|1
+1| Anti-Inflammatoires / Analgésiques| Corticoïde|2
+1| Anti-Inflammatoires / Analgésiques| Autres anti-inflammatoires / analgésiques|3
+2| Pénicillines| Penicilline intraveineuse ou intramusculaire|4
+2| Pénicillines| Amoxicilline|5
+2| Pénicillines| Amoxicilline /Clavulanique|6
+32| Autres antibiotiques| Erythromycine|7
+32| Autres antibiotiques| Ceftriaxone|8
+32| Autres antibiotiques| Ciprofloxacine|9
+2| Pénicillines| Cloxacilline|10
+32| Autres antibiotiques| Doxycycline|11
+32| Autres antibiotiques| Metronidazole|12
+32| Autres antibiotiques| Cotrimoxazole|13
+32| Autres antibiotiques| Autres antibactériens|14
+3| Antifongiques| Antifongique oral|15
+3| Antifongiques| Antifongique vaginal|16
+3| Antifongiques| Autres antifongiques|17
+4| Antiviraux| Antiviraux|18
+5| Antipaludiques| Quinine intraveineuse|19
+5| Antipaludiques| Quinine via oral|20
+5| Antipaludiques| Artemether intramusculaire|21
+5| Antipaludiques| Thérapie Combinée de dérivés d arthémisine|22
+5| Antipaludiques| Autres antipaludiques|23
+6| Antiparasitaires| Albendazole|24
+6| Antiparasitaires| Autres antiparasitaires|25
+7| Vitamines et sels minéraux| Vitamine A|26
+48| Anti anémiques| Acide folique|27
+48| Anti anémiques| Sel ferreux|28
+7| Vitamines et sels minéraux| Autres vitamines|29
+8| Suppléments nutritionaux| Lait|30
+8| Suppléments nutritionaux| Ruft|31
+8| Suppléments nutritionaux| Autres suppléments nutritionnaux|32
+9| Antiacide / antiulcéreux| Oméprazole ou similaire|33
+9| Antiacide / antiulcéreux| Hydroxyde d aluminium|34
+9| Antiacide / antiulcéreux| Autres antiulcéreux|35
+10| Antiémétiques| Antiémétique|36
+11| Antidiarrhéiques| Antidiarrhéique|37
+12| Solutés de réhydratation| Sels de réhydratation orale|38
+13| Antiasthmatiques| Salbutamol|39
+13| Antiasthmatiques| Autres antiasthmatiques inhalés|40
+14| Antitussifs / Expectorants| Antitusif|41
+15| Antiépileptiques| Antiépileptique|42
+16| Anticonvulsivants| Diazepam|43
+17| Neuroleptiques| Antipsychotique|44
+18| Anti histaminiques H1| Antiallergique / antianaphylactique|45
+19| Insulines| Insuline|46
+20| Antidiabétiques oraux| Metformin|47
+20| Antidiabétiques oraux| Autres antidiabétiques|48
+21| Diurétiques| Diurétique|49
+22| Antihypertenseurs| Captopril|50
+22| Antihypertenseurs| Autres antihypertenseurs|51
+23| Antiarythmiques| Digoxine|52
+23| Antiarythmiques| Autres antiarythmiques|53
+24| Traitements topiques ophtalmologiques et othalgiques| Traitement topique ophatalmologique et othalgique|54
+25| Traitements topiques anti-infectieux| Traitement topique anti-infectieux|55
+26| Corticoïdes topiques| Corticoïde topique|56
+27| Sérums voie parentérale| Sérum voie parentérale|57
+28| sérums immunologiques| Sérum antivenimeux|58
+29| Antiseptiques| Antiseptique|59
+1| Anti-Inflammatoires / Analgésiques| Acide acétylsalicylique|60
+30| Anticoagulants| Autres anti-coagulants|61
+31| Anti lépreux| Autres|62
+7| Vitamines et sels minéraux| Multivitamines|64
+2| Pénicillines| Ampiciline|65
+32| Autres antibiotiques| Gentamicine|66
+26| Corticoïdes topiques| Dexamethazone|67
+72| Sans traitement| Sans traitement|68
+5| Antipaludiques| Coarthesiane syrop|69
+1| Anti-Inflammatoires / Analgésiques| Aspergic|70
+33| Antipiretiques| Bain froid|71
+1| Anti-Inflammatoires / Analgésiques| Ibuprofen|72
+10| Antiémétiques| Primperan|73
+3| Antifongiques| Nystatine|74
+1| Anti-Inflammatoires / Analgésiques| Diclofenac|75
+5| Antipaludiques| Co-Artem dispersible|76
+6| Antiparasitaires| Mebendazole|77
+6| Antiparasitaires| Praziquantel|78
+8| Suppléments nutritionaux| Farine enrichie (CSCOM)|79
+4| Antiviraux| Acilovir comp. |80
+14| Antitussifs / Expectorants| Carbocisteine sirop 2%|81
+14| Antitussifs / Expectorants| Codeine comp. 5 10 mg|82
+3| Antifongiques| Griseofulvine comp.|83
+26| Corticoïdes topiques| Betamethasone valerate 0.1% creme|84
+21| Diurétiques| Furosemide comp. 40 mg.|85
+21| Diurétiques| Spironolactone comp. 25 50 mg|86
+25| Traitements topiques anti-infectieux| Neo Bacitracine creme|87
+16| Anticonvulsivants| Diazepam|89
+24| Traitements topiques ophtalmologiques et othalgiques| Tetracycline ophtalmique|90
+24| Traitements topiques ophtalmologiques et othalgiques| Gentamicine Collyre|91
+8| Suppléments nutritionaux| Zinc sulfate|92
+72| Sans traitement| Conseil  diététique|93
+14| Antitussifs / Expectorants| Carbetux|94
+48| Anti anémiques| Fer|95
+14| Antitussifs / Expectorants| Terpine|98
+1| Anti-Inflammatoires / Analgésiques| Novalgin|99
+33| Antipiretiques| Aspegic sachet|100
+11| Antidiarrhéiques| Importal|101
+34| Anti tuberculeux| Debridat suspension|102
+34| Anti tuberculeux| Butyl hyocine|104
+17| Neuroleptiques| Promethazine|105
+1| Anti-Inflammatoires / Analgésiques| Enantyun|106
+72| Sans traitement| Cta adulte|107
+11| Antidiarrhéiques| Duphalac|108
+25| Traitements topiques anti-infectieux| Permaganate|110
+25| Traitements topiques anti-infectieux| Neo-bacitracin pomade|111
+18| Anti histaminiques H1| Chlorphenamine|112
+7| Vitamines et sels minéraux| B complexe|113
+34| Anti tuberculeux| Spafont injectable|114
+5| Antipaludiques| Falcimon|115
+74| Pansements| Pansement|116
+35| Anti amibiens et antigiardiens| Perydis|117
+1| Anti-Inflammatoires / Analgésiques| Zaldiar|118
+1| Anti-Inflammatoires / Analgésiques| Nolotil|120
+61| Contraceptifs| Androtadyl injectable|121
+25| Traitements topiques anti-infectieux| Proconil pomade|122
+72| Sans traitement| Conseil pour des mesures prophylactique|123
+7| Vitamines et sels minéraux| Ideos sachet|124
+5| Antipaludiques| Sp|125
+7| Vitamines et sels minéraux| Calcium|126
+25| Traitements topiques anti-infectieux| Diclo pomade|127
+5| Antipaludiques| Sp(fansidar)|128
+1| Anti-Inflammatoires / Analgésiques| Diclofenac injectable|130
+72| Sans traitement| Conseil|131
+32| Autres antibiotiques| Cotrimoxazole suspension|133
+46| Anti ischémiques| Nootropyl suspension|134
+73| Référer| Référer au cscom|136
+1| Anti-Inflammatoires / Analgésiques| Paracetamol suspension|137
+27| Sérums voie parentérale| Serum glucose|138
+33| Antipiretiques| Aspegic injectable|139
+10| Antiémétiques| Vogalene injectable|140
+18| Anti histaminiques H1| Atarax|141
+10| Antiémétiques| Primperan suspension|142
+2| Pénicillines| Amoxiciline suspension|143
+3| Antifongiques| Nystatine ovule|144
+32| Autres antibiotiques| Erytromicyne suspensioin|145
+1| Anti-Inflammatoires / Analgésiques| Ibuprofene suspension|146
+52| Anti hémorroïdaires| Hemorroide pomade|147
+25| Traitements topiques anti-infectieux| Tetracycline pomade 3%|148
+39| Anti spasmodiques| Spasfon comprime|149
+2| Pénicillines| Acide clavulanique|150
+3| Antifongiques| Nystatine sirop|151
+22| Antihypertenseurs| Nifedipine|152
+22| Antihypertenseurs| Losartam|153
+51| Corticoïdes| Celestene|154
+1| Anti-Inflammatoires / Analgésiques| Airtal|155
+72| Sans traitement| Cta adolexant|156
+72| Sans traitement| Etat satisfaisant|157
+9| Antiacide / antiulcéreux| Azantac|158
+2| Pénicillines| Augmentin|159
+7| Vitamines et sels minéraux| Dodecavit|160
+5| Antipaludiques| Falcimon enfant|161
+25| Traitements topiques anti-infectieux| Aureomycine pomade|162
+82| Circoncision| Circoncision|163
+84| Extraction dentaire| Extraction|164
+56| Anxiolytiques et hypnotiques| Promethazine suspension|165
+18| Anti histaminiques H1| Aerius|166
+72| Sans traitement| Mesure d hygiène|167
+26| Corticoïdes topiques| Celestoderm pomade|168
+41| Médicaments de l’insuffisance cardiaque| Digoxine|170
+7| Vitamines et sels minéraux| Kaleorid = potasium|171
+42| Anti angoreux| Risordan|172
+1| Anti-Inflammatoires / Analgésiques| Aas|173
+51| Corticoïdes| Dacortin|174
+24| Traitements topiques ophtalmologiques et othalgiques| Celestene goutte|176
+72| Sans traitement| Sans traitement (conseil)|177
+21| Diurétiques| Aldactone|178
+11| Antidiarrhéiques| Smecta sachet|179
+32| Autres antibiotiques| Metronidazole suspension|180
+7| Vitamines et sels minéraux| Multivitamine suspension|182
+2| Pénicillines| Peniv|183
+6| Antiparasitaires| Vermin|184
+83| Lavage auriculaire| Extraction (lavage auriculaire)|185
+51| Corticoïdes| Betametasone|187
+4| Antiviraux| Aciclovin|188
+63| Oestrogènes| Duphaston|189
+73| Référer| Référer|190
+54| Stomatologie| Hextril bain de bouche|192
+24| Traitements topiques ophtalmologiques et othalgiques| Chibro cadron collyre|193
+22| Antihypertenseurs| Masdil|195
+15| Antiépileptiques| Gardenal|196
+26| Corticoïdes topiques| Betametasone pomade|200
+17| Neuroleptiques| Haldol|202
+55| Antiparkinsoniens| Artane|203
+28| sérums immunologiques| Sérum antitétanique|204
+56| Anxiolytiques et hypnotiques| Tranxene|205
+72| Sans traitement| Connseil diététique|208
+24| Traitements topiques ophtalmologiques et othalgiques| Otipax|209
+79| Suture| Suture sur la plaie|210
+29| Antiseptiques| Eosine acquise|213
+70| Stimulants de l’appétit| Tres-orix suspension|215
+54| Stomatologie| Aftasone|216
+70| Stimulants de l’appétit| Tresorix|217
+24| Traitements topiques ophtalmologiques et othalgiques| Diclofenac collyre|218
+5| Antipaludiques| Artecospe|219
+68| Antipelliculaires| Ascabiol|220
+83| Lavage auriculaire| Lavage auriculaire|222
+7| Vitamines et sels minéraux| Princi b fort|223
+18| Anti histaminiques H1| Poloramine|224
+45| Médicaments contre l’insuffisance veineuse| Daflon|225
+7| Vitamines et sels minéraux| Vit b complexe injectable|226
+1| Anti-Inflammatoires / Analgésiques| Novalgin injectable|227
+40| Anti reflux| Peridyx|228
+9| Antiacide / antiulcéreux| Caprozone|229
+5| Antipaludiques| Sulfadoxine pyriméthamine|230
+71| Décongestionnants ORL| Xylo-mepha|231
+46| Anti ischémiques| Nootropyl|232
+25| Traitements topiques anti-infectieux| Poudre exophene|233
+25| Traitements topiques anti-infectieux| Locoid pomade|234
+29| Antiseptiques| Eosine|235
+7| Vitamines et sels minéraux|  Vitamine c|236
+81| Drainage| Drainage|238
+5| Antipaludiques| Quinine injectable|239
+51| Corticoïdes| Kenacort|240
+10| Antiémétiques| Metoclopramide|241
+1| Anti-Inflammatoires / Analgésiques| Tramadol|242
+2| Pénicillines| Ampiciline injectable|243
+32| Autres antibiotiques| Biodroxyl suspension|244
+25| Traitements topiques anti-infectieux| Nystatine pomade|245
+25| Traitements topiques anti-infectieux| Tetracycline 1%|246
+32| Autres antibiotiques| Biodroxyl suspension|248
+7| Vitamines et sels minéraux| Alvityl goutte|249
+62| Ocytocine| Oxytocin|252
+27| Sérums voie parentérale| Serum sale|253
+32| Autres antibiotiques| Antibio synallar|254
+1| Anti-Inflammatoires / Analgésiques| Aspirine|257
+1| Anti-Inflammatoires / Analgésiques| Lyrica|258
+67| Laxatifs| Plantaben sachet|259
+14| Antitussifs / Expectorants| Otrivine|261
+25| Traitements topiques anti-infectieux| Clotrimazole crème|262
+7| Vitamines et sels minéraux| Vitamine k|263
+48| Anti anémiques| Fer suspension|265
+39| Anti spasmodiques| Butyl hyoscine|268
+1| Anti-Inflammatoires / Analgésiques| Adalgur|269
+54| Stomatologie| Angispray|270
+54| Stomatologie| Bain de bouche|271
+72| Sans traitement| Conseil nutritionnel|272
+7| Vitamines et sels minéraux| Hidroxil|273
+39| Anti spasmodiques| Debridat cp|274
+2| Pénicillines| Extencilline|275
+2| Pénicillines| Peni g|277
+26| Corticoïdes topiques| Diprosept|278
+11| Antidiarrhéiques| Erceryl|279
+56| Anxiolytiques et hypnotiques| Alapryl|280
+27| Sérums voie parentérale| Ringer|281
+2| Pénicillines| Clamoxil|282
+9| Antiacide / antiulcéreux| Maalox|284
+49| Hémostatiques généraux| Vit k1|286
+14| Antitussifs / Expectorants| Carbocysteine|288
+86| Anti rétroviraux| Anti retroviraux|289
+56| Anxiolytiques et hypnotiques| Lexomil|290
+58| Anesthésiques| Xylocaine|291
+22| Antihypertenseurs| Atenol|293
+13| Antiasthmatiques| Ventoline|294
+79| Suture| Suture|295
+51| Corticoïdes| Urbason|296
+32| Autres antibiotiques| Metronidazol ovule|297
+51| Corticoïdes| Prednisolone|298
+32| Autres antibiotiques| Ciprofloxacine perfusion|299
+32| Autres antibiotiques| Metronidazole perfusion|300
+1| Anti-Inflammatoires / Analgésiques| Celebrex|303
+65| Progestérone| Synergon injectable|304
+32| Autres antibiotiques| Oracefal|305
+5| Antipaludiques| Coartem|306
+72| Sans traitement| Conseil diétetique|307
+56| Anxiolytiques et hypnotiques| Lexantin|309
+1| Anti-Inflammatoires / Analgésiques| Piroxicam|310
+40| Anti reflux| Cidine|311
+29| Antiseptiques| Betadine dermique|312
+52| Anti hémorroïdaires| Hepro|314
+80| Ablation| Ablation|316
+51| Corticoïdes| Fortecortin|317
+5| Antipaludiques| Artesunate cp|318
+47| Anti hypotenseur| Heptamyl cp|319
+25| Traitements topiques anti-infectieux| Septivon|320
+2| Pénicillines| Bristopen|321
+3| Antifongiques| Nystatine cp|323
+1| Anti-Inflammatoires / Analgésiques| Naproxene sodico|325
+7| Vitamines et sels minéraux| Godecavit cp|327
+1| Anti-Inflammatoires / Analgésiques| Analgin|328
+48| Anti anémiques| Tothema|329
+1| Anti-Inflammatoires / Analgésiques| Codolipran|331
+48| Anti anémiques| Acfol|332
+3| Antifongiques| Miconazol crÈme|333
+5| Antipaludiques| Arthemeter inj|334
+48| Anti anémiques| Bioferon sp|335
+24| Traitements topiques ophtalmologiques et othalgiques| Gentamicine goutte|336
+1| Anti-Inflammatoires / Analgésiques| Doliprane|337
+59| Antidotes| Atropine|338
+72| Sans traitement| Conseil pour rééducation|340
+28| sérums immunologiques| Sérum anti 2|341
+26| Corticoïdes topiques| Diprosone pomade|342
+68| Antipelliculaires| Benzyl benzoate|343
+1| Anti-Inflammatoires / Analgésiques| Bi profenid|344
+32| Autres antibiotiques| Chloramphenicol|345
+1| Anti-Inflammatoires / Analgésiques| Indometacine suppositoire|346
+52| Anti hémorroïdaires| Anti hémorroïdaire pomade|347
+60| Androgènes| Androtadyl|348
+1| Anti-Inflammatoires / Analgésiques| Efferalgan comprime|349
+39| Anti spasmodiques| Riabal|350
+32| Autres antibiotiques| Azitromicine cp|351
+3| Antifongiques| Fluconazol|352
+28| sérums immunologiques|  Vaccin anti rabique|353
+7| Vitamines et sels minéraux| Alvityl|354
+39| Anti spasmodiques| Spasmodyl|355
+26| Corticoïdes topiques| Diprosept pomade|356
+21| Diurétiques| Furosemide injectable|357
+1| Anti-Inflammatoires / Analgésiques| Profenid Injectable|358
+26| Corticoïdes topiques| Voltarene pommade|359
+54| Stomatologie| Fungizone|361
+1| Anti-Inflammatoires / Analgésiques| Parafizz comprime|362
+1| Anti-Inflammatoires / Analgésiques| Algidol sachet|363
+57| Antidépresseurs| Anafranil cp|364
+1| Anti-Inflammatoires / Analgésiques| Xicil sachet|365
+8| Suppléments nutritionaux| Lait sachet|367
+5| Antipaludiques| Amodiaquine|368
+28| sérums immunologiques| Vaccin antitétanique|369
+73| Référer| Référer pour transfusion|370
+39| Anti spasmodiques| Nospa|371
+48| Anti anémiques| Ferplex|372
+48| Anti anémiques| Ferplex sp|373
+87| Autres| Autres|400
+88| Chirurgie|Chirurgie|401
+87| Autres| Adaltone|402
+72| Sans traitement| Cta enfant|403
+87| Autres| GUERRI|404
+89| Inconnu|Inconnu|406

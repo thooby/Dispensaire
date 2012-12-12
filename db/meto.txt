@@ -1,0 +1,6 @@
+241,1,,cp,10mg,
+142,2,Metclopamida,Inj,5mg/ml,S,C
+142,2,Metclopamida,cp,5mg/ml,S,C
+142,2,Metclopamida,Suspension,5mg/ml,,C
+73,2,Metoclopamida,Cp,10mg
+73,2,Metclopamida,Suspension,10mg/ml
