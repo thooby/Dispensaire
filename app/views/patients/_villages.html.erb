@@ -9,7 +9,7 @@ jQuery(function($) {
   });
 })
 </script>
-<% villages ||= f.object.commune.present? ? f.object.commune.villages : [] %>
+<%  villages ||= f.object.commune.present? ? f.object.commune.villages : [] %>
 <% if !villages.blank? %>
   Villages <%= select "patient", :village_id, villages.collect{ |s| [s.nom,s.id]}, :include_blank => true %>
 <% end %>
