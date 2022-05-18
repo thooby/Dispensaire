@@ -20,7 +20,7 @@ gem 'debugger'
 
 # Bundle the extra gems:
 # gem 'bj'
-gem "nokogiri","~>1.5.5"
+gem "nokogiri","~>1.13.5"
 # gem 'sqlite3-ruby', :require => 'sqlite3'
 # gem 'aws-s3', :require => 'aws/s3'
 
